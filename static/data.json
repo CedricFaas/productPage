@@ -1,0 +1,3225 @@
+{
+  "1": {
+    "1": {
+      "Info": {
+        "Brand": "",
+        "Name": "Apfel Elstar",
+        "Price": "0,60 €"
+      },
+      "Details": [
+        "1 Stück ca. 200g",
+        "1kg = 2,99 €",
+        "Österreich, Klasse I",
+        "Die Sorte Elstar ist gelb und sonnenseits schwach orangerot bis kräftig rot marmoriert oder verwaschen.",
+        "Äpfel stellen roh verzehrt (am besten mit Schale) eine ideale Zwischenmahlzeit dar.",
+        "Sie eignen sich zum Kochen und Backen, zur Herstellung von Apfelmus bzw. Kompott oder für Salate und Nachspeisen.",
+        "Kühl, luftig und druckfrei lagern."
+      ],
+      "Important": [
+        "1kg = 2,99 €"
+      ],
+      "Picture": "../static/Pictures/Apfel Elstar.webp"
+    },
+    "2": {
+      "Info": {
+        "Brand": "",
+        "Name": "Bio Apfel Natrya",
+        "Price": "2,99 €"
+      },
+      "Details": [
+        "550g",
+        "1kg = 5,44€",
+        "Fertigverpackt in Schale",
+        "Äpfel sollten nach Möglichkeit kühl gelagert werden und zu Rohkost verarbeitet verzehrt werden.",
+        "Das kostbare Vitamin C kann beim Erhitzen der Äpfel zu bis zu 70% verloren gehen.",
+        "ohne Gentechnik",
+        "Bio",
+        "Herkunftsland: Deutschland"
+      ],
+      "Important": [
+        "1kg = 5,44€", "Bio"
+      ],
+      "Picture": "../static/Pictures/Bio Apfel Natrya.png"
+    },
+    "3": {
+      "Info": {
+        "Brand": "",
+        "Name": "Bio Apfel Rot",
+        "Price": "2,39 €"
+      },
+      "Details": [
+        "550g",
+        "1kg = 4,35 €",
+        "Knackiger, süß-säuerlicher Apfel zum Reinbeißen.",
+        "Deutschland, Klasse I",
+        "Fertigverpackt in Schale",
+        "Da die meisten Vitamine direkt unter der Schale sitzen sollte diese gut gewaschen und mitverzehrt werden.",
+        "Bio"
+      ],
+      "Important": [
+        "1kg = 4,35 €", "Bio"
+      ],
+      "Picture": "../static/Pictures/Bio Apfel Rot.webp"
+    },
+    "4": {
+      "Info": {
+        "Brand": "REWE",
+        "Name": "Regional Apfel Rot",
+        "Price": "2,39 €"
+      },
+      "Details": [
+        "1 kg",
+        "1kg = 2,39",
+        "Deutschland, Klasse I",
+        "Der hohe Ballaststoffanteil in Äpfeln, der durch Schale und Pektin hervorgerufen wird, lässt Äpfel verdauungsfördernd und sättigend wirken.",
+        "Saftig, knackig, würzig, fruchtig, feinsäuerlich-süß.",
+        "Aromatisch, vielfältig."
+      ],
+      "Important": [
+        "1kg = 2,39"
+      ],
+      "Picture": "../static/Pictures/REWE Bio Apfel Rot.webp"
+    },
+    "5": {
+      "Info": {
+        "Brand": "REWE",
+        "Name": "Bio Apfel Rot",
+        "Price": "0,74 €"
+      },
+      "Details": [
+        "1 Stück ca. 200g",
+        "1kg = 3,69 €",
+        "Italien, Klasse II",
+        "Durch seine Vitamine hat er einen hohen ernährungsphysiologischen Wert.",
+        "Äpfel stellen roh verzehrt (am besten mit Schale) eine ideale Zwischenmahlzeit dar.",
+        "Sie eignen sich auch zum Kochen und Backen, zur Herstellung von Apfelmus bzw. Kompott oder für Salate und Nachspeisen.",
+        "Kühl, luftig und druckfrei lagern.",
+        "Bio"
+      ],
+      "Important": [
+        "1kg = 3,69 €","Bio"
+      ],
+      "Picture": "../static/Pictures/REWE Regional Apfel Rot.webp"
+    }
+  },
+  "2": {
+    "1": {
+      "Info": {
+        "Brand": "",
+        "Name": "Avocado Hass vorgereift",
+        "Price": "1,79 €"
+      },
+      "Details": ["Cremiges Fruchtfleisch mit nussiger Note.",
+        "Die birnenförmige Avocado kann je nach Sorte tiefdunkelgrün bis schwarz und mit einer glatten bis warzig genoppten Schale ausgestattet sein.",
+        "Das Fruchtfleisch ist cremefarben bis gelblich und hat einen nussartigen Geschmack",
+        "Von voll ausgereiften Früchten lässt sich die Haut leicht abziehen.",
+        "Handelsklasse I",
+        "Herkunftsland: Peru"],
+      "Picture": "../static/Pictures/Avocado Hass vorgereift.png",
+      "Important": [
+        "1,79 €"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "",
+        "Name": "Bio Avocado Hass ANG PE II",
+        "Price": "2,85 €"
+      },
+      "Details": ["cremig nussig",
+        "etwas kleiner als die grünen Avocadosorten",
+        "umschließt einen großen, glatten, nicht essbaren Kern",
+        "Unreife Avocados sind bei Zimmertemperatur wenige Wochen haltbar.",
+        "Der Kern in der Mitte ist ungenießbar.",
+        "Bio"],
+      "Picture": "../static/Pictures/Bio Avocados Hass ANG PE II.jpg",
+      "Important": [
+        "2,85 €","Bio"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "",
+        "Name": "Bio Avocado Hass Genussreif",
+        "Price": "1,99 €"
+      },
+      "Details": ["Herkunftsland: Spanien",
+        "Die Frucht ist verzehrsbereit wenn sie durchweg weich ist.",
+        "Das angeschnittene Fruchtfleisch wird sehr schnell braun, aber Beträufeln mit Zitronensaft verhindert das Braunwerden.",
+        "Die Früchte sind birnenförmig und haben eine Haut, die unterschiedliche Grün-Töne bis hin zu schwarzer Farbe haben kann.",
+        "EG-Bio"],
+      "Picture": "../static/Pictures/Bio Avocado Hass Genussreif.jpg",
+      "Important": [
+        "1,99 €","EG-Bio"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "NaturWert",
+        "Name": "Bio Avocado",
+        "Price": "1,99 €"
+      },
+      "Details": ["Cremiges Fruchtfleisch mit nussiger Note.",
+        "Die birnenförmige Avocado kann je nach Sorte tiefdunkelgrün bis schwarz und mit einer glatten bis warzig genoppten Schale ausgestattet sein.",
+        "Das Fruchtfleisch ist cremefarben bis gelblich und hat einen nussartigen Geschmack",
+        "Von voll ausgereiften Früchten lässt sich die Haut leicht abziehen.",
+        "Handelsklasse I",
+        "Herkunftsland: Spanien"],
+      "Picture": "../static/Pictures/Naturwert Bio Avocado.png",
+      "Important": [
+        "Bio Avocado","1,99 €"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "",
+        "Name": "Avocado Hass essreif",
+        "Price": "0,99 €"
+      },
+      "Details": ["Die Früchte sind birnenförmig und haben eine Haut, die unterschiedliche Grün-Töne bis hin zu schwarzer Farbe haben kann.",
+        "Unter der Haut befindet sich ein weißlich bis grünes Fruchtfleisch.",
+        "Verwendung z.B. zur Kombination mit pikanten Zutaten oder in Salaten.",
+        "Die Avocado wird längs eingeschnitten, dann werden beide Hälften gegeneinander gedreht und so geteilt.",
+        "Der Kern wird entfernt und die Hälften geschält oder das Fruchtfleisch herausgelöffelt."],
+      "Picture": "../static/Pictures/Avocado Hass essreif.webp",
+      "Important": [
+        "0,99 €"
+      ]
+    }
+  },
+  "3": {
+    "1": {
+      "Info": {
+        "Brand": "",
+        "Name": "Bio Champignon braun",
+        "Price": "2,59 €"
+      },
+      "Details": ["250g Schale", "1kg = 10,36€", "Herkunft: Deutschland", "Qualität: Bioland",
+        "Champignons können vielseitig eingesetzt werden. Ob als Suppe, gegrillt als Antipasti, roh in Salaten oder würzig angebraten in der Pfanne - Champignons sind einfach in der Zubereitung und immer wieder ein Genuss."],
+      "Picture": "../static/Pictures/Bio Champignon Braun.jpg",
+      "Important": [
+        "1kg = 10,36€","Qualität: Bioland"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "",
+        "Name": "Champignon braun",
+        "Price": "1,99 €"
+      },
+      "Details": ["400g Schale", "1kg = 4,98€", "Ursprungsland: Deutschland",
+        "Champignons sind die weltweit am häufigsten angebauten Speisepilzsorten.",
+        "Die rund 20 verschiedenen Sorten unterscheiden sich durch ihre Hutfarbe, die weiß, cremefarben bis hin zu sattbraun reicht.",
+        "Besonders aromatisch sind die braunen Champignons."],
+      "Picture": "../static/Pictures/Champignons Braun Schale.jpg",
+      "Important": [
+        "1kg = 4,98€"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "REWE",
+        "Name": "Bio Champignons braun 250g",
+        "Price": "2,39 €"
+      },
+      "Details": ["Niederlande, Klasse II", "1kg = 9,56€",
+        "Zur Zubereitung die Stielenden abschneiden, falls noch Erdreste an den Pilzen haften, diese kurz in kaltem Wasser waschen.",
+        "Gut abgetropft mit etwas Zitronensaft beträufeln, damit sie die weiße Farbe behalten.",
+        "Champignons vor dem Verzehr mit einem feuchten Tuch abreiben (nicht waschen) und die holzigen Stiele abschneiden."],
+      "Picture": "../static/Pictures/REWE Bio Champignons Braun.webp",
+      "Important": [
+        "1kg = 9,56€","Bio Champignons braun 250g"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "REWE Beste Wahl",
+        "Name": "Champignons braun 250g",
+        "Price": "1,69 €"
+      },
+      "Details": ["Deutschland, Klasse I", "1kg = 6,76€",
+        "Zur Zubereitung die Stielenden abschneiden, falls noch Erdreste an den Pilzen haften, diese kurz in kaltem Wasser waschen.",
+        "Gut abgetropft mit etwas Zitronensaft beträufeln, damit sie die weiße Farbe behalten.",
+        "Kühl, dunkel und vor Zugluft geschützt aufbewahren.",
+        "Sie sind sehr wärme- und lichtempfindlich und bilden auf Druck sofort braune Druckstellen."],
+      "Picture": "../static/Pictures/REWE Beste Wahl Champignons Braun.webp",
+      "Important": [
+        "1kg = 6,76€"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "NaturWert",
+        "Name": "Bio Creme Champignons",
+        "Price": "2,39 €"
+      },
+      "Details": ["250g","1kg = 9,56€",
+        "Champignons sind kalorienarm und eignen sich gut als Zutat zu Geschnetzeltem oder für Auläufe.",
+        "Handelsklasse I",
+        "Herkunftsland: Deutschland",
+        "Bio"],
+      "Picture": "../static/Pictures/NaturWert Bio Creme Champignons.png",
+      "Important": [
+        "1kg = 9,56€","Bio"
+      ]
+    }
+  },
+  "4": {
+    "1": {
+      "Info": {
+        "Brand": "NaturWert",
+        "Name": "Bio Cherrytomaten",
+        "Price": "1,79 €"
+      },
+      "Details": ["250g",
+        "1kg = 7,16€",
+        "Ob mit Feta, Mozzarella oder als Brotbelag mit Scheibenkäse. Tomaten sind mit wenigen Kalorien und hohem Wassergehalt ein Gemüse für figurbewusste Genießer.",
+        "Handelsklasse I",
+        "Herkunftsland: Spanien",
+        "Bio"],
+      "Picture": "../static/Pictures/Bio Cherry Tomaten.png",
+      "Important": [
+        "Bio","1kg = 7,16€"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Demeter",
+        "Name": "Bio Cherry Roma Tomate",
+        "Price": "2,49 €"
+      },
+      "Details": ["250g",
+        "1kg = 9,96 €",
+        "Herkunftsland: Spanien",
+        "Klasse I",
+        "Die kleinen Cherrytomaten eignen sich besonders gut als kleiner extra Gemüse-Snack für unterwegs, in Schule oder Büro."],
+      "Picture": "../static/Pictures/Bio Demeter Cherry Roma Tomate.webp",
+      "Important": [
+        "1kg = 9,96 €","Bio Cherry Roma Tomate"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "EDEKA",
+        "Name": "Bio Mini Roma Tomaten 250g",
+        "Price": "2,89 €"
+      },
+      "Details": ["1kg = 11,56€",
+        "Ausgesuchte Sorten und Herkünfte aus ökologisch, biologischer Landwirtschaft",
+        "fein-fruchtig, würziges Aroma, zum Naschen",
+        "süßer, angenehm fruchtiger, intensiver Geschmack",
+        "dünne Haut und festes Fruchtfleisch",
+        "Herkunftsland: Spanien",
+        "Klasse II"],
+      "Picture": "../static/Pictures/bio edeka mini roma tomaten.jpg",
+      "Important": [
+        "Bio Mini Roma Tomaten 250g","1kg = 11,56€"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "",
+        "Name": "Minirispentomate",
+        "Price": "1,99 €"
+      },
+      "Details": ["500g", "1kg = 3,98€",
+        "Herkunftsland: Niederlande",
+        "Klasse I",
+        "Ob mit Feta, Mozzarella oder als Brotbelag mit Scheibenkäse. Tomaten sind mit wenigen Kalorien und hohem Wassergehalt ein Gemüse für figurbewusste Genießer."],
+      "Picture": "../static/Pictures/Minirispentomaten.webp",
+      "Important": [
+        "1kg = 3,98€"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "",
+        "Name": "Tomaten Zwerge",
+        "Price": "1,29 €"
+      },
+      "Details": ["250g",
+        "1kg = 5,16€",
+        "Tomaten Zwerge im Beutel",
+        "Nasch-Tomaten",
+        "Die kleinen Cherrytomaten eignen sich besonders gut als kleiner extra Gemüse-Snack für unterwegs, in Schule oder Büro.",
+        "Handelsklasse I",
+        "Herkunftsland: Spanien"],
+      "Picture": "../static/Pictures/Tomaten Zwerge.png",
+      "Important": [
+        "1kg = 5,16€"
+      ]
+    }
+  },
+  "5": {
+    "1": {
+      "Info": {
+        "Brand": "",
+        "Name": "Afri Cola",
+        "Price": "1,49 €"
+      },
+      "Details": ["Cola-Limonade mit erhöhtem Koffeingehalt.",
+        "1 Liter",
+        "1,49€/1l",
+        "zzgl. 0,25€ Pfand",
+        "Koffeingehalt: 25 mg/ 100ml",
+        "Für Kinder und schwangere Frauen nicht empfohlen."],
+      "Picture": "../static/Pictures/Afri Cola.png",
+      "Important": [
+        "1,49€/1l"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Coca-Cola",
+        "Name": "Original Taste",
+        "Price": "1,79 €"
+      },
+      "Details": ["Koffeinhaltiges Erfrischungsgetränk mit Pflanzenextrakten.",
+        "Natürliche Aromen.",
+        "Ohne zugesetzte Konservierungsstoffe.",
+        "1,5 Liter",
+        "1,19€/1l",
+        "zzgl. 0,25€ Pfand"],
+      "Picture": "../static/Pictures/Coca-Cola.png",
+      "Important": [
+        "1,19€/1l"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Dr. Pepper",
+        "Name": "Erfrischungsgetränk",
+        "Price": "1,69 €"
+      },
+      "Details": ["Koffeinhaltiges Erfrischungsgetränk mit Zucker und Süßungsmitteln.",
+        "1 Liter",
+        "1,69€/1l",
+        "zzgl. 0,25€ Pfand",
+        "Kühl und dunkel lagern."],
+      "Picture": "../static/Pictures/Dr. Pepper Erfrischungsgetränk.png",
+      "Important": [
+        "1,69€/1l"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Pespi",
+        "Name": "Cola",
+        "Price": "1,19 €"
+      },
+      "Details": ["Koffeinhaltiges Erfrischungsgetränk.",
+        "Eiskalt genießen.",
+        "1,5 Liter",
+        "0,79/1l",
+        "zzgl. 0,25€ Pfand"],
+      "Picture": "../static/Pictures/Pepsi Cola.png",
+      "Important": [
+        "0,79/1l"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Sinalco",
+        "Name": "Cola",
+        "Price": "1,19 €"
+      },
+      "Details": ["Schmeckt schon seit über 80 Jahren. Pur oder gemixt ein Genuss!",
+        "Koffeinhaltige Limonade mit natürlichem Mineralwasser.",
+        "1 Liter",
+        "1,19€/1l",
+        "zzgl. 0,15€ Pfand",
+        "Vor Sonnenlicht und Wärme schützen."],
+      "Picture": "../static/Pictures/Sinalco Cola.png",
+      "Important": [
+        "1,19€/1l"
+      ]
+    }
+  },
+  "6": {
+    "1": {
+      "Info": {
+        "Brand": "BraTee",
+        "Name": "Pfirisch",
+        "Price": "1,79 €"
+      },
+      "Details": ["Capital Bra, der aktuell erfolgreichste Rapper Deutschlands, löste bereits mit seiner eigenen Pizza einen regelrechten Hype aus. Jetzt kommt der Eistee. Erhältlich ist das neue Sommergetränk in Capi’s Lieblingssorten Wassermelone, Pfirsich, Zitrone und Granatapfel.",
+        "750 ml",
+        "2,39€/1l"],
+      "Picture": "../static/Pictures/BraTee Pfirsich.png",
+      "Important": [
+        "2,39€/1l"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Fuze Tea",
+        "Name": "Schwarzer Tee Pfirsich",
+        "Price": "1,49 €"
+      },
+      "Details": ["Fuze Tea ist der perfekte Mix aus einem konzentrierten Aufguss von Teeblättern aus nachhaltigem Anbau und köstlichem Fruchtsaft. Das Ergebnis ist ein außergewöhnlicher Eisteegeschmack - so gut, dass du für einen Moment deinen Alltag hinter dir lässt. Drei Sorten enthalten zudem ausgewählte Kräuter-Extrakte und sind kalorienarm.",
+        "1 Liter",
+        "1,49€/1l",
+        "zzgl. 0,25€ Pfand"],
+      "Picture": "../static/Pictures/Fuze Tea Schwarzer Tee Pfirsich.png",
+      "Important": [
+        "1,49€/1l"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Nestea",
+        "Name": "Pfirsich",
+        "Price": "1,69 €"
+      },
+      "Details": ["Erfrischungsgetränk mit Pfirsichgeschmack und Tee-Extrakt.",
+        "1,5 Liter",
+        "1,13€/1l",
+        "zzgl. 0,25 € Pfand",
+        "Nach dem Öffnen im Kühlschrank aufbewahren und innerhalb von 3 Tagen konsumieren."],
+      "Picture": "../static/Pictures/Nestea Pfirsich.png",
+      "Important": [
+        "1,13€/1l"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Pfanner",
+        "Name": "Ice Tea Pfirsich",
+        "Price": "1,99 €"
+      },
+      "Details": ["Pfanner IceTea Pfirsich wird aus erlesenen Schwarzteesorten nach höchsten Qualitätsansprüchen frisch aufgebrüht. Hagebutten und Hibiskusblüten runden die feinherbe Schwarzteebasis ausgewogen ab. Fruchtiger Pfirsichsaft verfeinert Pfanner IceTea Pfirsich zu einem erfrischenden Geschmackserlebnis.",
+        "Die sorgfältig ausgewählten Teesorten werden bei Pfanner aus Tradition frisch aufgebrüht. Durch die schonende Zubereitung kommt der charakterische, vollmundige Teegeschmack besonders gut zur Geltung.",
+        "2 Liter",
+        "1,00€/1l"],
+      "Picture": "../static/Pictures/Pfanner Ice Tea.png",
+      "Important": [
+        "1,00€/1l"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Volvic",
+        "Name": "Tee Pfirsich",
+        "Price": "1,29 €"
+      },
+      "Details": ["It's Tea Time! Mit Volvic Tee und seinem sanften Pfirsich-Geschmack ist Chillexen angesagt.",
+        "Ohne Konservierungsstoffe.",
+        "Ohne künstliche Aromen.",
+        "Ohne künstliche Süßstoffe.",
+        "1,72€/1l",
+        "zzgl. 0,25 € Pfand"],
+      "Picture": "../static/Pictures/Volvic Tee Pfirsich.png",
+      "Important": [
+        "1,72€/1l"
+      ]
+    }
+  },
+  "7": {
+    "1": {
+      "Info": {
+        "Brand": "Pfanner",
+        "Name": "100% Orange",
+        "Price": "3,19 €"
+      },
+      "Details": ["Pfanner 100% Orangensaft verwöhnt den Gaumen mit dem fruchtigen Geschmack von sonnengereiften Orangen und versorgt den Körper mit einer Extraportion natürlichem Vitamin C.",
+        "Für 2 Liter Pfanner 100% Orange werden rund 4kg beste Orangen im Ursprungsland schonend gepresst. Das Ergebnis: Höchste Qualität und ein natürlicher Geschmack mit angenehmer Säure.",
+        "2 Liter",
+        "1,60€/1l",
+        "Vor dem Öffnen gut schütteln."],
+      "Picture": "../static/Pictures/Pfanner Orange.png",
+      "Important": [
+        "1,60€/1l"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Valensina",
+        "Name": "Milde Orange",
+        "Price": "1,59 €"
+      },
+      "Details": ["Genießen Sie 100% milden Saft-Genuss",
+        "Die sorgfältige Auswahl besonders milder Orangen und feiner Orangenblüten-Extrakt lassen Sie unbeschwert und sanft in den Tag starten",
+        "1 Liter",
+        "1,59€/1l",
+        "zzgl. 0,25€ Pfand"],
+      "Picture": "../static/Pictures/Valensina Milde Orange.webp",
+      "Important": [
+        "1,59€/1l"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Merzinger",
+        "Name": "Orangensaft",
+        "Price": "1,99 €"
+      },
+      "Details": ["Orangensaft aus Orangensaftkonzentrat",
+        "100% Fruchtgehalt",
+        "ohne Zuckerzusatz",
+        "1 Liter",
+        "1,99€/1l",
+        "zzgl. 0,15€ Pfand"],
+      "Picture": "../static/Pictures/Merzinger Orangensaft.webp",
+      "Important": [
+        "1,99€/1l"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Hohes C",
+        "Name": "Milde Orange",
+        "Price": "2,49 €"
+      },
+      "Details": ["Orangensaft aus Orangensaftkonzentrat (99,5%); Acerolsaft aus Acerolsaftkonzentrat (0,5%)",
+        "100% Saft",
+        "CO2-neutrale Produktion",
+        "ohne Zuckerzusatz",
+        "1,5 liter",
+        "1,66€/1l"],
+      "Picture": "../static/Pictures/Hohes C Milde Orange.webp",
+      "Important": [
+        "1,66€/1l"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Amecke",
+        "Name": "Sanfte Säfte Orange",
+        "Price": "1,79 €"
+      },
+      "Details": ["Orangensaft aus Orangensaftkonzentrat",
+        "100% Saft",
+        "ohne Zuckerzusatz",
+        "unverdünnt",
+        "1 Liter",
+        "1,79€/1l"],
+      "Picture": "../static/Pictures/Amecke Sanfte Säfte Orange.webp",
+      "Important": [
+        "1,79€/1l"
+      ]
+    }
+  },
+  "8": {
+    "1": {
+      "Info": {
+        "Brand": "Staatlich Fachingen",
+        "Name": "Heilwasser still",
+        "Price": "1,09 €"
+      },
+      "Details": ["Das klassische stille Wasser. Rein und natürlich.",
+        "Quellenname: Staatl. Fachingen",
+        "Bei schwerer Herz- und Niereninsuffzienz dürfen Sie Staatl. Fachinger nur nach Rücksprache mit dem Arzt trinken.",
+        "0,75 Liter",
+        "1,45€ /1 l",
+        "zzgl. 0,15 € Pfand"],
+      "Picture": "../static/Pictures/Staatlich Fachingen Heilwasser still.png",
+      "Important": [
+        "1,45€ /1 l"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Vio",
+        "Name": "Mineralwasser still",
+        "Price": "1,19 €"
+      },
+      "Details": ["Vio Still ist ein natürliches Mineralwasser ohne Kohlensäure und dem besonders weichen Geschmack dank seiner leichten Mineralisierung.",
+        "Quellenname: Lüner Quelle.",
+        "1,5 Liter",
+        "0,79 €/1 l",
+        "zzgl. 0,25 € Pfand",
+        "Natriumarm"],
+      "Picture": "../static/Pictures/Vio Mineralwasser still.png",
+      "Important": [
+        "0,79 €/1 l"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Vittel",
+        "Name": "Stilles Mineralwasser",
+        "Price": "1,19 €"
+      },
+      "Details": ["Vittel ist der ideale Begleiter für einen aktiven Tag. Ein natürliches Mineralwasser, still und trotzdem voller Lebensfreude. Aus dem Vulkangestein der Vogesen. Jedes Mineralwasser hat einen eigenen Charakter. So wie Vittel, das aus den französischen Vogesen stammt.",
+        "Quellenname: Vittel Bonne Source.",
+        "1,5 Liter",
+        "0,79 €/1 l",
+        "zzgl. 0,25 € Pfand",
+        "Natriumarm"],
+      "Picture": "../static/Pictures/Vittel Stilles Mineralwasser Natürliches Wasser.png",
+      "Important": [
+        "0,79 €/1 l"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Volvic",
+        "Name": "Mineralwasser naturelle",
+        "Price": "1,29 €"
+      },
+      "Details": ["Natürliches Mineralwasser ohne Kohlensäure.",
+        "Quellenname: Clairvic.",
+        "1,5 Liter",
+        "0,86 €/1 l",
+        "zzgl. 0,25 € Pfand",
+        "Zur Zubereitung von Babynahrung geeignet.",
+        "Natriumarm"],
+      "Picture": "../static/Pictures/Volvic Mineralwasser naturelle.png",
+      "Important": [
+        "0,86 €/1 l"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Gerolsteiner",
+        "Name": "Mineralwasser naturell",
+        "Price": "1,09 €"
+      },
+      "Details": ["Natürliches Mineralwasser. Ursprünglich rein und unverfälscht frisch: Gerolsteiner Naturell aus der Vulkaneifel. Von Natur aus schmeckt es angenehm weich und erfrischend neutral. Dank seines geringen Natriumgehalts ist es für eine natriumarme Ernährung geeignet.",
+        "Quellenname: Gerolsteiner Naturell.",
+        "1 Liter",
+        "1,09 €/1 l",
+        "zzgl. 0,15 € Pfand",
+        "Natriumarm"],
+      "Picture": "../static/Pictures/Gerolsteiner Mineralwasser naturell.png",
+      "Important": [
+        "1,09 €/1 l"
+      ]
+    }
+  },
+  "9": {
+    "1": {
+      "Info": {
+        "Brand": "Sonnentor",
+        "Name": "Kurkuma, gemahlen",
+        "Price": "2,39 €"
+      },
+      "Details": ["Kenner betiteln Kurkuma auch gern mal fachspezifisch als Gelbwurz, was in unseren Augen nicht im Geringsten die Superkräfte der Wurzel transportiert! Sie regiert die meisten Curry-Mischungen, da sie oft der Hauptbestandteil ist.",
+        "40 Gramm",
+        "59,75€/kg",
+        "Bio"],
+      "Picture": "../static/Pictures/Sonnentor Kurkuma, gemahlen.jpg",
+      "Important": [
+        "59,75€/kg",
+        "Bio"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "REWE",
+        "Name": "Kurkuma, gemahlen",
+        "Price": "2,99 €"
+      },
+      "Details": ["45 Gramm",
+        "66,44€/kg",
+        "Bio",
+        "Ideal für Reisgerichte, Currys, Chutneys, Smoothies und mehr."],
+      "Picture": "../static/Pictures/REWE Bio Kurkuma gemahlen.webp",
+      "Important": [
+        "66,44€/kg",
+        "Bio"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Lebensbaum",
+        "Name": "Kurkuma, gemahlen",
+        "Price": "2,49 €"
+      },
+      "Details": ["50 Gramm",
+        "49,50€/kg",
+        "Bio",
+        "Das mild würzige, leicht herbe Kurkuma ist in Indien seit über 4.000 Jahren bekannt und die Hauptzutat von Currypulver. Geben Sie es Reisgerichten, Chutneys und Soßen zeitig bei – dann entfaltet es sein warmes Aroma und sein intensives Gelb."],
+      "Picture": "../static/Pictures/Lebensb Kurkuma, gemahlen.jpg",
+      "Important": [
+        "49,50€/kg",
+        "Bio"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Ankerkraut",
+        "Name": "Bio Kurkuma",
+        "Price": "5,69 €"
+      },
+      "Details": ["Bio Kurkuma passt wunderbar zu Reis- und Nudelgerichten, verschiedenen Suppen, Saucen sowie Mayonnaisen. Aber auch Fisch, Meeresfrüchte, Rindfleisch, Geflügel und Eier, Gemüsecurrys und auch Chutneys freuen sich über ihren exotischen Besuch.",
+        "85 Gramm",
+        "66,94€/kg"],
+      "Picture": "../static/Pictures/Ankerkraut Bio Kurkuma.png",
+      "Important": [
+        "Bio Kurkuma passt wunderbar zu Reis- und Nudelgerichten, verschiedenen Suppen, Saucen sowie Mayonnaisen. Aber auch Fisch, Meeresfrüchte, Rindfleisch, Geflügel und Eier, Gemüsecurrys und auch Chutneys freuen sich über ihren exotischen Besuch.",
+        "66,94€/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Kurkuma, gemahlen",
+        "Price": "2,49 €"
+      },
+      "Details": ["Bio-Kurkumapulver mit dezent pfeffrig-fruchtigem Geschmack. Als typisches Gewürz der indischen Küche gibt es Reis, Hülsenfrüchten, Gemüse und mehr ein orientalisches Aroma und eine orangegelbe Farbe.",
+        "60 Gramm",
+        "41,50€/kg"],
+      "Picture": "../static/Pictures/Alnatura Kurkuma gemahlen.png",
+      "Important": [
+        "Bio-Kurkumapulver mit dezent pfeffrig-fruchtigem Geschmack. Als typisches Gewürz der indischen Küche gibt es Reis, Hülsenfrüchten, Gemüse und mehr ein orientalisches Aroma und eine orangegelbe Farbe.",
+        "41,50€/kg"
+      ]
+    }
+  },
+  "10": {
+    "1": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Paprika edelsüß",
+        "Price": "3,29 €"
+      },
+      "Details": ["Edelsüßes Bio-Paprikapulver mit milder Schärfe.",
+        "Die fruchtig-süße, leicht pikante Note macht es vielseitig verwendbar für ungarisches Gulasch, Gemüsegerichte, Eierspeisen, kräftige Saucen und Suppen",
+        "70 Gramm",
+        "47,00€/kg"],
+      "Picture": "../static/Pictures/Alnatura Paprika edelsüß.png",
+      "Important": [
+        "Edelsüßes Bio-Paprikapulver mit milder Schärfe.",
+        "47,00€/kg"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Ankerkraut",
+        "Name": "Bio Paprika edelsüß",
+        "Price": "5,69 €"
+      },
+      "Details": ["Süß fruchtige Noten und eine milde Schärfe zeichnen Ankerkraut Bio Paprika edelsüß mit der intensiv dunkelroten Färbung aus.",
+        "Der Klassiker ist nicht nur fester Bestandteil eines jeden guten Gulasch-Gerichtes, sondern sollte auch jenseits davon in keiner Küche fehlen! Denn Pommes, Fleisch- und Fischgerichte, sowie Soßen und Gemüseeintöpfe sind ohne Bio Paprika edlesüß nur ein: langweilig!",
+        "85 Gramm",
+        "66,94€/kg"],
+      "Picture": "../static/Pictures/Ankerkraut Bio Paprika edelsüß.png",
+      "Important": [
+        "Süß fruchtige Noten und eine milde Schärfe zeichnen Ankerkraut Bio Paprika edelsüß mit der intensiv dunkelroten Färbung aus.",
+        "66,94€/kg"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Lebensbaum",
+        "Name": "Paprika edelsüß",
+        "Price": "2,37 €"
+      },
+      "Details": ["Für Gemüse- und Reisgerichte, Geflügel, Kräuterquark und mehr.",
+        "Edelsüßer Paprika schmeckt fruchtig-süß und leicht pikant. Damit passt er perfekt zu Gemüse oder Geflügel und verleiht Kräuterquark und Dips ein fruchtiges i-Tüpfelchen. Genießen Sie den vollen Paprikageschmack - ohne feurige Note.",
+        "Bio",
+        "50 Gramm",
+        "47,31€/kg"],
+      "Picture": "../static/Pictures/Lebensb Paprika edelsüß.jpg",
+      "Important": [
+        "Bio",
+        "47,31€/kg"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Paprika edelsüß",
+        "Price": "2,69 €"
+      },
+      "Details": ["Kolumbus brachte nichtsahnend eine Gewürzpaprika mit nach Europa... und heute ist das Paprikapulver ein echtes Must-Have in jeder Küche! Damit hätter er sicher nicht gerechnet...",
+        "Die fruchtig-süße, leicht pikante Note macht Paprika edelsüß vielseitig verwendbar",
+        "60 Gramm",
+        "44,83€/kg"],
+      "Picture": "../static/Pictures/REWE Bio Paprika edelsüß.webp",
+      "Important": [
+        "REWE Bio",
+        "44,83€/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Sonnentor",
+        "Name": "Paprika, edelsüß",
+        "Price": "2,49 €"
+      },
+      "Details": ["Fruchtig-süß und leicht pikant im Geschmack.",
+        "Passt perfekt zu Gemüse oder Geflügel, sowie Kräuterquark und Dips",
+        "Bio",
+        "50 Gramm",
+        "49,80€/kg"],
+      "Picture": "../static/Pictures/Sonnentor Paprika, edelsüß.jpg",
+      "Important": [
+        "Bio",
+        "49,80€/kg"
+      ]
+    }
+  },
+  "11": {
+    "1": {
+      "Info": {
+        "Brand": "Lebensbaum",
+        "Name": "Pfeffer schwarz, ganz",
+        "Price": "2,99 €"
+      },
+      "Details": ["Schwarzer Pfeffer schmeckt fruchtig-scharf.",
+        "Bio",
+        "50 Gramm",
+        "59,80€/kg"],
+      "Picture": "../static/Pictures/Lebensbaum Pfeffer schwarz ganz.jpg",
+      "Important": [
+        "Bio",
+        "59,80€/kg"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Schwarzer Pfeffer, ganz",
+        "Price": "2,69 €"
+      },
+      "Details": ["Schwarzer Bio-Pfeffer mit aromatischer, leicht zitroniger Schärfe.",
+        "70 Gramm",
+        "38,43€/kg"],
+      "Picture": "../static/Pictures/Alnatura Schwarzer Pfeffer ganz.png",
+      "Important": [
+        "Schwarzer Bio-Pfeffer mit aromatischer, leicht zitroniger Schärfe.",
+        "38,43€/kg"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Ostmann",
+        "Name": "Pfeffer schwarz ganz",
+        "Price": "3,29 €"
+      },
+      "Details": ["Schwarzer Pfeffer verleiht allen Speisen und Gerichten eine pikante Note.",
+        "100g",
+        "32,90€/kg"],
+      "Picture": "../static/Pictures/Ostmann Pfeffer schwarz ganz.webp",
+      "Important": [
+        "32,90€/kg"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Pfeffer schwarz",
+        "Price": "2,99 €"
+      },
+      "Details": [" Ganz oder gemahlen passt er zu fast allen herzhaften Speisen und verleiht fruchtig-süßen Gerichten eine pikante Note.",
+        "60 Gramm",
+        "49,83€/kg"],
+      "Picture": "../static/Pictures/REWE Bio Pfeffer schwarz.webp",
+      "Important": [
+        "REWE Bio",
+        "49,83€/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Sonnentor",
+        "Name": "Pfeffer schwarz, ganz",
+        "Price": "2,99 €"
+      },
+      "Details": ["Die Beeren dieser Schlingpflanze werden noch vor der Reife von Hand gepflückt und dann sonnengetrocknet, wodurch sich die schwarze Farbe einstellt.",
+        "Bio",
+        "55 Gramm",
+        "54,36€/kg"],
+      "Picture": "../static/Pictures/Sonnentor Pfeffer schwar ganz.jpg",
+      "Important": [
+        "Bio",
+        "54,36€/kg"
+      ]
+    }
+  },
+  "12": {
+    "1": {
+      "Info": {
+        "Brand": "REWE Beste Wahl",
+        "Name": "Meersalz grob",
+        "Price": "0,99 €"
+      },
+      "Details": ["Grobe Körnung",
+        "500 Gramm",
+        "1,98€/kg"],
+      "Picture": "../static/Pictures/REWE Beste Wahl Meersalz grob.webp",
+      "Important": [
+        "1,98€/kg"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Ostmann",
+        "Name": "Salz grob",
+        "Price": "2,89 €"
+      },
+      "Details": ["Grob",
+        "175 Gramm",
+        "16,51€/kg"],
+      "Picture": "../static/Pictures/Ostmann Salz grob.webp",
+      "Important": [
+        "16,51€/kg"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Fuchs",
+        "Name": "Salz grob",
+        "Price": "2,99 €"
+      },
+      "Details": ["150 Gramm",
+        "19,93€/kg",
+        "Das Salz grob ist ideal für die Salzmühle, aber auch zum Bestreuen von Laugenbrezeln."],
+      "Picture": "../static/Pictures/Fuchs Salz grob.png",
+      "Important": [
+        "19,93€/kg"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Bad Reichenhaller",
+        "Name": "Alpensalz grob",
+        "Price": "2,29 €"
+      },
+      "Details": ["Grobes Alpensalz aus den tiefen der Alpen",
+        "500 Gramm",
+        "4,58€/kg"],
+      "Picture": "../static/Pictures/Bad Reichenhaller Alpensalz grob.jpg",
+      "Important": [
+        "4,58€/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Aquasale",
+        "Name": "Meersalz grobkörnig",
+        "Price": "1,99 €"
+      },
+      "Details": ["Grobe Körnung",
+        "1000 Gramm",
+        "1,99€/kg"],
+      "Picture": "../static/Pictures/Aquasale Meersalz grobkörnig.webp",
+      "Important": [
+        "1,99€/kg"
+      ]
+    }
+  },
+  "13": {
+    "1": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Mais Chips Paprika",
+        "Price": "1,59 €"
+      },
+      "Details": ["Knabberspaß nach mexikanischem Vorbild: Diese knusprigen Bio-Chips werden aus Maismehl gemacht, eine Paprika-Gewürzmischung gibt die pikante Note. Die veganen Chips schmecken pur oder mit einem Dip.",
+        "125 Gramm",
+        "12,72€/kg"],
+      "Picture": "../static/Pictures/Alnatura Mais Chips Paprika.png",
+      "Important": [
+        "Knabberspaß nach mexikanischem Vorbild: Diese knusprigen Bio-Chips werden aus Maismehl gemacht, eine Paprika-Gewürzmischung gibt die pikante Note. Die veganen Chips schmecken pur oder mit einem Dip.",
+        "12,72€/kg"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Chio",
+        "Name": "Tortillas Juicy Salsa",
+        "Price": "2,19 €"
+      },
+      "Details": ["Chio Tortillas Juicy Salsa bringt den Geschmack einer fruchtig-frischen und pikant-leckeren Tomaten-Salsa auf die knusprig gebackenen Tortillas.",
+        "125 Gramm",
+        "17,52€/kg",
+        "Vegan"],
+      "Picture": "../static/Pictures/Chio Tortillas Juicy Salsa.png",
+      "Important": [
+        "17,52€/kg",
+        "Vegan"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Don Enrico",
+        "Name": "Mexicano Torilla Chips Chili",
+        "Price": "1,99 €"
+      },
+      "Details": ["Geröstete Mais-Chips mit Chiliwürzung. Knusprig und würzig-scharf schmecken diese gerösteten Chips zu jeder Gelegenheit - als Snack zwischendurch, zu mexikanischen Eintöpfen oder auch überbacken auf herzhaften Aufläufen.",
+        "175 Gramm",
+        "11,37€/kg",
+        "Vegan"],
+      "Picture": "../static/Pictures/Don Enrico Mexicano Tortilla Chips Chili.png",
+      "Important": [
+        "11,37€/kg",
+        "Vegan"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Jeden Tag",
+        "Name": "Torillas Käse",
+        "Price": "1,29 €"
+      },
+      "Details": ["Maischips mit Käsegeschmack",
+        "Ohne Zusatzstoffe, Geschmacksverstärker und Aromen.",
+        "300 Gramm",
+        "4,30€/kg"],
+      "Picture": "../static/Pictures/Jeden Tag Tortilla Chips Käse.png",
+      "Important": [
+        "4,30€/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Kühne",
+        "Name": "Enjoy Kichererbsen Nachos Paprika",
+        "Price": "1,99 €"
+      },
+      "Details": ["Kichererbsen-Nachos mit gelben und grünen Erbsen sind super knusprig, weil sie locker und luftig aufgepoppt statt frittiert sind. Dadurch haben sie 40% weniger Fett als klassische Tortilla Chips zum Dippen und sind eine gute Protein- und Ballaststoffquelle. Enjoy Kichererbsen Nachos Paprika schmecken lecker würzig und leicht süß nach der roten, knackigen Schote. Echt nice!",
+        "70 Gramm",
+        "28,43€/kg",
+        "Vegan"],
+      "Picture": "../static/Pictures/Kühne Enjoy Kichererbsen Nachos Paprika.png",
+      "Important": [
+        "28,43€/kg",
+        "Vegan"
+      ]
+    }
+  },
+  "14": {
+    "1": {
+      "Info": {
+        "Brand": "Katjes",
+        "Name": "Fruchtgummi Wunderland Sauer",
+        "Price": "0,99 €"
+      },
+      "Details": ["Willkommen im Wunderland. Hier ist der Name Programm: Magisch leckere saure Fruchtgummi-Wunder in 5 Farben und Geschmacksrichtungen: Johannisbeere, Pfirsich, Himbeere, Limette und Blutorange. Natürlich vegan. Katjes –jes –jes –jes!",
+        "200 Gramm",
+        "4,95€/kg"],
+      "Picture": "../static/Pictures/Katjes Wunderland Sauer.webp",
+      "Important": [
+        "Willkommen im Wunderland. Hier ist der Name Programm: Magisch leckere saure Fruchtgummi-Wunder in 5 Farben und Geschmacksrichtungen: Johannisbeere, Pfirsich, Himbeere, Limette und Blutorange. Natürlich vegan. Katjes –jes –jes –jes!",
+        "4,95€/kg"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "HARIBO",
+        "Name": "Fruchtgummi Pasta Frutta",
+        "Price": "0,99 €"
+      },
+      "Details": ["Unsere allseits beliebte Pasta servieren wir gern fruchtig mit dem Geschmack von Erdbeere, Apfel, Zitrone, Orange und garniert mit einer sauren Kandierung.",
+        "175 Gramm",
+        "5,66€/kg",
+        "Vegan"],
+      "Picture": "../static/Pictures/HARIBO Pasta Frutta.webp",
+      "Important": [
+        "5,66€/kg",
+        "Vegan"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Hitschler",
+        "Name": "Fruchtgummi Bunte Drachenzungen Sauer",
+        "Price": "0,99 €"
+      },
+      "Details": ["Unsere drachenstark-sauren Drachenzungen sind lange, bunte Fruchtgummi-Bänder und es gibt sie in den vier sauer-bezuckerten Geschmacksrichtungen Erdbeere, Apfel, Pfirsich und Kirsche. ",
+        "125 Gramm",
+        "7,92€/kg",
+        "Vegan"],
+      "Picture": "../static/Pictures/Hitschler Bunte Drachenzungen Sauer.webp",
+      "Important": [
+        "7,92€/kg",
+        "Vegan"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "HARIBO",
+        "Name": "Pommes Sauer",
+        "Price": "0,99 €"
+      },
+      "Details": ["Pommes in fünf Geschmacksrichtungen? Ja, gibt es: HARIBO Saure Pommes sind nicht nur sauer, sondern schmecken auch nach Ananas, Grapefruit, Pfirsich, Saftorange und Zitrone. Die Extraportion Spaß für Klein und Groß. Lecker fruchtig – auch ohne Ketchup.",
+        "200 Gramm",
+        "4,95€/kg"],
+      "Picture": "../static/Pictures/HARIBO Saure Pommes.webp",
+      "Important": [
+        "4,95€/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Trolli",
+        "Name": "Bizzl Mix",
+        "Price": "0,99 €"
+      },
+      "Details": ["Eine kunterbunte Mischung aus total sauren Fruchtgummis in den prickelnd-frischen Geschmacksvariationen Zitrone, Zitrone/Limette, Grapefruit, Orange, Kirsche und rote Grütze. Bring ein bisschen Bizzl-Spaß in dein Leben!",
+        "200 Gramm",
+        "4,95€/kg",
+        "Vegan"],
+      "Picture": "../static/Pictures/Trolli Bizzl Mix.webp",
+      "Important": [
+        "4,95€/kg",
+        "Vegan"
+      ]
+    }
+  },
+  "15": {
+    "1": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Edelvollmilch-Schokolade",
+        "Price": "1,29 €"
+      },
+      "Details": ["Die REWE Bio Edelvollmilch-Schokolade wird aus edlem Kakao hergestellt. Durch die schonende Verarbeitung und die hochwertigen Bio-Zutaten zergeht die REWE Bio Edelvollmilch-Schokolade langsam auf der Zunge.",
+        "100 Gramm",
+        "12,90€/kg",
+        "Kann Spuren von Haselnüssen, Mandeln und Soja enthalten."],
+      "Picture": "../static/Pictures/REWE Bio Edelvollmilch-Schokolade.webp",
+      "Important": [
+        "12,90€/kg"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Edelbitter-Schokolade 60% Cacao",
+        "Price": "1,29 €"
+      },
+      "Details": ["Die REWE Bio Edelbitter-Schokolade wird aus frischem Kakao ohne zugesetzte Aromastoffe hergestellt. Der natürliche Geschmack stammt ausschließlich aus dem Kakao. Durch die schonende Verarbeitung und die hochwertigen Bio-Zutaten zergeht die REWE Bio Edelbitter-Schokolade langsam auf der Zunge.",
+        "100 Gramm",
+        "12,90€/kg",
+        "Kann Spuren von Haselnüssen, Mandeln, Milch und Soja enthalten.",
+        "Vegan"],
+      "Picture": "../static/Pictures/REWE Bio Edelbitter-Schokolade 60 Cacao.webp",
+      "Important": [
+        "12,90€/kg",
+        "Vegan"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Edelbitter-Schokolade",
+        "Price": "1,29 €"
+      },
+      "Details": ["Die REWE Bio Edelbitter-Schokolade wird aus frischem Kakao ohne zugesetzte Aromastoffe hergestellt. Der natürliche Geschmack stammt ausschließlich aus dem Kakao. Durch die schonende Verarbeitung und die hochwertigen Bio-Zutaten zergeht die REWE Bio Edelbitter-Schokolade langsam auf der Zunge.",
+        "100 Gramm",
+        "12,90€/kg",
+        "Kann Spuren von Milch, Haselnüssen, Mandeln und Soja enthalten.",
+        "Vegan"],
+      "Picture": "../static/Pictures/REWE Bio Edel-Bitter Schokolade.webp",
+      "Important": [
+        "12,90€/kg",
+        "Vegan"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "REWE Bio + vegan",
+        "Name": "Schokolade Nougat & Crisp",
+        "Price": "1,79 €"
+      },
+      "Details": ["Bio Nougat mit Reissiruppulver und Reiscrispies",
+        "100 Gramm",
+        "17,90€/kg",
+        "Kann Spuren von Pistazien, Pekannüssen und Milch enthalten."],
+      "Picture": "../static/Pictures/REWE Bio + vegan Schokolade Nougat & Crisp.webp",
+      "Important": [
+        "REWE Bio + vegan",
+        "17,90€/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "REWE Bio + vegan",
+        "Name": "Schokolade Ganze Haselnuss",
+        "Price": "1,79 €"
+      },
+      "Details": ["Bio Schokoladenkuvertüre mit ganzen, gerösteten Haselnüssen 20 % und getrocknetem Reissirup",
+        "100 Gramm",
+        "17,90€/kg",
+        "Kann Spuren von Pistazien, Mandeln, Pekannüssen, Milch und Gluten enthalten."],
+      "Picture": "../static/Pictures/REWE Bio + vegan Schokolade Ganze Haselnuss.webp",
+      "Important": [
+        "REWE Bio + vegan",
+        "17,90€/kg"
+      ]
+    }
+  },
+  "16": {
+    "1": {
+      "Info": {
+        "Brand": "Veganz",
+        "Name": "Doppelkeks Kakao",
+        "Price": "3,19 €"
+      },
+      "Details": ["Sobald du merkst, dass dir etwas mal wieder so richtig auf den Keks geht - zögere nicht und greif gleich zu dieser Knusperei. Der Bio Doppelkeks Kakao macht dich mit seiner cremigen Füllung zwischen zwei Kekstalern im Nu wieder happy.",
+        "Bio",
+        "Vegetarisch",
+        "Vegan",
+        "400 Gramm",
+        "7,98 €/kg"],
+      "Picture": "../static/Pictures/Veganz Doppelkeks Kakao.png",
+      "Important": [
+        "Bio",
+        "Vegan",
+        "7,98 €/kg"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Dinkel Doppelkeks",
+        "Price": "1,99 €"
+      },
+      "Details": ["Bio Dinkel-Doppelkeks mit Kakaocremefüllung 30 %",
+        "Vegetarisch",
+        "Vegan",
+        "330 Gramm",
+        "6,03 €/kg"],
+      "Picture": "../static/Pictures/REWE Bio Dinkel Doppelkeks.webp",
+      "Important": [
+        "Bio Dinkel-Doppelkeks mit Kakaocremefüllung 30 %",
+        "Vegan",
+        "6,03 €/kg"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Prinzen Rolle",
+        "Name": "Doppelkekse Kakao",
+        "Price": "1,69 €"
+      },
+      "Details": ["Prinzen Rolle ist der Klassiker unter den Doppelkeksen: Zwei knusprig gebackene Kekse und die leckere Schokoladencreme stehen für Genuss und viele leckere Momente. Mit dem Wiederverschluss bleiben die Kekse länger knusprig: Lasche am Boden der Packung aufziehen, Keks bequem entnehmen und Lasche wieder schließen. „Einfach auf, einfach raus, einfach zu“.",
+        "400 Gramm",
+        "4,23 €/kg"],
+      "Picture": "../static/Pictures/Prinzen Rolle Doppelkekse Kakao.webp",
+      "Important": [
+        "4,23 €/kg"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Hammermühle",
+        "Name": "Doppelkekse",
+        "Price": "3,19 €"
+      },
+      "Details": ["Zwei knusprige Kekse mit einer herrlich schokoladigen Creme - der passende Snack für Groß und Klein.",
+        "Ohne Zusatz von Palmöl.",
+        "Vegetarisch",
+        "Vegan",
+        "Glutenfrei",
+        "225 Gramm",
+        "14,18 €/kg"],
+      "Picture": "../static/Pictures/Hammermühle Doppelkekse.png",
+      "Important": [
+        "Vegan",
+        "14,18 €/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Dinkel Doppel Keks",
+        "Price": "1,99 €"
+      },
+      "Details": ["Bio-Qualität",
+        "knusprige Dinkelkekse mit aromatisch-süßer Kakaocremefüllung",
+        "330 Gramm",
+        "6,03 €/kg"],
+      "Picture": "../static/Pictures/Bio Dinkel Doppelkekse, Vollmilch.jpg",
+      "Important": [
+        "Bio-Qualität",
+        "6,03 €/kg"
+      ]
+    }
+  },
+  "17": {
+    "1": {
+      "Info": {
+        "Brand": "Diamant",
+        "Name": "Feinster Zucker",
+        "Price": "1,39 €"
+      },
+      "Details": ["Diamant Feinster Zucker ist mit seinen gleichmäßigen, besonders kleinen Kristallen sehr schnell löslich und lässt sich leicht verrühren.",
+        "1000 Gramm",
+        "1,39 €/kg"],
+      "Picture": "../static/Pictures/Diamant Feinster Zucker.png",
+      "Important": [
+        "1,39 €/kg"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Gut & Günstig",
+        "Name": "Raffinade Zucker",
+        "Price": "0,99 €"
+      },
+      "Details": ["leicht löslich, feine Körnung",
+        "1000 Gramm",
+        "0,99 €/kg"],
+      "Picture": "../static/Pictures/G&G Raffinade-Zucker.webp",
+      "Important": [
+        "0,99 €/kg"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Jeden Tag",
+        "Name": "Zucker",
+        "Price": "1,29 €"
+      },
+      "Details": ["Zucker-Raffinade, feiner Kristallzucker",
+        "1000 Gramm",
+        "1,29 €/kg"],
+      "Picture": "../static/Pictures/Jeden Tag Zucker.png",
+      "Important": [
+        "1,29 €/kg"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Wüstengold",
+        "Name": "Feiner Zucker",
+        "Price": "1,39 €"
+      },
+      "Details": ["Feiner Zucker ist durch seine feinen Zuckerkristalle besonders leicht löslich.",
+        "1000 Gramm",
+        "1,39 €/kg"],
+      "Picture": "../static/Pictures/Küstengold Feiner Zucker.png",
+      "Important": [
+        "1,39 €/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Südzucker",
+        "Name": "Raffinade fein",
+        "Price": "1,29 €"
+      },
+      "Details": ["Für feine Kuchen, zartes Gebäck, cremige Desserts und kalte Getränke.",
+        "1000 Gramm",
+        "1,29 €/kg"],
+      "Picture": "../static/Pictures/Südzucker Raffinade fein.webp",
+      "Important": [
+        "1,29 €/kg"
+      ]
+    }
+  },
+  "18": {
+    "1": {
+      "Info": {
+        "Brand": "Weltgold",
+        "Name": "Weizenmehl",
+        "Price": "0,99 €"
+      },
+      "Details": ["Das Weltgold Weizenmehl Type 405 ist vielseitig zu verwenden: für süßes und salziges Gebäck, Kuchen sowie helle Brote und Brötchen.",
+        "1000 Gramm",
+        "0,99 €/kg"],
+      "Picture": "../static/Pictures/Weltgold Weizenmehl T405 1KG.jpg",
+      "Important": [
+        "0,99 €/kg"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Goldmarie",
+        "Name": "Weizenmehl",
+        "Price": "1,19 €"
+      },
+      "Details": ["Wochenmarkt ist jetzt täglich - mit hochwertigen Lebensmitteln von Goldmarie! Entdecken Sie ein frisches, natürliches Lebensmittel hoher Qualität. Die Verarbeitung des Weizenmehls erfolgt mit besten Zutaten und größter Sorgfalt von ausgewählten Herstellern. Goldmarie - so gut wie vom Wochenmarkt.",
+        "1000 Gramm",
+        "1,19 €/kg"],
+      "Picture": "../static/Pictures/Goldmarie Weizenmehl Type 550.png",
+      "Important": [
+        "1,19 €/kg"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Edeka Bio",
+        "Name": "Weizenmehl",
+        "Price": "1,09 €"
+      },
+      "Details": ["Das aromatische EDEKA BIO Weizenmehl ist von besonders lockerer Natur und lässt sich sehr gleichmäßig verbacken. Es eignet sich insbesondere für ein feines Gebäck und luftige Kuchen.",
+        "1000 Gramm",
+        "1,09 €/kg"],
+      "Picture": "../static/Pictures/EDEKA Bio Weizenmehl Type 550.jpg",
+      "Important": [
+        "Das aromatische EDEKA BIO Weizenmehl ist von besonders lockerer Natur und lässt sich sehr gleichmäßig verbacken. Es eignet sich insbesondere für ein feines Gebäck und luftige Kuchen.",
+        "1,09 €/kg"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Campo Verde Demeter",
+        "Name": "Weizenmehl",
+        "Price": "2,49 €"
+      },
+      "Details": ["Das Bio Weizenmehl Type 550 wird aus gesundem, intensiv gereinigtem Weizen hergestellt. Pro 100g sind 550mg Mineralstoffe enthalten. Das Weizenmehl Type 550 eignet sich bestens für Brot und Brötchen, aber auch für Pizza- und süßen Hefeteig sowie typisch schwäbische Spätzle.",
+        "1000 Gramm",
+        "2,49 €/kg"],
+      "Picture": "../static/Pictures/Campo Verde Demeter Weizenmehl Type 550.png",
+      "Important": [
+        "Das Bio Weizenmehl Type 550 wird aus gesundem, intensiv gereinigtem Weizen hergestellt. Pro 100g sind 550mg Mineralstoffe enthalten. Das Weizenmehl Type 550 eignet sich bestens für Brot und Brötchen, aber auch für Pizza- und süßen Hefeteig sowie typisch schwäbische Spätzle.",
+        "2,49 €/kg"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Bio Weizenmehl",
+        "Price": "1,29 €"
+      },
+      "Details": ["Ein helles, fein ausgemahlenes Bio-Mehl mit hervorragenden Backeigenschaften. Der Weizen stammt aus Bioland-Anbau. Mit dem Kauf dieses Produktes unterstützen Sie die Alnatura Bio-Bauern-Initiative für mehr Bio-Landbau in Deutschland.",
+        "1000 Gramm",
+        "1,29 €/kg"],
+      "Picture": "../static/Pictures/Alnatura Bio Weizenmehl Type 550 1KG.jpg",
+      "Important": [
+        "Ein helles, fein ausgemahlenes Bio-Mehl mit hervorragenden Backeigenschaften. Der Weizen stammt aus Bioland-Anbau. Mit dem Kauf dieses Produktes unterstützen Sie die Alnatura Bio-Bauern-Initiative für mehr Bio-Landbau in Deutschland.",
+        "1,29 €/kg"
+      ]
+    }
+  },
+  "19": {
+    "1": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Natives Olivenöl",
+        "Price": "4,79 €"
+      },
+      "Details": ["Bio Natives Olivenöl extra - erste Güteklasse - direkt aus Oliven ausschließlich mit mechanischen Verfahren gewonnen.",
+        "750 ml",
+        "6,39 €/l"],
+      "Picture": "../static/Pictures/REWE Bio Natives Olivenöl.webp",
+      "Important": [
+        "Bio Natives Olivenöl extra - erste Güteklasse - direkt aus Oliven ausschließlich mit mechanischen Verfahren gewonnen.",
+        "6,39 €/l"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Oilivia Greka",
+        "Name": "Bio Natives Olivenöl Extra",
+        "Price": "4,79 €"
+      },
+      "Details": ["Ausgewogen würzig, fein pfefferig.",
+        "Naturbelassen und ein gesunder Genuss.",
+        "250 ml",
+        "19,16 €/kg"],
+      "Picture": "../static/Pictures/Oiliva Greka Bio Natives Olivenöl Extra.png",
+      "Important": [
+        "Bio Natives Olivenöl Extra",
+        "19,16 €/kg"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Natives Olivenöl naturtrüb",
+        "Price": "5,99 €"
+      },
+      "Details": ["Bio Natives Olivenöl extra - erste Güteklasse - direkt aus Oliven ausschließlich mit mechanischen Verfahren gewonnen.",
+        "500 ml",
+        "11,98 €/l"],
+      "Picture": "../static/Pictures/REWE Bio Natives Olivenöl naturtrüb.webp",
+      "Important": [
+        "Bio Natives Olivenöl extra - erste Güteklasse - direkt aus Oliven ausschließlich mit mechanischen Verfahren gewonnen.",
+        "11,98 €/l"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "NaturWert",
+        "Name": "Bio Natives Olivenöl Extra kaltgepresst",
+        "Price": "4,49 €"
+      },
+      "Details": ["Natives Olivenöl Extra Kaltgepresst. Vorios Mylopotamos Rethymnis Kritis P.D.O.",
+        "500 ml",
+        "8,98 €/l"],
+      "Picture": "../static/Pictures/NaturWert Bio Natives Olivenöl Extra.png",
+      "Important": [
+        "Bio Natives Olivenöl Extra kaltgepresst",
+        "8,98 €/l"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "La Signoria",
+        "Name": "Natives Olivenöl extra",
+        "Price": "4,19 €"
+      },
+      "Details": ["Erste Güteklasse - direkt aus Oliven, ausschließlich mit mechanischen Verfahren gewonnen.",
+        "750 ml",
+        "4,19 €/l"],
+      "Picture": "../static/Pictures/La Signoria Natives Olivenöl extra.png",
+      "Important": [
+        "4,19 €/l"
+      ]
+    }
+  },
+  "20": {
+    "1": {
+      "Info": {
+        "Brand": "NaturWert",
+        "Name": "Bio Sonnenblumenöl kaltgepresst",
+        "Price": "2,19 €"
+      },
+      "Details": ["Natives Sonnenblumenöl ist kaltgepresst und fein nussig im Geschmack. Mit seiner fruchtigen, fein nussigen Note ideal für Salate und Rohkost, aber auch zum Kochen und Dünsten.",
+        "500 ml",
+        "4,38 €/l"],
+      "Picture": "../static/Pictures/NaturWert Bio Sonnenblumenöl kaltgepresst.png",
+      "Important": [
+        "Bio Sonnenblumenöl kaltgepresst",
+        "4,38 €/l"
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "NaturWert",
+        "Name": "Bio Bratöl kaltgepresst",
+        "Price": "2,79 €"
+      },
+      "Details": ["Bratöl aus Sonnenblumenöl mit hohem Ölsäuregehalt, kaltgepresst und mild gedämpft. Hervorragend geeignet zum Braten, Backen und Frittieren.",
+        "500 ml",
+        "5,58 €/l"],
+      "Picture": "../static/Pictures/NaturWert Bio Bratöl kaltgepresst.png",
+      "Important": [
+        "Bio Bratöl kaltgepresst",
+        "5,58 €/l"
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Herr Edelmann",
+        "Name": "Sonnenblumenöl",
+        "Price": "4,99 €"
+      },
+      "Details": ["Eignet sich hervorragend zum Kochen und Backen, sowie zu Salaten und Rohkost.",
+        "1000 ml",
+        "4,99 €/l"],
+      "Picture": "../static/Pictures/Herr Edelmann Sonnenblumenöl.png",
+      "Important": [
+        "4,99 €/l"
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Sonnenblumenöl nativ",
+        "Price": "2,39 €"
+      },
+      "Details": ["Natives Bio-Sonnenblumenöl aus erster kalter Pressung. Mit seinem saatig-nussigen Geschmack verfeinert es Salatdressings und eignet sich, schonend erhitzt, auch zum Kochen und Dünsten.",
+        "500 ml",
+        "4,78 €/l"],
+      "Picture": "../static/Pictures/Alnatura Sonnenblumenöl nativ.png",
+      "Important": [
+        "Natives Bio-Sonnenblumenöl aus erster kalter Pressung. Mit seinem saatig-nussigen Geschmack verfeinert es Salatdressings und eignet sich, schonend erhitzt, auch zum Kochen und Dünsten.",
+        "4,78 €/l"
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Bratöl",
+        "Price": "4,29 €"
+      },
+      "Details": ["Hoch erhitzbares Bio-Bratöl aus ölsäurereichen Sonnenblumen. Perfekt zum Braten, Backen und Frittieren. Mit Wasserdampf desodoriert, hat daher einen besonders milden, fast neutralen Geschmack.",
+        "750 ml",
+        "5,72 €/l"],
+      "Picture": "../static/Pictures/Alnatura Bratöl.png",
+      "Important": [
+        "5,72 €/l"
+      ]
+    }
+  },
+  "21": {
+    "1": {
+      "Info": {
+        "Brand": "Zewa",
+        "Name": "Wisch & Weg Original",
+        "Price": "2,89 €"
+      },
+      "Details": ["Das neue Zewa Wisch&Weg: Die innovative Power-X-Struktur hält die Küchenrolle stark und reißfest, während ihre weichen Kissen besonders gut absorbieren. So können die Haushaltstücher durch die verbesserte Wabentechnologie Flüssigkeit aufnehmen - ganz ohne zu reißen. Es eignet sich als perfekter Helfer für den Küchenalltag, ist im Haushalt vielseitig einsetzbar und das Original überzeugt auch optisch mit der Markenbordüre.", "Mit den Haushaltstüchern von Zewa Wisch&Weg lässt sich im Handumdrehen jeder Schmutz und jeder Fleck entfernen – ob auf der Kleidung, der Küchenablage oder dem Boden. Das robuste Papier eignet sich zum Aufwischen, Schrubben, Polieren und Aufsaugen, ohne dabei Fussel zu hinterlassen.","4 x 45 Blatt","16,06€/1000 St"],
+      "Picture": "../static/Pictures/Zewa Wisch & Weg Original.png",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Zewa",
+        "Name": "Küchenrolle Wisch & Weg Leicht",
+        "Price": "2,39 €"
+      },
+      "Details": ["Das nachhaltigste Zewa Wisch&Weg aller Zeiten – spart 30% Fasern für weniger Verbrauch* - und ein Blatt kann ausreichen.","Zewa Wisch&Weg Leicht spart im Vergleich zu konventionellen, 3-lagigen Haushaltstüchern 30% Fasern. So hilft es den Verbrauch zu verringern und Müll zu minimieren. Dank der handlichen Größe und der leichteren Qualität im Vergleich zu Zewa Wisch&Weg Original erweist es sich als perfekter Helfer bei den verschiedensten täglichen Herausforderungen des Haushalts - und ein Blatt kann ausreichen. Dabei ist Zewa Wisch&Weg Leicht sowohl beim Aufwischen als auch Wegwischen saugstark und reißfest, wodurch Flüssigkeiten und Schmutz effektiv aufgenommen werden. Die Verpackung ist zu 100% recycelbar und besteht zu mehr als 30% aus bereits recyceltem Plastik. Dadurch wird der CO2-Dußabdruck der Verpackung reduziert. Die Tücher bleiben biologisch abbaubar. So sorgt Zewa Wisch&Weg für weniger Plastikmüll und mehr Wohlbefinden.","4 x 48 Blatt","12,45€/1000 St"],
+      "Picture": "../static/Pictures/Zewa Küchenrolle Wisch & Weg Leicht.png",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Regina",
+        "Name": "Küchenrollen mit Herzen",
+        "Price": "2,99 €"
+      },
+      "Details": ["Haushaltstücher 3-lagig, 100% Zellstoff und 4 x 45 Blatt. Alleskönner: Aufwischen, Putzen, Reinigen, Trockentupfen, Dekorieren.","4 x 43 Blatt", "17,38€/1000 St"],
+      "Picture": "../static/Pictures/Regina Küchenrollen.png",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Mach mit",
+        "Name": "Küchentücher 3-lagig",
+        "Price": "2,79 €"
+      },
+      "Details": ["Mit den Mach mit... Küchentüchern aus 100% Recyclingfasern können Sie kleine Missgeschicke schnell verschwinden lassen und dies mit gutem Gewissen der Umwelt gegenüber. Zum einen leisten Sie durch die Verwendung von Recyclingpapieren gegenüber Frischfaserprodukten einen positiven Beitrag zur Umwelt, zum anderen können Sie Mach mit... Küchentücher durch die Sparblatt-Funktion genau in der Menge verwenden, die Sie gerade benötigen ohne etwas zu verschwenden. Die Küchentücher sind mit dem Blauen Engel ausgezeichnet und tragen das WWF Logo.","4 x 90 Blatt", "7,75€/1000 St"],
+      "Picture": "../static/Pictures/Mach Mit Küchentücher.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Dick & Durstig",
+        "Name": "Küchenrolle 2-lagig",
+        "Price": "2,49 €"
+      },
+      "Details": ["Haushalttücher mit Dekor - für immer und überall.","4 x 45 Blatt","13,83€/1000 St"],
+      "Picture": "../static/Pictures/Dick & Durstig Küchenrolle.png",
+      "Important": [
+
+      ]
+    }
+  },
+  "22": {
+    "1": {
+      "Info": {
+        "Brand": "Zewa",
+        "Name": "samtig Toilettenpapier 3-lagig",
+        "Price": "3,79 €"
+      },
+      "Details": ["Das Zewa samtig WC Papier bietet dank seiner innovativen Kombilagen-Qualität anspruchsvolle Reinigung und Weichheit für die ganze Familie","Das 3-lagige Hybridpapier besteht aus einer Lage konventionellem Tissue und zwei Lagen in spezieller TAD-Qualität und ist somit besonders reißfest, zuverlässig und sicher","Das Kombilagen-System des Toilettenpapiers ermöglicht eine besonders komfortable Reinigung und hinterlässt ein samtig weiches Gefühl auf der Haut","Angenehm weiches Toilettenpapier mit hellblau geprägtem Federmuster - das Toilettenpapier von Zewa bietet Qualität und Komfort für jeden Tag und die gesamte Familie","8x140 Blatt","3,38€/1000 St"],
+      "Picture": "../static/Pictures/Zewa Samtig Toilettenpapier 3-lagig 8x140 Blat.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Zewa",
+        "Name": "Bewährt Toilettenpapier 3-lagig",
+        "Price": "3,29 €"
+      },
+      "Details": ["Wir alle fühlen uns wohler, wenn wir uns den ganzen Tag frisch und sauber fühlen. Deshalb haben wir unser Zewa bewährt Toilettenpapier so entwickelt, dass es extra saugfähig ist, um eine noch effektivere Reinigung für dich und deine Familie zu bieten.","Die mittlere Lage ist jetzt dicker und stärker und somit extra saugfähig und reißfest. Die beiden äußeren Lagen hingegen sind noch genauso weich wie zuvor für maximalen Komfort. Somit bietet das qualitativ hochwertiges Zewa bewährt nun die perfekte Kombination aus Weichheit, Stärke und Saugfähigkeit – perfekt für die ganze Familie.Das reißfeste Toilettenpapier ist in zartem Weiß mit dezenter Prägung erhältlich.","Das Toilettenpapier Zewa bewährt bietet zuverlässige Markenqualität für Groß und Klein. Bei der Verpackung achten wir darauf, dass die Umwelt geschont wird. Die Verpackung ist zu 100% recycelbar und besteht aus über 30 Prozent recyceltem Plastik.","8 x 150 Blatt","2,74€/1000 St"],
+      "Picture": "../static/Pictures/Zewa Bewährt Toilettenpapier 3-lagig 8x150 Blatt.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Danke",
+        "Name": "Toilettenpapier 3-lagig",
+        "Price": "3,59 €"
+      },
+      "Details": ["Das DANKE WC Papier besteht zu 100% aus Recyclingfasern und ist besonders umwelt- und hautfreundlich","Das 3-lagige Klopapier enthält weder Farbzusätze noch Bleichmittel und ist damit auch ideal für Allergiker geeignet","Das weiche Klopapier ist mit dem Umweltzeichen \"Blauer Engel\" für besondere Sicherheit und Unbedenklichkeit ausgezeichnet", "Umweltfreundliches DANKE Toilettenpapier mit weicher Struktur bietet Qualität und Komfort für jeden Tag und die gesamte Familie","8x150 Blatt", "2,99€/1000 st"],
+      "Picture": "../static/Pictures/Danke Toilettenpapier 3-lagig 8x150 Blatt.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Mach mit",
+        "Name": "Toilettenpapier 3-lagig",
+        "Price": "3,49 €"
+      },
+      "Details": ["Mit Mach mit... Toilettenpapieren leisten Sie täglich einen kleinen Beitrag zum Umweltschutz ohne auf Ihren gewohnten Komfort verzichten zu mössen. Die Toilettenpapiere sind mit dem Umweltzeichen Blauer Engel ausgezeichnet und tragen das WWF Logo.","8x150 Blatt", "2,191€/1000 St"],
+      "Picture": "../static/Pictures/Mach mit Toilettenpapier 3lagig.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Hakle",
+        "Name": "Klassisch Weiß Toilettenpapier 3-lagig",
+        "Price": "3,49 €"
+      },
+      "Details": ["Toilettenpapier mit einzigartigen Wohlfühlkissen. Angenehm weich, sicher und saugfähig. Lage um Lage hochwertig Hakle.","8 x 150 Blatt", "2,91€/1000 St"],
+      "Picture": "../static/Pictures/Hakle Klassisch weiß Toilettenpapier 3-lagig.png",
+      "Important": [
+
+      ]
+    }
+  },
+  "23": {
+    "1": {
+      "Info": {
+        "Brand": "Mach mit",
+        "Name": "Taschentücher Box",
+        "Price": "1,49 €"
+      },
+      "Details": ["Die starken Helfer wenn die Nase kribbelt. Die 4-lagigen Recycling-Taschentücher von Mach mit... bestehen aus 100% hygienischen Recyclingfasern und bestechen durch den gewohnten Komfort in Weichheit & Reißfestigkeit. Als kleiner Hingucker für Zuhause nun auch in der praktischen Box. Ausgezeichnet sind die Recycling-Taschentücher mit dem Umweltzeichen \"Blauer Engel\" und tragen das WWF-Logo.","100 Stück", "1,49/100 St"],
+      "Picture": "../static/Pictures/Mach mit Taschentücher Box 4-lagig.png",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "REWE Beste Wahl",
+        "Name": "Taschentücher-Box",
+        "Price": "1,15 €"
+      },
+      "Details": ["Die 4-lagigen REWE Taschentücher in der praktischen Zupfbox sind besonders reißfest und weich.","100 Stück", "1,15 €/100 St"],
+      "Picture": "../static/Pictures/REWE Beste Wahl Taschentücher-Box.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "REWE Beste Wahl",
+        "Name": "ECO Recycling Taschentücher Box",
+        "Price": "1,25 €"
+      },
+      "Details": ["Recycling Taschentücher Box 4-lagig", "100 Stück", "1,25 €/100 St"],
+      "Picture": "../static/Pictures/REWE Beste Wahl Eco Recycling Taschentücher Box.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Tempo",
+        "Name": "Bamboo ECO Taschentücher Box",
+        "Price": "2,19 €"
+      },
+      "Details": ["Ob bei Schnupfen oder bei kleinen Missgeschicken im Haushalt: Die Papiertücher aus der praktischen und recycelbaren Taschentuchbox sind nur einen Handgriff entfernt.","Tempo Bamboo ECO Taschentücher bestehen zu 25% aus Bambusfasern - und zu 100% aus Fasern natürlichen Ursprungs. Dabei sind die 3-lagigen Papiertücher nicht nur weich und stark, sondern auch genauso dick wie 4-lagige Papiertaschentücher. Das Tuch in verlässlicher Tempo-Qualität ist waschmaschinenfest.","90 Stück", "2,43 €/100 St"],
+      "Picture": "../static/Pictures/Tempo Bamboo ECO Taschentücher Box.webp",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Tempo",
+        "Name": "Taschentücher Original Box",
+        "Price": "2,19 €"
+      },
+      "Details": ["Dank einer einzigartigen Kombination aus Weichheit und Stärke bist du mit unseren Tempo Taschentüchern für jede Situation gewappnet. Sie sind in der Tat so stark, dass sie waschmaschinenfest sind. Die Tempo Boxen haben eine Papieröffnung statt Plastik und sind recycelbar. Sie sind in sechs verschiedenen trendigen Designs erhältlich und ein echter Hingucker für jeden deiner Wohnräume. Von fließenden Nasen über Make-up-Flecken bis hin zu Allergien und gegen verschütteten Kaffee, es gibt so viele kleine Missgeschicke, die im Haus oder Büro passieren können. Durch die Quick&Easy Öffnung ist das Tempo Taschentuch immer schnell zur Hand.","100 Stück", "2,19 €/100 St"],
+      "Picture": "../static/Pictures/Tempo Taschentücher Original Box 4-lagig.webp",
+      "Important": [
+
+      ]
+    }
+  },
+  "24": {
+    "1": {
+      "Info": {
+        "Brand": "Jeden Tag",
+        "Name": "Taschentücher 4 lagig",
+        "Price": "1,79 €"
+      },
+      "Details": ["Jeden Tag Taschentücher 15 x 10 Stück Packung, 4-lagig, aus Zellstoff.","25 x 10 St.", "1,19 €/100 St"],
+      "Picture": "../static/Pictures/Jeden Tag Taschentücher 4 -lagig.png",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Kleenex",
+        "Name": "Täglich sicher Taschentücher",
+        "Price": "2,19 €"
+      },
+      "Details": ["Kleenex Täglich Sicher Taschentücher. Suchen Sie nach Taschentüchern für die ganze Familie? Dann wählen Sie Kleenex Täglich Sicher. Die Tücher sind wunderbar weich, dick und saugfähig und bieten unschlagbare Schutzpflege für jeden Tag.","15 x 9 St.", "1,62 €/100 St"],
+      "Picture": "../static/Pictures/Kleenex Täglich Sicher Taschentücher.png",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Mach mit",
+        "Name": "Taschentücher",
+        "Price": "1,99 €"
+      },
+      "Details": ["Die starken Helfer wenn die Nase kribbelt. Die 4-lagigen Recycling-Taschentücher von Mach mit... bestehen aus 100% hygienischen Recyclingfasern und bestechen durch den gewohnten Komfort in Weichheit & Reißfestigkeit. Ausgezeichnet sind die Recycling-Taschentücher mit dem Umweltzeichen \"Blauer Engel\" und tragen das WWF-Logo.","15 x 10 St.", "1,33 €/100 St"],
+      "Picture": "../static/Pictures/Mach mit Taschentücher.png",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Regina Softis",
+        "Name": "Taschentücher super-soft",
+        "Price": "2,19 €"
+      },
+      "Details": ["Super-softe Papiertaschentücher. 4lagig. Softer, dicker, stärker. Hautfreundlich, dermatologisch getestet.","15 x 9 St.", "1,46 €/100 St"],
+      "Picture": "../static/Pictures/Regina Softis Taschentücher super-soft.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Tempo",
+        "Name": "Taschentücher",
+        "Price": "2,29 €"
+      },
+      "Details": ["Weicher denn je, stark wie immer. Mit Soft-Komfort-Formel. Vierlagig.","15 x 10 St.", "1,53 €/100 St"],
+      "Picture": "../static/Pictures/Tempo Taschentücher.png",
+      "Important": [
+
+      ]
+    }
+  },
+  "25": {
+    "1": {
+      "Info": {
+        "Brand": "ALVERDE",
+        "Name": "Seifenstück naturschön Zitrone",
+        "Price": "2,45 €"
+      },
+      "Details": ["Die handgemachte naturschön Stückseife Zitrone mit Bio-Glycerin von alverde NATURKOSMETIK ist eine zart nach Zitrone duftende, feuchtigkeitsspendende Handseife. Darüber hinaus schützt sie die Haut vor Austrocknung und Irritationen. Rezeptur ohne Mikroplastik und wasserlösliche rein synthetische Polymere.","Klimaneutrales Produkt inklusive Verpackung nachträglich CO2-kompensiert durch Unterstützung eines Klimaschutzprojektes.","Zart nach Zitrone duftend","Verleiht einen zarten und weichen Teint","Feuchtigkeitsspendend","Ohne Silikone und ohne Parabene","Vegan","Naturkosmetik, Ohne Alkohol, Ohne Konservierungsstoffe, Ohne Nanopartikel, Ohne Parabene, Sensitive Pflege, Vegan", "100 Gramm", "24,50 €/kg"],
+      "Picture": "../static/Pictures/alverde NATURKOSMETIK Seifenstück naturschön Zitrone.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Balea",
+        "Name": "Seifenstück Sensitive mit Aloe-Vera-Extrakt",
+        "Price": "0,50 €"
+      },
+      "Details": ["Reinigt Ihre Hände sanft und pflegt sie spürbar – jeden Tag: Die Balea Cremeseife Sensitive mit Aloe Vera Extrakt unterstützt mit einer sanften Pflegeformel und den sorgfältig ausgewählten Inhaltsstoffen die natürliche Feuchtigkeitsbalance Ihrer Haut. Rezeptur ohne Mikroplastik und wasserlösliche rein synthetische Polymere.","Reinigt Hände sanft und pflegt sie spürbar","Sanfte Pflegeformel mit Aloe Vera Extrakt","Sorgfältig ausgewählte Inhaltsstoffe","150 Gramm", "3,33 €/kg"],
+      "Picture": "../static/Pictures/Balea Seifenstück sensitive mit Aloe-Vera-Extrakt.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Dove",
+        "Name": "Seifenstück Beauty creme bar",
+        "Price": "1,25 €"
+      },
+      "Details": ["Die Dove Seife Beauty DUO enthält ¼ Feuchtigkeitscreme und hilft so, die Haut vor Austrocknung zu bewahren. Die enthaltene Feuchtigkeitsscreme und milde Reinigungssubstanzen unterstützen den natürlichen Feuchtigkeitsgehalt der Haut. So schenkt die Seife ein weiches, geschmeidiges Hautgefühl und ein gesünderes Aussehen. Sie ist für die tägliche Anwendung auf Gesicht, Körper und Händen geeignet und hat eine milde Formel.","Mit ¼ Feuchtigkeitscreme","Hilft die Haut vor Austrocknung zu bewahren","Unterstützt den natürlichen Feuchtigkeitsgehalt der Haut","Schenkt ein weiches, geschmeidiges Hautgefühl","200 Gramm", "6,25 €/kg"],
+      "Picture": "../static/Pictures/Dove Seifenstück beauty creme bar 200 g.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "NIVEA",
+        "Name": "Seifenstück Creme Soft Pflegeseife",
+        "Price": "0,65 €"
+      },
+      "Details": ["Entdecken Sie jetzt eine verwöhnende Handwäsche mit der NIVEA Creme Soft Pflegeseife. Dank der Formel mit Mandel-Öl sorgt die Seife für eine gründliche Reinigung der Hände und pflegt die Haut gleichzeitig. In Kombination mit Wasser lässt sich die feste Seife zu einem seidigen Schaum aufschäumen, der einen milden Duft entfaltet. Für ein spürbar zartes Hautgefühl.","Mit Mandel-Öl & zartem Duft","Reinigt sanft","Hautverträglichkeit dermatologisch bestätigt","100 Gramm", "6,50 €/kg"],
+      "Picture": "../static/Pictures/NIVEA Seifenstück Creme Soft Pflegeseife.webp",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "share",
+        "Name": "Seifenstück Limette & Koriander",
+        "Price": "1,95 €"
+      },
+      "Details": ["Die share Seife Limette & Koriander reinigt sanft und pflegt Ihre Haut mit wertvollem Kokos- und Olivenöl. Melissenblätter verleihen ihr einen Peeling-Effekt und ätherische Öle einen erfrischenden Duft nach Limette und Koriander. Der Kauf spendet ein Hygieneprodukt an einen Menschen in Not.","Basische Pflege mit ätherischen Ölen","Ohne Palmöl","Mit wertvollem Kokos- und Olivenöl","Ohne Konservierungsstoffe, Ohne Nanopartikel, Ohne Parabene, Ohne Paraff3ne Mineralöle, Vegan","100 Gramm", "19,50 €/kg"],
+      "Picture": "../static/Pictures/share Seifenstück Limette & Koriander.webp",
+      "Important": [
+
+      ]
+    }
+  },
+  "26": {
+    "1": {
+      "Info": {
+        "Brand": "ALVERDE",
+        "Name": "Shampoo Pure",
+        "Price": "1,95 €"
+      },
+      "Details": ["Gründliche Reinigung & gute Verträglichkeit","Minimalistische & simple Haarwäsche","Zertifizierte Naturkosmetik & vegan","Recycelbare Verpackung","Flasche aus 100 % Recycling-Material (ohne Verschluss)","Die Rezeptur des Pure Shampoo von alverde Naturkosmetik reinigt Ihre Haare ohne Schnickschnack gründlich und schonend. Nur mit den nötigsten Inhaltsstoffen versehen, ist das Shampoo für jeden Haartyp geeignet. Das Pure Shampoo zeichnet sich durch eine gute Verträglichkeit aus.","Rezeptur ohne Mikroplastik und wasserlösliche rein synthetische Polymere.","Klimaneutrales Produkt inklusive Verpackung nachträglich CO2-kompensiert durch Unterstützung eines Klimaschutzprojektes.","200 ml", "9,75 €/l"],
+      "Picture": "../static/Pictures/alverde NATURKOSMETIK Shampoo Pure.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Balea MED",
+        "Name": "Shampoo Ultra Sensitvie",
+        "Price": "2,25 €"
+      },
+      "Details": ["Mit dem Ultra Sensitive Shampoo von Balea Med reinigen Sie Ihr Haar und die Kopfhaut sanft, aber effektiv. Die hochwertige Formel ist insbesondere für empfindliche Kopfhaut geeignet und wurde speziell für die tägliche Haarwäsche entwickelt. Das Shampoo wurde zudem vom Deutschen Allergieund Asthmabund e.V. getestet und empfohlen. Es unterstützt das Gleichgewicht der Hautflora sowie den Erhalt einer intakten Hautbarriere. Damit reinigen Sie Haar und Kopfhaut auf eine sanfte Art und Weise, ganz ohne Parfüm, Parabene, Farbstoffe oder Silikone!","Für sensible und empfindliche Kopfhaut","Reinigt und pflegt das Haar sowie die Kopfhaut","Ohne Silikonen, Parabene, Parfüm sowie Farbstoffe","Vegan","250 ml", "9,00 €/l"],
+      "Picture": "../static/Pictures/Balea MED Shampoo Ultra Sensitive.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "head&shoulders",
+        "Name": "Shampoo Anti-Schuppen Classic clean",
+        "Price": "5,95 €"
+      },
+      "Details": ["Versorgt Ihr Haar und Ihre Kopfhaut mit Feuchtigkeit","Verleiht bis zu 100% schuppenfreies Haar","Reichhaltige Formel mit natürlicher Aloe","Wirkt juckender und trockener Kopfhaut entgegen","Mit ausgewogenem pH-Wert und Antioxidantien","Das head & shoulders Classic Clean Anti-Schuppen Shampoo mit Aloe wurde entwickelt, um Ihr Haar und Ihre Kopfhaut mit Feuchtigkeit zu versorgen – für bis zu 100% schuppenfreies Haar. Die reichhaltige Formel mit natürlicher Aloe wirkt juckender, fettiger und trockener Kopfhaut effektiv entgegen und bekämpft Schuppen, bevor sie zu sehen sind.","500 ml","11,90 €/kg"],
+      "Picture": "../static/Pictures/head&shoulders Shampoo Anti-Schuppen Classic clean.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "NIVEA",
+        "Name": "Shampoo Reparatur & Gezielte Pflege",
+        "Price": "2,45 €"
+      },
+      "Details": ["Das vegane NIVEA Reparatur & Gezielte Pflege Shampoo unterstützt Ihr Haar mit Schutz und mehr Geschmeidigkeit. Das pH-optimierte Shampoo mit NIVEA Glanz Serum, intelligentem Reparatur-System und Macadamia Öl pflegt das Haar, erkennt Haarschäden, und repariert sie dort, wo es benötigt wird. Die zu 98% biologisch abbaubare Formel (gemäß OECD oder gleichwertigen Standards) mit dermatologisch bestätigter Hautverträglichkeit harmoniert mit dem natürlichem pH-Wert von Haar und Kopfhaut und ist frei von Silikonen und fester Mikroplastik sowie wasserlöslichen rein synthetischen Polymeren (gemäß UNEP-Definition).","250 ml", "9,80 €/l"],
+      "Picture": "../static/Pictures/NIVEA Shampoo Reparatur & Gezielte Pflege.webp",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "sebamed",
+        "Name": "Shampoo Every-Day",
+        "Price": "3,45 €"
+      },
+      "Details": ["Das Sebamed Shampoo Every-Day ist durch die Zuckertensidformel besonders mild und bringt Ihrem","Haar so mehr Fülle und Glanz.","Besondere Zuckertensidformel","Milde Reinigung für die tägliche Haarwäsche","Reinigt schonend und hilft das Haar und die Kopfhaut vor Austrocknung zu schützen","Mehr duftige Fülle und seidigen Glanz","Fördert die Funktion des natürlichen Hautschutzmantels und trägt zur Gesunderhaltung der Kopfhaut bei","Dermatologisch-klinisch getestet","200 ml", "17,25 €/l"],
+      "Picture": "../static/Pictures/sebamed Shampoo Every-Day.webp",
+      "Important": [
+
+      ]
+    }
+  },
+  "27": {
+    "1": {
+      "Info": {
+        "Brand": "Frosch",
+        "Name": "Duachgel Sensitiv Aloe Vera",
+        "Price": "1,95 €"
+      },
+      "Details": ["Die Frosch Senses Aloe Vera Sensitiv-Dusche pflegt und reinigt besonders schonend die Haut. Die wertvolle, milde pH-hautneutrale Formel mit Aloe Vera sorgt für ein angenehm zartes Hautgefühl. Die Rezeptur ist frei von Mikroplastik, EDTA, Parabenen und Farbstoffen.","Besonders hautschonende und sensitive Dusche","Mit ausgewählten Inhaltsstoffen naturnaher Kosmetik","Mit Aloe Vera","300 ml", "6,50 €/l"],
+      "Picture": "../static/Pictures/Frosch Duschgel Sensitiv Aloe Vera.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Dove",
+        "Name": "Cremedusche Reichhaltige Pflege",
+        "Price": "2,75 €"
+      },
+      "Details": ["Die Dove Cremedusche Reichhaltige Pflege enthält ¼ Feuchtigkeitscreme und milde Reinigungssubstanzen. Der reichhaltige Schaum verwöhnt Ihre Haut mit Pflegestoffen, sodass sie sich sauber und gepflegt anfühlt. Dabei hilft sie, den natürlichen Feuchtigkeitsgehalt Ihrer Haut zu bewahren. Die reichhaltige, cremige Formel ist sanft-pflegend zur Haut und sorgt für spürbar weichere Haut nach nur einmal Duschen.","Mit ¼ Feuchtigkeitscreme","Unsere mildeste Hautreinigung aller Zeiten","Feuchtigkeitsspendend","Mild und schützend","Für die tägliche Anwendung","400 ml", "6,88 €/l"],
+      "Picture": "../static/Pictures/Dove Cremedusche Reichhaltige Pflege.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "CD",
+        "Name": "Duschgel Morgenfrische",
+        "Price": "1,65 €"
+      },
+      "Details": ["Mit belebendem Duft: CD Duschgel Morgenfrische mit Extrakten von Wasserminze und Gurke trocknet die Haut nicht aus und verleiht ein erfrischtes Hautgefühl. Hautverträglichkeit dermatologisch bestätigt.","Belebender Duft","Nur mit ausgewählten Inhaltsstoffen, ohne synthetische Farbstoffe, ohne tierische Inhaltsstoffe","Vegan", "250 ml", "6,60 €/l"],
+      "Picture": "../static/Pictures/CD Duschgel Morgenfrische.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Balea MED",
+        "Name": "Duschgel Ultra Sensitive",
+        "Price": "1,95 €"
+      },
+      "Details": ["Medizinische Pflege", "Ohne Alkohol", "Ohne Farbstoffe","Ohne Konservierungsstoffe", "Ohne Nanopartikel", "Ohne Parabene", "Ohne Paraffine / Mineralöle", "Ohne Parfum", "pH-Hautneutral", "Sensitive Pflege", "Vegan","250 ml", "7,80 €/l"],
+      "Picture": "../static/Pictures/Balea MED Duschgel Ultra Sensitive.webp",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "ALVERDE",
+        "Name": "Duschgel Bio-Minze Bio-Bergamotte",
+        "Price": "1,35 €"
+      },
+      "Details": ["Die pH-hautneutrale Rezeptur des Duschgels Bio-Minze Bio-Bergamotte von alverde Naturkosmetik mit Bio-Bergamotte-Wasser und Bio-Limonen-Extrakt sowie milden Tensiden reinigt Ihre Haut sanft. Die Kombination mit pflanzlichem Glycerin und einem Feuchtigkeitsfaktor erhält zudem den Feuchtigkeitshaushalt Ihrer Haut und verleiht ein samtig zartes Gefühl. Die Rezeptur mit natürlichem Meersalz verwöhnt Ihre Haut außerdem. Rezeptur ohne Mikroplastik und wasserlösliche rein synthetische Polymere.","Sanfte Reinigung","Feuchtigkeitsspendend","Zertifizierte Naturkosmetik, NATRUE & vegan","Recycelbare Verpackung","Flasche aus 100 % Recycling- Material (ohne Verschluss)","250 ml", "5,40 €/l"],
+      "Picture": "../static/Pictures/alverde NATURKOSMETIK Duschgel Bio-Minze Bio-Bergamotte.webp",
+      "Important": [
+
+      ]
+    }
+  },
+  "28": {
+    "1": {
+      "Info": {
+        "Brand": "Sensodyne",
+        "Name": "MultiCare sanftweiß",
+        "Price": "2,95 €"
+      },
+      "Details": ["Tägliche Zahnpasta mit 24h-Schutz bei schmerzempflindlichen Zähnen (bei zweimal täglicher Anwendung nach 2-4 Wochen)","Zahnpasta mit Whitening Effekt zur sanften Aufhellung für weiße Zähne","Hilft Plaque und Verfärbungen zu entfernen und das Zahnfleisch gesund zu halten (bei regelmäßigem Zähneputzen)","Zahnpflege hilft vor Karies zu schützen und gibt frischen Atem","Die Sensodyne Sanftweiß ist eine tägliche Zahnpasta mit Whitening Effekt, formuliert für schmerzempfindliche Zähne. Neben dem Schutz vor Schmerzempfindlichkeit bei 2x täglichem Zähneputzen bietet sie alle Vorteile einer herkömmlichen Zahnpasta. Die tägliche Zahnpflege entfernt schonend Verfärbungen mit der Whitening Formulierung und hilft das natürliche Weiß Ihrer Zähne zurück zu bringen.","75 ml", "39,33 €/l"],
+      "Picture": "../static/Pictures/Sensodyne Zahnpasta MultiCare sanftweiß.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Odol med 3",
+        "Name": "Zahnpasta Original",
+        "Price": "0,95 €"
+      },
+      "Details": ["Die Odol-med 3 Zahnpasta Original besitzt die Fluorid-Formel mit 24h Zuckersäuren-Schutz und schützt bei regelmäßigem Zähneputzen 3-fach gegen Karies, Zahnfleischprobleme, Plaque- und Zahnstein-Bildung.","75 ml", "12,67 €/l"],
+      "Picture": "../static/Pictures/Odol med 3 Zahnpasta Original.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "elmex",
+        "Name": "Zahnpasta Kariesschutz",
+        "Price": " 2,95 €"
+      },
+      "Details": ["Hochwirksamem Aminfluorid schützt vor Karies","Unterstützt die Remineralisierung des Zahnschmelzes","Macht die Zähne widerstandsfähiger gegen Karies","Bildet eine Schutzschicht, die Mineralverluste im Zahn verhindert","Klinisch bestätigte Wirksamkeit","Die Elmex Zahnpasta bietet einen zuverlässigen Kariesschutz, indem sie die Zähne remineralisiert. Die in ihrer Wirksamkeit klinisch bestätigte Wirksamkeit der Zahnpasta mit Aminfluorid unterstützt gesunde und starke Zähne.","75 ml", "39,33 €"],
+      "Picture": "../static/Pictures/elmex Zahnpasta Kariesschutz.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Dontodent",
+        "Name": "Zahnpasta clear fresh",
+        "Price": "0,55 €"
+      },
+      "Details": ["Die Dontodent Zahnpasta Clear Fresh verleiht ein sauberes und frisches Mundgefühl. Sanfte Putzkörper entfernen schonend und gründlich Zahnbeläge. Das enthaltene Zink wirkt dabei antibakteriell. Die angenehm frische, minzige Zahncreme härtet und remineralisiert den Zahnschmelz.","Vegan","125 ml", "4,40 €/l"],
+      "Picture": "../static/Pictures/Dontodent Dontodent Zahnpasta clear fresh.webp",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "ALVERDE",
+        "Name": "Pro Climare Zahncreme mit natürlichen Kräuter-Extrakten",
+        "Price": "2,95 €"
+      },
+      "Details": ["Die alverde Pro Climate Zahncreme mit natürlichen Kräuter-Extrakten wirkt antibakteriell durch Zink und reduziert bei regelmäßigem Putzen die Neubildung von Zahnstein. Natürliches Minzöl und ausgewählte Kräuter-Extrakte aus Kamille, Myrrhe und Salbei verleihen der Kräuter-Zahncreme einen frischen Geschmack.","Naturksometik", "Vegan","125 ml", "23,60 €/l"],
+      "Picture": "../static/Pictures/alverde NATURKOSMETIK Pro Climate Zahncreme mit natürlichen Kräuter-Extrakten.webp",
+      "Important": [
+
+      ]
+    }
+  },
+  "29": {
+    "1": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Langkornreis parboiled",
+        "Price": "3,29 €"
+      },
+      "Details": ["Ein schnellkochender Bio-Langkornreis, der in etwa 20 Minuten gar ist, als Beilage, in Aufläufen und als Suppeneinlage.","1000 Gramm", "3,29 €/kg"],
+      "Picture": "../static/Pictures/Alnatura Langkornreis parboiled.png",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Davert",
+        "Name": "Bio Langkornreis",
+        "Price": "2,99 €"
+      },
+      "Details": ["Weißer Langkornreis ist der Allrounder unter den Reissorten - einfach zuzubereiten und leicht zu kombinieren.","500 Gramm", "5,98 €/kg"],
+      "Picture": "../static/Pictures/Davert Bio Langkornreis.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "ja!",
+        "Name": "Parboiled Spitzenlangkornreis",
+        "Price": "1,29 €"
+      },
+      "Details": ["1000 Gramm", "1,39 €/kg"],
+      "Picture": "../static/Pictures/ja! Parboiled Spitzenreis Langkornreis 1kg.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Oryza",
+        "Name": "Ideal Reis Langkorn parboiled",
+        "Price": "1,79 €"
+      },
+      "Details": ["Ist, wie er heißt: ideal für jede kulinarische Herausforderung. Der hochwertige Langkorn- Spitzenreis wurde besonders schonend parboiledveredelt und gelingt dadurch immer locker und körnig.","500 Gramm", "3,58 €/kg"],
+      "Picture": "../static/Pictures/Oryza Ideal Reis Langkorn parboiled.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "REWE Beste Wahl",
+        "Name": "Langkornreis mit Wildreis",
+        "Price": "1,99 €"
+      },
+      "Details": ["Bei diesem REWE Beste Wahl Reis handelt es sich um eine ausgewogene Mischung aus Parboiled Langkornreis und Wildreis.","500 Gramm", "3,98 €/kg"],
+      "Picture": "../static/Pictures/REWE Beste Wahl Langkornreis mit Wildreis.webp",
+      "Important": [
+
+      ]
+    }
+  },
+  "30": {
+    "1": {
+      "Info": {
+        "Brand": "Zabler",
+        "Name": "Hochzeit Nudeln Spaghetti",
+        "Price": "1,79 €"
+      },
+      "Details": ["Frisch-Ei-Nudeln","250 Gramm", "7,16 €/kg"],
+      "Picture": "../static/Pictures/Zabler Hochzeit Nudeln Spaghetti.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Schär",
+        "Name": "Spaghetti",
+        "Price": "2,99 €"
+      },
+      "Details": ["Der absolute Pasta-Klassiker: glutenfreie Spaghetti. Carbonara, Bolognese, Aglio e Olio? Es gibt so viele leckere Möglichkeiten die Pasta in vollen Zügen zu genießen. Zubereitet mit 20% Hirse. Natürlich frei von Gluten und Laktose.","Vegetarisch","Vegan","500 Gramm", "5,98 €/kg"],
+      "Picture": "../static/Pictures/Schär Spaghetti.png",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Original italienische Linguine",
+        "Price": "1,29 €"
+      },
+      "Details": ["Teigwaren aus Hartzweizen","500 Gramm", "2,58 €/kg"],
+      "Picture": "../static/Pictures/REWE Bio Original italienische Linguine 500g.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Linguine No. 13",
+        "Price": "1,39 €"
+      },
+      "Details": ["Diese Bio-Linguine No.13 werden in Italien aus Hartweizengrieß hergestellt und schmecken besonders zu Pesto, Tomaten- und hellen Saucen.","Vegetarisch","Vegan","500 Gramm","2,78 €/kg"],
+      "Picture": "../static/Pictures/Alnatura Linguine.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Gelbe Linsen Spaghetti",
+        "Price": "2,49 €"
+      },
+      "Details": ["Proteinreiche, glutenfreie Bio-Spaghetti-Nudeln, die zu hundert Prozent aus dem Mehl gelber Linsen hergestellt werden.","Vegan.","250 Gramm","9,96 €/kg"],
+      "Picture": "../static/Pictures/Alnatura Gelbe Linsen Spaghetti.png",
+      "Important": [
+
+      ]
+    }
+  },
+  "31": {
+    "1": {
+      "Info": {
+        "Brand": "McCain",
+        "Name": "Chef Frites",
+        "Price": "2,49 €"
+      },
+      "Details": ["Die beliebten Chef Frites mit dem knusprigen Wellenschnitt. Geschnitten aus ganzen Kartoffeln, besitzen sie durch ihre Wellenform eine feine Knusprigkeit und bringen das gewisse Etwas auf den Teller.","Vegan","Glutenfrei","Laktosefrei","Ohne Konservierungsstoffe, ohne Zusatz von Erdnussöl.","750 Gramm", "3,32 €/kg"],
+      "Picture": "../static/Pictures/McCain Chef Frites.png",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Küstengold",
+        "Name": "Pommes Frittes Wellenschnitt",
+        "Price": "4,49 €"
+      },
+      "Details": ["Pommes frites aus sorgfältig ausgewählten Kartoffeln. Wellenschnitt.","Glutenfrei","Laktosefrei","2500 Gramm", "1,80 €/kg"],
+      "Picture": "../static/Pictures/Küstengold Pommes Frites Wellenschnitt.png",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Jeden Tag",
+        "Name": "Backofen Pommes Frites",
+        "Price": "1,79 €"
+      },
+      "Details": ["Pommes Frites - Wellenschnitt. Tiefgefroren.","Vegan","Glutenfrei","Laktosefrei","1000 Gramm", "1,79 €/kg"],
+      "Picture": "../static/Pictures/Jeden Tag Backofen Pommes Frites Wellenschnitt.png",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "ja!",
+        "Name": "Pommes Frites Wellenschnitt",
+        "Price": "1,39 €"
+      },
+      "Details": ["Pommes Frites im Wellenschnitt, für den Backofen und die Fritteuse - vorfrittiert und tiefgefroren.","Vegan","Glutenfrei","Laktosefrei", "1000 Gramm", "1,39 €/kg"],
+      "Picture": "../static/Pictures/ja! Pommes Frites Wellenschnitt 1kg.webp",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Agrarfrost",
+        "Name": "Knusper Frites Wellenschnitt",
+        "Price": "2,49 €"
+      },
+      "Details": ["Das besondere Knuspererlebnis mit dem typischen Wellenschnitt für den Backofen: Genießen Sie die krosse Hülle und den saftigen Kern! Aus kontrolliertem deutschen Anbau.","Vegan","Glutenfrei","Laktosefrei","1000 Gramm","750 Gramm", "3,32 €/kg"],
+      "Picture": "../static/Pictures/Agrarfrost Knusper Frites Wellenschnitt.png",
+      "Important": [
+
+      ]
+    }
+  },
+  "32": {
+    "1": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Kartoffelknödel",
+        "Price": "2,49 €"
+      },
+      "Details": ["Klassische Bio-Kartoffelknödel - schnell und einfach zubereitet. Die Trockenmischung aus rohen und gekochten deutschen Kartoffeln ergibt zweimal circa vier Knödel zum Selbstformen.","Vegan","225 Gramm", "11,07 €/kg"],
+      "Picture": "../static/Pictures/Alnatura Kartoffelknödel halb & halb.png",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Maggi",
+        "Name": "Kartoffelknödel in Kochbeuteln",
+        "Price": "2,89 €"
+      },
+      "Details": [" Zubereitung: 1. Gewünschte Anzahl Kartoffelknödel in einen Topf mit kaltem Wasser legen. Die Knödel müssen reichlich mit Wasser bedeckt sein. Ca. 5 Min. quellen lassen.2. Aufkochen, etwas Salz einstreuen und ca. 1 Min. kochen lassen. Im offenen Topf bei geringer Wärmezufuhr 15 Min. ziehen lassen. 3. Kartoffelknödel herausnehmen und kurz mit kaltem Wasser abschrecken.4. Den Kochbeutel an einem Ende aufreißen, die Knödel herausdrücken und anrichten.","Vegan","200 Gramm", "14,90 €/kg"],
+      "Picture": "../static/Pictures/Maggi Kartoffelknödel.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Jeden Tag",
+        "Name": "Kartoffelknödel halb und halb in Kochbeuteln",
+        "Price": "1,19 €"
+      },
+      "Details": ["Kartoffelknödel halb & halb.","Vegan","200 Gramm", "5,95 €/kg"],
+      "Picture": "../static/Pictures/Jeden Tag Kartoffelknödel halb und halb.png",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "ja!",
+        "Name": "Kartoffelknödel halb und halb",
+        "Price": "0,89 €"
+      },
+      "Details": ["12 Kartoffel Knödel halb und halb", "Vegan", "309 Gramm", "2,88 €/kg"],
+      "Picture": "../static/Pictures/Ja! Kartoffelknödel halb und halb.webp",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Pfanni",
+        "Name": "Kartoffelknödel in Kochbeuteln halb & halb",
+        "Price": "3,99 €"
+      },
+      "Details": ["Viele fragen sich: Warum heißt dieser Knödel eigentlich halb & halb? Ist es wegen der ausgewogenen Mischung aus blanchierten und gekochten Kartoffeln, die für diesen Knödel erst gerieben und dann fein gewürzt werden? Oder weil ihn manche lieber zu Fleisch- und andere lieber zu Gemüsegerichten genießen? Wir glauben, weil niemand auch nur eine halbe Minute widerstehen kann, wenn ihm dieser Knödel serviert wird (in der nächsten halben Minute wird er übrigens gegessen).","Vegetarisch","400 Gramm", "9,98 €/kg"],
+      "Picture": "../static/Pictures/Pfanni Kartoffelknödel in Kochbeuteln halb & halb.png",
+      "Important": [
+
+      ]
+    }
+  },
+  "33": {
+    "1": {
+      "Info": {
+        "Brand": "Golden Toast",
+        "Name": "Vollkorn-Toast",
+        "Price": "1,59 €"
+      },
+      "Details": ["Weizenvollkorntoast", "Vegan","500 Gramm", "3,18 €/kg"],
+      "Picture": "../static/Pictures/Golden Toast Vollkorn-Toast.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Harry",
+        "Name": "Körner Balance Sandwich-Toastbrot",
+        "Price": "1,99 €"
+      },
+      "Details": ["Vegan","750 Gramm", "2,65 €/kg"],
+      "Picture": "../static/Pictures/Körner Balance Sandwich-Toastbrot.jpg",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "REWE Beste Wahl",
+        "Name": "Weizen-Vollkornsandwich",
+        "Price": "1,69 €"
+      },
+      "Details": ["Vegan","750 Gramm", "2,25 €/kg"],
+      "Picture": "../static/Pictures/REWE Beste Wahl Weizen-Vollkornsandwich.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Gab",
+        "Name": "Toastbrötchen Mehrkorn",
+        "Price": "0,99 €"
+      },
+      "Details": ["Vegan","335 Gramm", "2,96 €/kg"],
+      "Picture": "../static/Pictures/Toastbrötchen, Mehrkorn.jpg",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Jeden Tag",
+        "Name": "Vollkorn Toast",
+        "Price": "0,89 €"
+      },
+      "Details": ["Vegan","500 Gramm", "1,78 €/kg"],
+      "Picture": "../static/Pictures/Vollkorn Toast.jpg",
+      "Important": [
+
+      ]
+    }
+  },
+  "34": {
+    "1": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Roggenvollkornbrot",
+        "Price": "1,29 €"
+      },
+      "Details": ["Vegan","500 Gramm", "2,58 €/kg"],
+      "Picture": "../static/Pictures/REWE Bio Roggenvollkornbrot.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "REWE Beste Wahl",
+        "Name": "Brot zum Schinken Roggenvollkornbrot",
+        "Price": "1,99 €"
+      },
+      "Details": ["Vegan","500 Gramm","3,98 €/kg"],
+      "Picture": "../static/Pictures/REWE Beste Wahl Brot zum Schinken Roggenvollkornbrot.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Pema",
+        "Name": "Bio Roggen Brot mit Olivenöl und Oregano",
+        "Price": "2,09 €"
+      },
+      "Details": ["Vegan","375 Gramm", "5,57 €/kg"],
+      "Picture": "../static/Pictures/Pema Bio Roggen Brot mit Olivenöl und Oregano.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Lieken",
+        "Name": "Urkorn Roggenbäcker",
+        "Price": "0,99 €"
+      },
+      "Details": ["Vegan","250 Gramm", "3,96 €/kg"],
+      "Picture": "../static/Pictures/Lieken Urkorn Roggenbäcker.webp",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Edeka Bio",
+        "Name": "Roggen-Vollkornbrot",
+        "Price": "1,59 €"
+      },
+      "Details": ["mit 3-Stufen-Natursauerteig gebacken","reich an Ballaststoffen","herzhaft im Geschmack","aus kontrolliert ökologischer Landwirtschaft","500 Gramm", "3,18 €/kg"],
+      "Picture": "../static/Pictures/EDEKA Bio Roggen Vollkornbrot.jpg",
+      "Important": [
+
+      ]
+    }
+  },
+  "35": {
+    "1": {
+      "Info": {
+        "Brand": "Ibis",
+        "Name": "Baguette zum Aufbacken",
+        "Price": "0,55 €"
+      },
+      "Details": ["Vegan","300 Gramm", "1,83 €/kg"],
+      "Picture": "../static/Pictures/Baguette Brötchen, zum Aufbacken.jpg",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "ja!",
+        "Name": "Steinofen Baguette",
+        "Price": "0,99 €"
+      },
+      "Details": ["Vegan","500 Gramm", "3,96 €/kg"],
+      "Picture": "../static/Pictures/ja! Steinofen Baguette.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Harry",
+        "Name": "Ruchmehl Baguette zum Aufbacken",
+        "Price": "1,99 €"
+      },
+      "Details": ["Vegan", "280 Gramm", "7,11 €/kg"],
+      "Picture": "../static/Pictures/Ruchmehl Baguette zum Aufbacken.jpg",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Ibis",
+        "Name": "Steinofen Baguette Korn, zum Aufbacken",
+        "Price": "1,29 €"
+      },
+      "Details": ["Vegan","250 Gramm", "5,16 €/kg"],
+      "Picture": "../static/Pictures/Steinofen Baguette Korn, zum Aufbacken.jpg",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Jeden Tag",
+        "Name": "Steinofenbaguette",
+        "Price": "0,99 €"
+      },
+      "Details": ["Vegan","100 Gramm", "9,90 €/kg"],
+      "Picture": "../static/Pictures/Steinofenbaguette 250g.jpg",
+      "Important": [
+
+      ]
+    }
+  },
+  "36": {
+    "1": {
+      "Info": {
+        "Brand": "Goldmarie",
+        "Name": "Mehrkornbrötchen",
+        "Price": "1,49 €"
+      },
+      "Details": ["Wochenmarkt ist jetzt täglich - mit den hochwertigen Lebensmitteln von Goldmarie! Entdecken Sie ein frisches, natürliches Lebensmittel hoher Qualität. Die Verarbeitung der Mehrkornbrötchen erfolgt mit besten Zutaten und größter Sorgfalt von ausgewählten Herstellern. Goldmarie - so gut wie vom Wochenmarkt","Vegan","450 Gramm", "3,31 €/kg"],
+      "Picture": "../static/Pictures/Goldmarie Mehrkornbrötchen.png",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Ibis",
+        "Name": "Steinofenbrötchen",
+        "Price": "1,19 €"
+      },
+      "Details": ["Von der Packungsgröße ideal geeignet für Single- und Kleinhaushalte: Die mit nativem Olivenöl extra verfeinerten Steinofen Brötchen sind knusprig im Geschmack und machen ofenfrisch ein Frühstück zum Genuss.","Vegan","300 Gramm", "3,97 €/kg"],
+      "Picture": "../static/Pictures/Ibis Steinofen Brötchen.png",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Jeden Tag",
+        "Name": "Brötchen",
+        "Price": "0,99 €"
+      },
+      "Details": ["Vegan","300 Gramm", "3,30 €/kg"],
+      "Picture": "../static/Pictures/Jeden Tag Brötchen.png",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Sinnack",
+        "Name": "Ciabatta Brötchen",
+        "Price": "1,29 €"
+      },
+      "Details": ["8 Ciabattabrötchen zum Fertigbacken. Ausgesuchte Roh- und Ballaststoffe. Handwerklich gefertigt - wie frisch vom Bäcker.","Vegan","560 Gramm", "2,30 €/kg"],
+      "Picture": "../static/Pictures/Sinnack Ciabatta Brötchen.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Sinnack",
+        "Name": "Gemischte Brötchen",
+        "Price": "1,49 €"
+      },
+      "Details": ["Vegan","560 Gramm", "2,66 €/kg"],
+      "Picture": "../static/Pictures/Sinnack Gemischte Brötchen.png",
+      "Important": [
+
+      ]
+    }
+  },
+  "37": {
+    "1": {
+      "Info": {
+        "Brand": "NaturWert Bio",
+        "Name": "Pfefferminz-Tee",
+        "Price": "1,69 €"
+      },
+      "Details": ["25 x 1,5g", "45,07 €/kg"],
+      "Picture": "../static/Pictures/NaturWert Bio Pfefferminz-Tee.png",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Meßmer",
+        "Name": "Pfefferminze",
+        "Price": "1,99 €"
+      },
+      "Details": ["Schon die alten Ägypter schätzten die wohltuenden Eigenschaften der Pfefferminze und ihren erfrischenden Geschmack. Meßmers Tea-Master wählen nur die besten Pfefferminzqualitäten aus und mischen diese zu einem frisch-würzigen Genuss-Erlebnis.","25 x 2,25g", "35,35 €/kg"],
+      "Picture": "../static/Pictures/Meßmer Pfefferminze.png",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Jeden Tag",
+        "Name": "Pfefferminztee",
+        "Price": "0,99 €"
+      },
+      "Details": ["Erfrischender Pfefferminztee.","25 x 2,25g", "17,58 €/kg"],
+      "Picture": "../static/Pictures/Jeden Tag Pfefferminztee.png",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Bünting Tee",
+        "Name": "Pfefferminze",
+        "Price": "1,79 €"
+      },
+      "Details": ["Original aus gutem Hause. In asiatischen und nordafrikanischen Ländern ist Pfefferminztee ein Nationalgetränk. Besonders geschätzt sind die ätherischen Öle, die der Pfefferminze ihren frisch belebenden Charakter verleihen.","20 x 2g", "44,75 €/kg"],
+      "Picture": "../static/Pictures/Bünting Tee Pfefferminze.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Bünting Tee",
+        "Name": "Bio-Pfefferminze",
+        "Price": "2,29 €"
+      },
+      "Details": ["Bereits im alten Ägypten war die Minze eine beliebte Heilpflanze. In diesem Tee entfaltet sie dank schonender Verarbeitung ihre ganze Kraft und ihr volles Aroma. Die ätherischen Öle entspannen und erfrischen zugleich. Für Bünting Bio-Pfefferminze werden nur sorgfältig ausgesuchte und kontrollierte Ernten verwendet.","20 x 2g", "57,25 €/kg"],
+      "Picture": "../static/Pictures/Bünting Bio-Pfefferminze.png",
+      "Important": [
+
+      ]
+    }
+  },
+  "38": {
+    "1": {
+      "Info": {
+        "Brand": "Dallmayr",
+        "Name": "Prodomo",
+        "Price": "7,99 €"
+      },
+      "Details": ["Mit Kaffee-Genuss in den Tag starten. Jeder Kaffeeliebhaber weiß: Es geht nichts über die gute Tasse Kaffee am Morgen. Natürlich lässt sich unser vielfältiges Kaffeesortiment auch zu jeder anderen Tageszeit genießen, egal ob Latte Macchiato, Espresso oder klassischer Filterkaffee.","500 Gramm", "15,98 €/kg"],
+      "Picture": "../static/Pictures/Dallmayr Prodomo 500g.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Jacobs",
+        "Name": "Krönung",
+        "Price": "6,99 €"
+      },
+      "Details": ["Seit mehr als 50 Jahren präsentiert sich Jacobs Krönung als einer der beliebtesten Kaffees der Deutschen und begeistert die Genießer durch das unnachahmliche Verwöhnaroma.","500 Gramm", "13,98 €/kg"],
+      "Picture": "../static/Pictures/Jacobs Filterkaffee Krönung Klassisch 500g.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Melitta",
+        "Name": "Auslese",
+        "Price": "6,49 €"
+      },
+      "Details": ["Charakterstark und rund im Geschmack:100% gemahlener Röstkaffee","500 Gramm", "12,98 €/kg"],
+      "Picture": "../static/Pictures/Melitta Auslese Röstkaffee Klassisch 500g.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "NaturWert Bio",
+        "Name": "Spitzenkaffee",
+        "Price": "7,79 €"
+      },
+      "Details": ["Genießen Sie diesen temperamentvollen Spitzenkaffee mit seinem vollen Aroma, seiner ausgeprägten Würze und seiner feinen Säure. Ein Genusserlebnis!","500 Gramm", "15,58 €/kg"],
+      "Picture": "../static/Pictures/NaturWert Bio Spitzenkaffee.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Röstkaffee gemahlen",
+        "Price": "6,29 €"
+      },
+      "Details": ["Volles Aroma aus Hochland-Bohnen. 100% Bio-Arabica aus fairem Handel","500 Gramm", "12,58 €/kg"],
+      "Picture": "../static/Pictures/REWE Bio Röstkaffee gemahlen 500g.webp",
+      "Important": [
+
+      ]
+    }
+  },
+  "39": {
+    "1": {
+      "Info": {
+        "Brand": "Suchard",
+        "Name": "Kakao Express",
+        "Price": "1,99 €"
+      },
+      "Details": ["Vegan","500 Gramm", "3,98 €/kg"],
+      "Picture": "../static/Pictures/Suchard Kakao Express.webp",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "REWE Bio",
+        "Name": "Trink Kakao",
+        "Price": "2,99 €"
+      },
+      "Details": ["REWE Bio Instant-Kakao löst sich in kalter und warmer Milch. Der hohe Kakaoanteil verleiht ihm seinen herrlich schokoladigen Geschmack ein Genuss für die ganze Familie.","Vegan","400 Gramm", "7,48 €/kg"],
+      "Picture": "../static/Pictures/REWE Bio Trink-Kakao.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Nesquik",
+        "Name": "Kakaohaltiges Getränkepulver",
+        "Price": "1,99 €"
+      },
+      "Details": ["Start in einen Tag voller Möglichkeiten mit dem kakaohaltigen Getränkepulver von Nesquik. Mit Milch zubereitet ist Nesquik eine schokoladig leckere Milchportion in einem ausgewogenen Frühstück.Die praktisch wiederverschließbare Nesquik 250g Dose enthält ca. 18 Portionen leckeren Kakao!","Vegan","250 Gramm", "7,96 €/kg"],
+      "Picture": "../static/Pictures/Nestlé Nesquik kakaohaltiges Getränkepulver.webp",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Kaba",
+        "Name": "Kakao",
+        "Price": "2,19 €"
+      },
+      "Details": ["Vegan","500 Gramm", "4,38 €/kg"],
+      "Picture": "../static/Pictures/Kaba Kakao.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Alnatura",
+        "Name": "Trink Kakao",
+        "Price": "3,29 €"
+      },
+      "Details": ["Ein Bio-Trinkkakaopulver, welches sich gut in kalter und warmer Flüssigkeit löst, der hohe Kakaogehalt sorgt für den besonders schokoladigen Geschmack.","Vegan","400 Gramm", "8,23 €/kg"],
+      "Picture": "../static/Pictures/Alnatura Trink Kakao.png",
+      "Important": [
+
+      ]
+    }
+  },
+  "40": {
+    "1": {
+      "Info": {
+        "Brand": "Massimo",
+        "Name": "Trinkschokolade",
+        "Price": "1,69 €"
+      },
+      "Details": ["Kakaohaltiges Getränkepulver mit Milchanteilen. Wundervoll cremig! Inhalt: 10 Portionen.","Vegetarisch","10 x 25 Gramm", "6,76 €/kg"],
+      "Picture": "../static/Pictures/Massimo Trinkschokolade.png",
+      "Important": [
+
+      ]
+    },
+    "2": {
+      "Info": {
+        "Brand": "Teekanne",
+        "Name": "Schokofix",
+        "Price": "0,39 €"
+      },
+      "Details": ["Kakaohaltiges Getränkepulver zur Herstellung eines Schokoladengetränks","25 Gramm", "15,60 €/kg"],
+      "Picture": "../static/Pictures/Teekanne Schocofix Classic.webp",
+      "Important": [
+
+      ]
+    },
+    "3": {
+      "Info": {
+        "Brand": "Nestlé",
+        "Name": "Feinste Heiße Schokolade",
+        "Price": "3,29 €"
+      },
+      "Details": ["Nicht nur in der kalten Jahreszeit kann man sich mit einer leckeren Tasse Trinkschokolade den Tag versüßen. Nestlé Feinste Heiße Schokolade wird aus erlesenen Kakaobohnen gewonnen.","Vegan","250 Gramm", "13,16 €/kg"],
+      "Picture": "../static/Pictures/Nestlé Feinste Heiße Schokolade.png",
+      "Important": [
+
+      ]
+    },
+    "4": {
+      "Info": {
+        "Brand": "Nescafé Dolce Gusto",
+        "Name": "Chococino",
+        "Price": "5,49 €"
+      },
+      "Details": ["256 Gramm", "21,45 €/kg"],
+      "Picture": "../static/Pictures/Nescafé Dolce Gusto Chococino.png",
+      "Important": [
+
+      ]
+    },
+    "5": {
+      "Info": {
+        "Brand": "Xucker",
+        "Name": "Heiße Schokolade",
+        "Price": "3,95 €"
+      },
+      "Details": ["Zuckerfrei","Vegan und ohne Gentechnik","Diese lecker-cremige Heisse Schokolade von Xucker ist nur mit Xylit gesüßt. Sie eignet sich für die Herstellung von Heißgetränken, kann aber – mit ein wenig warmer Milch angerührt – auch kalt getrunken werden.","200 Gramm", "19,75 €/kg"],
+      "Picture": "../static/Pictures/Xucker Heisse Schokolade.webp",
+      "Important": [
+
+      ]
+    }
+  },
+  "Ads": {
+    "1":{
+      "Name": "REWE Beste Wahl  ca. 200g",
+      "Price":"0,38 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Banane.webp"
+    },
+    "2":{
+      "Name": "Chiquita Banane ca. 200g",
+      "Price":"0,40 €",
+      "Picture":"../static/Pictures/Chiquita Banane.webp"
+    },
+    "3":{
+      "Name": "Bio Banane ca. 200g",
+      "Price":"0,38 €",
+      "Picture":"../static/Pictures/Bio Banane.webp"
+    },
+    "4":{
+      "Name": "Bananen 1kg",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/banane.png"
+    },
+    "5":{
+      "Name": "Birne Abate Fetel ca. 200g",
+      "Price":"0,76 €",
+      "Picture":"../static/Pictures/Birne Abate Fetel.webp"
+    },
+    "6":{
+      "Name": "Birne grün 1kg",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/Birne Grün 1kg.webp"
+    },
+    "7":{
+      "Name": "Lorenz Saltletts Brezel 200g",
+      "Price":"1,89 €",
+      "Picture":"../static/Pictures/Lorenz Saltletts Brezel 200g.webp"
+    },
+    "8":{
+      "Name": "Lorenz Saltletts Sticks Classic 250g",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/Lorenz Saltletts Sticks Classic 250g.webp"
+    },
+    "9":{
+      "Name": "Funny-frisch Sticks 175g",
+      "Price":"1,29 €",
+      "Picture":"../static/Pictures/Funny-frisch Sticks 175g.webp"
+    },
+    "10":{
+      "Name": "ja! Salzstangen mit Meersalz 250g",
+      "Price":"0,45 €",
+      "Picture":"../static/Pictures/ja! Salzstangen mit Meersalz 250g.webp"
+    },
+    "11":{
+      "Name": "Granini Die Limo Orange-Lemongras 1l",
+      "Price":"1,39 €",
+      "Picture":"../static/Pictures/Granini Die Limo Orange-Lemongras 1l.webp"
+    },
+    "12":{
+      "Name": "Ahoj-Brause Limonade Himbeer 330ml",
+      "Price":"1,29 €",
+      "Picture":"../static/Pictures/Ahoj-Brause Limonade Himbeer 330ml.webp"
+    },
+    "13":{
+      "Name": "Gerolsteiner Zitronenlimonade 0,75l",
+      "Price":"1,19 €",
+      "Picture":"../static/Pictures/Gerolsteiner Zitronenlimonade 0,75l.webp"
+    },
+    "14":{
+      "Name": "Fanta Orange 1l",
+      "Price":"1,19 €",
+      "Picture":"../static/Pictures/Fanta Orange 1l.webp"
+    },
+    "15":{
+      "Name": "Vio Bio Limo Orange 0,5l",
+      "Price":"0,99 €",
+      "Picture":"../static/Pictures/Vio Bio Limo Orange 0,5l.webp"
+    },
+    "16":{
+      "Name": "Teinacher Genuss Limonade Orange-Mandarine 0,75l",
+      "Price":"0,85 €",
+      "Picture":"../static/Pictures/Teinacher Genuss Limonade Orange-Mandarine 0,75l.webp"
+    },
+    "17":{
+      "Name": "Oettinger Glorietta Limonade Orange 0,5l",
+      "Price":"0,45 €",
+      "Picture":"../static/Pictures/Oettinger Glorietta Limonade Orange 0,5l.webp"
+    },
+    "18":{
+      "Name": "NIVEA Deospray Fresh Natural",
+      "Price":"1,85 €",
+      "Picture":"../static/Pictures/NIVEA Deospray Fresh Natural.webp"
+    },
+    "19":{
+      "Name": "NIVEA Deo Roll-On Dry Comfort Plus",
+      "Price":"1,85 €",
+      "Picture":"../static/Pictures/NIVEA Deo Roll-On Dry Comfort Plus.webp"
+    },
+    "20":{
+      "Name": "Dove Deo Roll-On Original",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/Dove Deo Roll-On Original.webp"
+    },
+    "21":{
+      "Name": "Hidrofugal Deo Zerstäuber Classic",
+      "Price":"3,99 €",
+      "Picture":"../static/Pictures/Hidrofugal Deo Zerstäuber Classik.webp"
+    },
+    "22":{
+      "Name": "Dove 48h Deodorant belebendes Ritual",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/Dove 48h Deodorant belebendes Ritual.webp"
+    },
+    "23":{
+      "Name": "Hidrofugal Deo Roll-On Classic",
+      "Price":"2,59 €",
+      "Picture":"../static/Pictures/Hidrofugal Deo Roll-On Classik.webp"
+    },
+    "24":{
+      "Name": "NIVEA Men Deospray Fresh Active Spray",
+      "Price":"1,85 €",
+      "Picture":"../static/Pictures/NIVEA Men Deospray Fresh Active Spray.webp"
+    },
+    "25":{
+      "Name": "Ostmann Pizza-Gewürz 15g",
+      "Price":"2,19 €",
+      "Picture":"../static/Pictures/Ostmann Pizza-Gewürz 15g.webp"
+    },
+    "26":{
+      "Name": "Maggi Würze 250g",
+      "Price":"1,79 €",
+      "Picture":"../static/Pictures/Maggi Würze 250g.webp"
+    },
+    "27":{
+      "Name": "Old Spice Deodorant Stick",
+      "Price":"2,59 €",
+      "Picture":"../static/Pictures/Old Spice Deodorant Stick.webp"
+    },
+    "28":{
+      "Name": "REWE Feine Welt Mexikos Jalapeno",
+      "Price":"2,99 €",
+      "Picture":"../static/Pictures/REWE Feine Welt Mexikos Jalapeno.webp"
+    },
+    "29":{
+      "Name": "Iglo Kräuter Italienische Art 60g",
+      "Price":"0,99 €",
+      "Picture":"../static/Pictures/Iglo Kräuter Italienische Art 60g.webp"
+    },
+    "30":{
+      "Name": "REWE Beste Wahl Garam Masala",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Garam Masala.webp"
+    },
+    "31":{
+      "Name": "REWE Beste Wahl Brathähnchen",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Brathähnchen.webp"
+    },
+    "32":{
+      "Name": "Bamboo Garden Garam Masala",
+      "Price":"1,79 €",
+      "Picture":"../static/Pictures/Bamboo Garden Garam Masala.webp"
+    },
+    "33":{
+      "Name": "REWE Beste Wahl Ras El Hanout",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Ras El Hanout.webp"
+    },
+    "34":{
+      "Name": "REWE Beste Wahl Majoran",
+      "Price":"1,90 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Majoran.webp"
+    },
+    "35":{
+      "Name": "REWE Bio Petersilie 50g",
+      "Price":"0,79 €",
+      "Picture":"../static/Pictures/REWE Bio Petersilie 50g.webp"
+    },
+    "36":{
+      "Name": "Tempo Feuchttücher Fresh to go Classic 10 Tücher",
+      "Price":"0,99 €",
+      "Picture":"../static/Pictures/Tempo Feuchttücher Fresh to go Classic 10 Tücher.webp"
+    },
+    "37":{
+      "Name": "Today Einmalwaschlappen Sensitiv 50 Stück",
+      "Price":"2,09 €",
+      "Picture":"../static/Pictures/Today Einmalwaschlappen Sensitiv 50 Stück.webp"
+    },
+    "38":{
+      "Name": "ja! Brillen-Putztücher 54 Stück",
+      "Price":"0,99 €",
+      "Picture":"../static/Pictures/ja! Brillen-Putztücher 54 Stück.webp"
+    },
+    "39":{
+      "Name": "Swirl Brillen-Putztücher 30 Stück",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/Swirl Brillen-Putztücher 30 Stück.webp"
+    },
+    "40":{
+      "Name": "Always Ultra Damenbinden normal mit Flügel 26 Stück",
+      "Price":"3,45 €",
+      "Picture":"../static/Pictures/Always Ultra Damenbinden normal mit Flügel 26 Stück.webp"
+    },
+    "41":{
+      "Name": "REWE Beste Wahl Slipeinlagen Normal 45 Stück",
+      "Price":"1,09 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Slipeinlagen Normal 45 Stück.webp"
+    },
+    "42":{
+      "Name": "Always Slipeinlagen Fresh & Protect Normal 56 Stück",
+      "Price":"2,45 €",
+      "Picture":"../static/Pictures/Always Slipeinlagen Fresh & Protect Normal 56 Stück.webp"
+    },
+    "43":{
+      "Name": "Carefree Cotton Slipeinlage 56 Stück",
+      "Price":"1,95 €",
+      "Picture":"../static/Pictures/Carefree Cotton Slipeinlage 56 Stück.webp"
+    },
+    "44":{
+      "Name": "REWE Beste Wahl Maxi Binden Normal 20 Stück",
+      "Price":"0,59 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Maxi Binden Normal 20 Stück.webp"
+    },
+    "45":{
+      "Name": "REWE Beste Wahl Ultra Binde Lang mit Flügeln 14 Stück",
+      "Price":"1,09 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Ultra Binde Lang mit Flügeln 14 Stück.webp"
+    },
+    "46":{
+      "Name": "REWE Beste Wahl Tampons Normal 80 Stück",
+      "Price":"2,39 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Tampons Normal 80 Stück.webp"
+    },
+    "47":{
+      "Name": "o.b. Tampons Original Normal 64 Stück",
+      "Price":"3,99 €",
+      "Picture":"../static/Pictures/o.b. Tampons Original Normal 64 Stück.webp"
+    },
+    "48":{
+      "Name": "REWE Beste Wahl Tampons Super 56 Stück",
+      "Price":"2,39 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Tampons Super 56 Stück.webp"
+    },
+    "49":{
+      "Name": "McCain Kroketten 500g",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/McCain Kroketten 500g.webp"
+    },
+    "50":{
+      "Name": "ja! Kroketten 750g",
+      "Price":"1,39 €",
+      "Picture":"../static/Pictures/ja! Kroketten 750g.webp"
+    },
+    "51":{
+      "Name": "ja! Curly Fries pikant gewürzt 600g",
+      "Price":"1,59 €",
+      "Picture":"../static/Pictures/ja! Curly Fries pikant gewürzt 600g.webp"
+    },
+    "52":{
+      "Name": "Chio Dip! Hot Cheese 200ml",
+      "Price":"2,29 €",
+      "Picture":"../static/Pictures/Chio Dip! Hot Cheese 200ml.webp"
+    },
+    "53":{
+      "Name": "Fuego Salsa Dip Mild 200ml",
+      "Price":"2,19 €",
+      "Picture":"../static/Pictures/Fuego Salsa Dip Mild 200ml.webp"
+    },
+    "54":{
+      "Name": "Fuego Tortillas Classic 320g",
+      "Price":"2,99 €",
+      "Picture":"../static/Pictures/Fuego Tortillas Classic 320g.webp"
+    },
+    "55":{
+      "Name": "Don Enrico Wrap Tortillas 320g",
+      "Price":"2,99 €",
+      "Picture":"../static/Pictures/Don Enrico Wrap Tortillas 320g.webp"
+    },
+    "56":{
+      "Name": "Mestemacher California Wraps Weizen 270g",
+      "Price":"2,49 €",
+      "Picture":"../static/Pictures/Mestemacher California Wraps Weizen 270g.webp"
+    },
+    "57":{
+      "Name": "REWE Beste Wahl Vollkorn Tortillas 432g, 6 Stück",
+      "Price":"1,39 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Vollkorn Tortillas 432g, 6 Stück.webp"
+    },
+    "58":{
+      "Name": "Landliebe frische Landmilch 3,8% 1,5l",
+      "Price":"1,99 €",
+      "Picture":"../static/Pictures/Landliebe frische Landmilch 3,8 1,5l.webp"
+    },
+    "59":{
+      "Name": "REWE Bio frische fettarme Milch 1,5 1l",
+      "Price":"1,05 €",
+      "Picture":"../static/Pictures/REWE Bio frische fettarme Milch 1,5 1l.webp"
+    },
+    "60":{
+      "Name": "Landliebe frische Landmilch 3,8% 1l",
+      "Price":"1,59 €",
+      "Picture":"../static/Pictures/Landliebe frische Landmilch 3,8 1l.webp"
+    },
+    "61":{
+      "Name": "Weihenstephan Frische Alpenmilch 3,5% 1l",
+      "Price":"1,59 €",
+      "Picture":"../static/Pictures/Weihenstephan Frische Alpenmilch 3,5 1l.webp"
+    },
+    "62":{
+      "Name": "Berchtesgadener Land Extra länger frische Bergbauern-Milch 3,5% 1l",
+      "Price":"1,19 €",
+      "Picture":"../static/Pictures/Berchtesgadener Land Extra länger frische Bergbauern-Milch 3,5 1l.webp"
+    },
+    "63":{
+      "Name": "REWE Beste Wahl Respeggt Eier Freilandhaltung 10 Stück",
+      "Price":"2,59 €",
+      "Picture":"../static/Pictures/REWE Beste Wahl Respeggt Eier Freilandhaltung 10 Stück.webp"
+    },
+    "64":{
+      "Name": "REWE Bio Eier Spitz und Bube 6 Stück",
+      "Price":"2,49 €",
+      "Picture":"../static/Pictures/REWE Bio Eier Spitz und Bube 6 Stück.webp"
+    },
+    "65":{
+      "Name": "Eier Freilandhaltung 6 Stück",
+      "Price":"2,39 €",
+      "Picture":"../static/Pictures/Eier Freilandhaltung 6 Stück.webp"
+    },
+    "66":{
+      "Name": "Cremissimo Eis Disney Die Eiskönigin 900ml",
+      "Price":"3,49 €",
+      "Picture":"../static/Pictures/Cremissimo Eis Disney Die Eiskönigin 900ml.webp"
+    },
+    "67":{
+      "Name": "REWE Feine Welt Pures Vergnügen 480ml",
+      "Price":"2,79 €",
+      "Picture":"../static/Pictures/REWE Feine Welt Pures Vergnügen 480ml.webp"
+    },
+    "68":{
+      "Name": "Ben & Jerry's Eis Cookie Dough 465ml",
+      "Price":"6,49 €",
+      "Picture":"../static/Pictures/Ben & Jerry's Eis Cookie Dough 465ml.webp"
+    },
+    "69":{
+      "Name": "Nestlé Schöller Eis Kaktus 9x45ml",
+      "Price":"3,49 €",
+      "Picture":"../static/Pictures/Nestlé Schöller Eis Kaktus 9x45ml.webp"
+    },
+    "70":{
+      "Name": "Häagen-Dazs Salted Caramel Eis 460ml",
+      "Price":"6,49 €",
+      "Picture":"../static/Pictures/Häagen-Dazs Salted Caramel Eis 460ml.webp"
+    }
+  }
+}

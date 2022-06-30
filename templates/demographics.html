@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/questionaire.css">
+    <title>Demografischer Fragebogen</title>
+</head>
+<body>
+<div class="banner">
+    <div>
+        Demografischer Fragebogen
+    </div>
+</div>
+<div>
+    <form id="demographics">
+        <div class="radioarray">
+            <b>Geschlecht:</b>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Männlich</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Weiblich</label>
+            <input type="radio" name="gender" id="divers" value="divers">
+            <label for="divers">Divers</label>
+        </div>
+        <div class="radioarray">
+            <b>Alter:</b>
+            <input type="number" id="age" name="age" min="18" style="width: 60px; font-size: 20px" size="2">
+        </div>
+        <div class="radioarray">
+            <b>Beruf:</b>
+            <input type="text" id="job" style="font-size: 20px" name="job" >
+        </div>
+        <div class="radioarray">
+            <b>Wie oft kaufst du Lebensmittel online?</b>
+            <br>
+            <input type="radio" id="neverOl" name="amountGroceriesOnline" value="neverOl">
+            <label for="neverOl">Nie</label>
+            <input type="radio" id="triedOl" name="amountGroceriesOnline" value="triedOl">
+            <label for="triedOl">Bisher nur getestet</label>
+            <input type="radio" id="lessMonthOl" name="amountGroceriesOnline" value="lessMonthOl">
+            <label for="lessMonthOl">Weniger als einmal im Monat</label>
+            <input type="radio" id="1-3MonthOl" name="amountGroceriesOnline" value="1-3MonthOl">
+            <label for="1-3MonthOl">1-3 mal im Monat</label>
+            <input type="radio" id="5-6WeekOl" name="amountGroceriesOnline" value="5-6WeekOl">
+            <label for="5-6WeekOl">5-6 mal in der Woche</label>
+            <input type="radio" id="3-4WeekOl" name="amountGroceriesOnline" value="3-4WeekOl">
+            <label for="3-4WeekOl">3-4 mal in der Woche</label>
+            <input type="radio" id="1-2WeekOl" name="amountGroceriesOnline" value="1-2WeekOl">
+            <label for="1-2WeekOl">1-2 mal in der Woche</label>
+        </div>
+        <div class="radioarray">
+            <b>Wie oft kaufst du Lebensmittel insgesamt?</b>
+            <br>
+            <input type="radio" id="never" name="amountGroceriesOverall" value="never">
+            <label for="never">Nie</label>
+            <input type="radio" id="tried" name="amountGroceriesOverall" value="tried">
+            <label for="tried">Bisher nur getestet</label>
+            <input type="radio" id="lessMonth" name="amountGroceriesOverall" value="lessMonth">
+            <label for="lessMonth">Weniger als einmal im Monat</label>
+            <input type="radio" id="1-3Month" name="amountGroceriesOverall" value="1-3Month">
+            <label for="1-3Month">1-3 mal im Monat</label>
+            <input type="radio" id="5-6Week" name="amountGroceriesOverall" value="5-6Week">
+            <label for="5-6Week">5-6 mal in der Woche</label>
+            <input type="radio" id="3-4Week" name="amountGroceriesOverall" value="3-4Week">
+            <label for="3-4Week">3-4 mal in der Woche</label>
+            <input type="radio" id="1-2Week" name="amountGroceriesOverall" value="1-2Week">
+            <label for="1-2Week">1-2 mal in der Woche</label>
+        </div>
+        <div class="radioarray">
+            <b>Nimmst du dir viel Zeit für Kaufentscheidungen?</b>
+            <br>
+            <input type="radio" id="stronglyAgree" name="amountGroceriesOverall" value="stronglyAgree">
+            <label for="stronglyAgree">Trifft vollkommen zu</label>
+            <input type="radio" id="agree" name="amountGroceriesOverall" value="agree">
+            <label for="agree">Trifft eher zu</label>
+            <input type="radio" id="neutral" name="amountGroceriesOverall" value="neutral">
+            <label for="neutral">Neutral</label>
+            <input type="radio" id="disagree" name="amountGroceriesOverall" value="disagree">
+            <label for="disagree">Trifft eher nicht zu</label>
+            <input type="radio" id="stronglyDisagree" name="amountGroceriesOverall" value="stronglyDisagree">
+            <label for="stronglyDisagree">Trifft gar nicht zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Trägst du während der Studie eine Sehhilfe?</b>
+            <input type="radio" id="glasses" name="visionCorrection" value="glasses">
+            <label for="glasses">Brille</label>
+            <input type="radio" id="contacts" name="visionCorrection" value="contacts">
+            <label for="contacts">Kontaktlinsen</label>
+            <input type="radio" id="noCorrection" name="visionCorrection" value="none">
+            <label for="noCorrection">Keine</label>
+        </div>
+    </form>
+    <button id="next" type="button">Weiter</button> <br>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/shop.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8">
+        var intervals = [];
+        var productNum = 1;
+        var productSet = 1;
+        var highlightingTechnique = 0;
+        $(window).on('load', loadData());
+        //detecting arrow key presses
+        document.addEventListener('keydown', function(e) {
+            var refresh = false;
+            switch (e.key) {
+                case "ArrowLeft":
+                    productNum--;
+                    if (productNum == 0){productNum = 5}
+                    refresh = true;
+                    break;
+                case "ArrowRight":
+                    productNum = (productNum%5)+1;
+                    refresh = true;
+                    break;
+                case "ArrowDown":
+                    productSet--;
+                    if (productSet == 0){productSet = 40}
+                    refresh = true;
+                    break;
+                case "ArrowUp":
+                    productSet = (productSet%40)+1;
+                    refresh = true;
+                    break;
+                case "0":
+                    highlightingTechnique = 0;
+                    refresh = true;
+                    break;
+                case "1":
+                    highlightingTechnique = 1;
+                    refresh = true;
+                    break;
+                case "2":
+                    highlightingTechnique = 2;
+                    refresh = true;
+                    break;
+                case "3":
+                    highlightingTechnique = 3;
+                    refresh = true;
+                    break;
+            }
+            if (refresh){
+                loadData();
+            }
+
+        });
+        function loadData() {
+            $.getJSON('../static/data.json', function(data) {
+                //General Information
+                const product = data[productSet.toString()][productNum.toString()];
+                //Details
+                const ul = document.getElementById("Details");
+                $(ul).empty();
+                product['Details'].forEach(function (element) {
+                    const li = document.createElement("li");
+                    $(document.createTextNode(element)).appendTo(li);
+                    highlighting(li,element,product);
+                    $(li).appendTo(ul);
+                });
+                //Ad
+                const ads = 70;
+                const ad1 = getRandomInteger(1, ads);
+                document.getElementById("ad1Name").innerHTML = data['Ads'][ad1.toString()]['Name'];
+                document.getElementById("ad1Price").innerHTML = data['Ads'][ad1.toString()]['Price'];
+                $("#ad1Picture").attr("src", data['Ads'][ad1.toString()]['Picture']);
+                let ad2 = getRandomInteger(1,ads);
+                while (ad2 === ad1){
+                    ad2 = getRandomInteger(1,ads)
+                }
+                document.getElementById("ad2Name").innerHTML = data['Ads'][ad2.toString()]['Name'];
+                document.getElementById("ad2Price").innerHTML = data['Ads'][ad2.toString()]['Price'];
+                $("#ad2Picture").attr("src", data['Ads'][ad2.toString()]['Picture']);
+                let ad3 = getRandomInteger(1,ads);
+                while (ad3 === ad2 || ad3 === ad1){
+                    ad3 = getRandomInteger(1,ads)
+                }
+                document.getElementById("ad3Name").innerHTML = data['Ads'][ad3.toString()]['Name'];
+                document.getElementById("ad3Price").innerHTML = data['Ads'][ad3.toString()]['Price'];
+                $("#ad3Picture").attr("src", data['Ads'][ad3.toString()]['Picture']);
+                let ad4 = getRandomInteger(1,ads);
+                while (ad4 === ad3 || ad4 === ad2 || ad4 === ad1){
+                    ad4 = getRandomInteger(1,ads)
+                }
+                document.getElementById("ad4Name").innerHTML = data['Ads'][ad4.toString()]['Name'];
+                document.getElementById("ad4Price").innerHTML = data['Ads'][ad4.toString()]['Price'];
+                $("#ad4Picture").attr("src", data['Ads'][ad4.toString()]['Picture']);
+            });
+        }
+        function getRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+        function highlighting (element, info, product) {
+            if (highlightingTechnique > 0){
+                if (product["Important"].includes(info)){
+                    if (highlightingTechnique === 1) {
+                        element.style.fontSize = "125%";
+                    } else if (highlightingTechnique === 2){
+                        element.style.color = "red";
+                    } else if (highlightingTechnique === 3){
+                        const Id = setInterval(function() {element.style.opacity = (element.style.opacity === "1" ? "0.5" : "1");}, 300)
+                        intervals.push(Id);
+                    }
+                }
+            }
+        }
+        function resetStyle (element) {
+            element.style.fontSize = "";
+            element.style.color = "";
+            intervals.forEach(value => clearInterval(value));
+            intervals.length = 0;
+            element.style.opacity = "";
+        }
+    </script>
+    <title>Lebensmittel-Shop</title>
+</head>
+<body>
+<div class="shopName">
+    <div> Lebensmittel-Shop </div>
+</div>
+
+<div class="row">
+    <div class="leftcolumn" >
+        <img id = "Picture"/>
+        <div class="productTitle">
+            <article>
+                <div id = "Brand" class="productBrand"></div>
+                <div id = "Name" class="productTitle"></div>
+            </article>
+            <article>
+                <div id = "Price"></div>
+                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+            </article>
+        </div>
+        <div class="productDetail">
+            Produktbeschreibung
+        </div>
+        <ul id = "Details">
+        </ul>
+    </div>
+
+    <div class="rightcolumn">
+        <div>
+            <article>
+                <p id="ad1Name"></p>
+                <br>
+                <p id="ad1Price"></p>
+            </article>
+            <img id = "ad1Picture"/>
+        </div>
+        <div>
+            <article>
+                <p id="ad2Name"></p>
+                <br>
+                <p id="ad2Price"></p>
+            </article>
+            <img id = "ad2Picture"/>
+        </div>
+        <div>
+            <article>
+                <p id="ad3Name"></p>
+                <br>
+                <p id="ad3Price"></p>
+            </article>
+            <img id = "ad3Picture"/>
+        </div>
+        <div>
+            <article>
+                <p id="ad4Name"></p>
+                <br>
+                <p id="ad4Price"></p>
+            </article>
+            <img id = "ad4Picture"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

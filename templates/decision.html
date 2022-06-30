@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/decision.css">
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" charset="utf-8">
+        let productSet =1;
+        let timerId;
+        $(window).on('load', loadData());
+        //detecting arrow key presses
+        document.addEventListener('keydown', function(e) {
+            let refresh = false;
+            switch (e.key) {
+                case "ArrowDown":
+                    productSet--;
+                    if (productSet == 0){productSet = 40}
+                    refresh = true;
+                    break;
+                case "ArrowUp":
+                    productSet = (productSet%40)+1;
+                    refresh = true;
+                    break;
+            }
+            if (refresh) {
+                clearInterval(timerId);
+                loadData();
+            }
+        });
+        function loadData() {
+            $.getJSON('../static/data.json', function(data) {
+                //General Information
+                const products = data[productSet.toString()];
+                for (let i=1; i<6; i++){
+                    let product = products[i];
+                    let element = document.getElementById("Price"+i.toString());
+                    element.innerHTML = product['Info']['Price'];
+                    element = document.getElementById("Brand"+i.toString());
+                    element.innerHTML = product['Info']['Brand'];
+                    element = document.getElementById("Name"+i.toString());
+                    element.innerHTML = product['Info']['Name'];
+                    //Picture
+                    $("#Picture"+i.toString()).attr("src", product['Picture']);
+                }
+                let seconds = 20;
+                let timer = seconds.toString()
+                seconds < 10 ? timer = "0"+seconds.toString() : timer = seconds.toString();
+                document.getElementById("timer").innerHTML = "0:"+timer;
+                timerId = setInterval(function(){
+                    seconds= seconds-1;
+                    seconds < 10 ? timer = "0"+seconds.toString() : timer = seconds.toString();
+                    document.getElementById("timer").innerHTML = "0:"+timer;
+                    if (seconds < 0) {
+                        clearInterval(timerId);
+                        document.getElementById("timer").innerHTML = "EXPIRED";
+                    }
+                },1000)
+            });
+        }
+    </script>
+    <title>Entscheidung</title>
+</head>
+<body>
+<div class="shopName">
+    <div> Entscheidung </div>
+</div>
+
+<div class="row">
+    <div class="column" >
+        <img id = "Picture1"/>
+        <div class="productTitle">
+            <article>
+                <div id = "Brand1" class="productBrand"></div>
+                <div id = "Name1" class="productTitle"></div>
+            </article>
+            <article>
+                <div id = "Price1"></div>
+                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+            </article>
+        </div>
+    </div>
+
+    <div class="column">
+        <img id = "Picture2"/>
+        <div class="productTitle">
+            <article>
+                <div id = "Brand2" class="productBrand"></div>
+                <div id = "Name2" class="productTitle"></div>
+            </article>
+            <article>
+                <div id = "Price2"></div>
+                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+            </article>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="column" >
+        <img id = "Picture3"/>
+        <div class="productTitle">
+            <article>
+                <div id = "Brand3" class="productBrand"></div>
+                <div id = "Name3" class="productTitle"></div>
+            </article>
+            <article>
+                <div id = "Price3"></div>
+                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+            </article>
+        </div>
+    </div>
+
+    <div class="column">
+        <img id = "Picture4"/>
+        <div class="productTitle">
+            <article>
+                <div id = "Brand4" class="productBrand"></div>
+                <div id = "Name4" class="productTitle"></div>
+            </article>
+            <article>
+                <div id = "Price4"></div>
+                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+            </article>
+        </div>
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="column">
+        <img id = "Picture5"/>
+        <div class="productTitle">
+            <article>
+                <div id = "Brand5" class="productBrand"></div>
+                <div id = "Name5" class="productTitle"></div>
+            </article>
+            <article>
+                <div id = "Price5"></div>
+                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+            </article>
+        </div>
+    </div>
+    <div class="column">
+        <div class="timer" id="timer">
+        </div>
+    </div>
+</div>
+</body>
+</html>

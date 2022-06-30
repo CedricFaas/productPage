@@ -1,0 +1,89 @@
+html, body, .container{
+    background-color: #efefef;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.shopName {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.shopName div {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: xx-large;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    height: 30%;
+}
+
+.column {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    padding: 10px;
+}
+
+img {
+    background-color: white;
+    height: 25vh;
+    width: 25vh;
+    object-fit: scale-down;
+    border-radius: 20px;
+    align-self: center;
+    alt: "Product Picture";
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+.productTitle {
+    display: flex;
+    flex-direction: row;
+    width: 35vh;
+    font-size: 24px;
+    text-align: left;
+    align-self: center;
+    justify-content: space-between;
+}
+
+.productBrand {
+    font-size: 20px;
+    text-align: left;
+}
+
+.timer {
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    font-size: 60px;
+    color: red;
+}
+
+.cart-btn {
+    display: inline-block;
+    background-color: #7DC855;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 12px 30px;
+    transition: all .5s;
+    margin: 10px;
+}
+.cart-btn:hover {
+    background-color: #64af3d;
+}
