@@ -4,31 +4,59 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/decision.css">
-    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" charset="utf-8">
-        let productSet =1;
-        let timerId;
-        $(window).on('load', loadData());
-        //detecting arrow key presses
-        document.addEventListener('keydown', function(e) {
-            let refresh = false;
-            switch (e.key) {
-                case "ArrowDown":
-                    productSet--;
-                    if (productSet == 0){productSet = 40}
-                    refresh = true;
-                    break;
-                case "ArrowUp":
-                    productSet = (productSet%40)+1;
-                    refresh = true;
-                    break;
-            }
-            if (refresh) {
+
+        $(document).ready(function() {
+            var socket = io();
+            let productSet;
+            let timerId;
+
+            socket.on('connect', function() {
+                socket.send('Decision page connected!');
+                socket.emit('loadDecision')
+            });
+            socket.on('shop', function () {
                 clearInterval(timerId);
-                loadData();
-            }
+                window.location.href = "/shop";
+                return false;
+            })
+            socket.on('loadDecision', function (message) {
+                productSet = message['Set'];
+                timerId = loadData(socket)
+                return false;
+            })
+
+
+
+            $('#cart1').click(function () {
+                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 1});
+                return false;
+            });
+
+            $('#cart2').click(function () {
+                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 2});
+                return false;
+            });
+
+            $('#cart3').click(function () {
+                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 3});
+                return false;
+            });
+
+            $('#cart4').click(function () {
+                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 4});
+                return false;
+            });
+
+            $('#cart5').click(function () {
+                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 5});
+                return false;
+            });
         });
-        function loadData() {
+
+        function loadData(socket) {
             $.getJSON('../static/data.json', function(data) {
                 //General Information
                 const products = data[productSet.toString()];
@@ -47,13 +75,14 @@
                 let timer = seconds.toString()
                 seconds < 10 ? timer = "0"+seconds.toString() : timer = seconds.toString();
                 document.getElementById("timer").innerHTML = "0:"+timer;
-                timerId = setInterval(function(){
+                return setInterval(function(){
                     seconds= seconds-1;
                     seconds < 10 ? timer = "0"+seconds.toString() : timer = seconds.toString();
                     document.getElementById("timer").innerHTML = "0:"+timer;
                     if (seconds < 0) {
                         clearInterval(timerId);
                         document.getElementById("timer").innerHTML = "EXPIRED";
+                        socket.emit('shop', null)
                     }
                 },1000)
             });
@@ -76,7 +105,7 @@
             </article>
             <article>
                 <div id = "Price1"></div>
-                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+                <button class="cart-btn" id="cart1">In den Einkaufswagen</button>
             </article>
         </div>
     </div>
@@ -90,7 +119,7 @@
             </article>
             <article>
                 <div id = "Price2"></div>
-                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+                <button class="cart-btn" id="cart2">In den Einkaufswagen</button>
             </article>
         </div>
 
@@ -107,7 +136,7 @@
             </article>
             <article>
                 <div id = "Price3"></div>
-                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+                <button class="cart-btn" id="cart3">In den Einkaufswagen</button>
             </article>
         </div>
     </div>
@@ -121,7 +150,7 @@
             </article>
             <article>
                 <div id = "Price4"></div>
-                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+                <button class="cart-btn" id="cart4">In den Einkaufswagen</button>
             </article>
         </div>
 
@@ -138,7 +167,7 @@
             </article>
             <article>
                 <div id = "Price5"></div>
-                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+                <button class="cart-btn" id="cart5">In den Einkaufswagen</button>
             </article>
         </div>
     </div>

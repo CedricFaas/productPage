@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/style.css">
     <title>Interview</title>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            const socket = io('');
+
+            socket.on('connect', function() {
+                socket.send('Interview page connected!');
+            });
+            socket.on('end', function () {
+                window.location.href = "/end";
+                return false;
+            })
+
+            $('button#start').click(function () {
+                if (document.getElementById("checkbox").checked) {
+                    socket.emit('end');
+                    return false;
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="banner">
@@ -15,8 +37,8 @@
 </div>
 <div>
     <article>
-        Vielen Dank für die Teilnahme an unserer Studie. Abschließend haben wir noch ein paar Fragen. Abschließend
-        erhälst du deine Vergütung.
+        Vielen Dank für die Teilnahme an unserer Studie. Abschließend haben wir noch ein paar Fragen an dich. Danach
+        erhältst du deine Vergütung.
     </article>
     <label><input id="checkbox" type="checkbox"> Vergütung erhalten und bestätigt</label>
     <br>

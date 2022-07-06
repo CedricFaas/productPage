@@ -6,6 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/questionaire.css">
     <title>Demografischer Fragebogen</title>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            const socket = io('');
+
+            socket.on('connect', function() {
+                socket.send('Demographics page connected!');
+            });
+            socket.on('task', function () {
+                window.location.href = "/task";
+                return false;
+            })
+
+            $('button#next').click(function () {
+                if($("input[name='gender']:checked").size() > 0){
+                    if ($("input[name='age']").val().length != 0) {
+                        if ($("input[name='job']").val().length != 0) {
+                            if($("input[name='amountGroceriesOnline']:checked").size() > 0){
+                                if($("input[name='amountGroceriesOverall']:checked").size() > 0){
+                                    if($("input[name='decisionTime']:checked").size() > 0){
+                                        if($("input[name='visionCorrection']:checked").size() > 0){
+                                            socket.emit('task');
+                                            return false;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="banner">
@@ -71,15 +106,15 @@
         <div class="radioarray">
             <b>Nimmst du dir viel Zeit für Kaufentscheidungen?</b>
             <br>
-            <input type="radio" id="stronglyAgree" name="amountGroceriesOverall" value="stronglyAgree">
+            <input type="radio" id="stronglyAgree" name="decisionTime" value="stronglyAgree">
             <label for="stronglyAgree">Trifft vollkommen zu</label>
-            <input type="radio" id="agree" name="amountGroceriesOverall" value="agree">
+            <input type="radio" id="agree" name="decisionTime" value="agree">
             <label for="agree">Trifft eher zu</label>
-            <input type="radio" id="neutral" name="amountGroceriesOverall" value="neutral">
+            <input type="radio" id="neutral" name="decisionTime" value="neutral">
             <label for="neutral">Neutral</label>
-            <input type="radio" id="disagree" name="amountGroceriesOverall" value="disagree">
+            <input type="radio" id="disagree" name="decisionTime" value="disagree">
             <label for="disagree">Trifft eher nicht zu</label>
-            <input type="radio" id="stronglyDisagree" name="amountGroceriesOverall" value="stronglyDisagree">
+            <input type="radio" id="stronglyDisagree" name="decisionTime" value="stronglyDisagree">
             <label for="stronglyDisagree">Trifft gar nicht zu</label>
         </div>
         <div class="radioarray">

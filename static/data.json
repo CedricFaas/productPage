@@ -1637,10 +1637,13 @@
         "Name": "Wisch & Weg Original",
         "Price": "2,89 €"
       },
-      "Details": ["Das neue Zewa Wisch&Weg: Die innovative Power-X-Struktur hält die Küchenrolle stark und reißfest, während ihre weichen Kissen besonders gut absorbieren. So können die Haushaltstücher durch die verbesserte Wabentechnologie Flüssigkeit aufnehmen - ganz ohne zu reißen. Es eignet sich als perfekter Helfer für den Küchenalltag, ist im Haushalt vielseitig einsetzbar und das Original überzeugt auch optisch mit der Markenbordüre.", "Mit den Haushaltstüchern von Zewa Wisch&Weg lässt sich im Handumdrehen jeder Schmutz und jeder Fleck entfernen – ob auf der Kleidung, der Küchenablage oder dem Boden. Das robuste Papier eignet sich zum Aufwischen, Schrubben, Polieren und Aufsaugen, ohne dabei Fussel zu hinterlassen.","4 x 45 Blatt","16,06€/1000 St"],
+      "Details": ["Das neue Zewa Wisch&Weg: Die innovative Power-X-Struktur hält die Küchenrolle stark und reißfest, während ihre weichen Kissen besonders gut absorbieren. So können die Haushaltstücher durch die verbesserte Wabentechnologie Flüssigkeit aufnehmen - ganz ohne zu reißen. Es eignet sich als perfekter Helfer für den Küchenalltag, ist im Haushalt vielseitig einsetzbar und das Original überzeugt auch optisch mit der Markenbordüre.",
+        "Mit den Haushaltstüchern von Zewa Wisch&Weg lässt sich im Handumdrehen jeder Schmutz und jeder Fleck entfernen – ob auf der Kleidung, der Küchenablage oder dem Boden. Das robuste Papier eignet sich zum Aufwischen, Schrubben, Polieren und Aufsaugen, ohne dabei Fussel zu hinterlassen.",
+        "4 x 45 Blatt",
+        "16,06€/1000 St"],
       "Picture": "../static/Pictures/Zewa Wisch & Weg Original.png",
       "Important": [
-
+        "16,06€/1000 St"
       ]
     },
     "2": {
@@ -1649,10 +1652,15 @@
         "Name": "Küchenrolle Wisch & Weg Leicht",
         "Price": "2,39 €"
       },
-      "Details": ["Das nachhaltigste Zewa Wisch&Weg aller Zeiten – spart 30% Fasern für weniger Verbrauch* - und ein Blatt kann ausreichen.","Zewa Wisch&Weg Leicht spart im Vergleich zu konventionellen, 3-lagigen Haushaltstüchern 30% Fasern. So hilft es den Verbrauch zu verringern und Müll zu minimieren. Dank der handlichen Größe und der leichteren Qualität im Vergleich zu Zewa Wisch&Weg Original erweist es sich als perfekter Helfer bei den verschiedensten täglichen Herausforderungen des Haushalts - und ein Blatt kann ausreichen. Dabei ist Zewa Wisch&Weg Leicht sowohl beim Aufwischen als auch Wegwischen saugstark und reißfest, wodurch Flüssigkeiten und Schmutz effektiv aufgenommen werden. Die Verpackung ist zu 100% recycelbar und besteht zu mehr als 30% aus bereits recyceltem Plastik. Dadurch wird der CO2-Dußabdruck der Verpackung reduziert. Die Tücher bleiben biologisch abbaubar. So sorgt Zewa Wisch&Weg für weniger Plastikmüll und mehr Wohlbefinden.","4 x 48 Blatt","12,45€/1000 St"],
+      "Details": ["Das nachhaltigste Zewa Wisch&Weg aller Zeiten – spart 30% Fasern für weniger Verbrauch* - und ein Blatt kann ausreichen.",
+        "Zewa Wisch&Weg Leicht spart im Vergleich zu konventionellen, 3-lagigen Haushaltstüchern 30% Fasern. So hilft es den Verbrauch zu verringern und Müll zu minimieren. Dank der handlichen Größe und der leichteren Qualität im Vergleich zu Zewa Wisch&Weg Original erweist es sich als perfekter Helfer bei den verschiedensten täglichen Herausforderungen des Haushalts - und ein Blatt kann ausreichen. Dabei ist Zewa Wisch&Weg Leicht sowohl beim Aufwischen als auch Wegwischen saugstark und reißfest, wodurch Flüssigkeiten und Schmutz effektiv aufgenommen werden.",
+        "Die Verpackung ist zu 100% recycelbar und besteht zu mehr als 30% aus bereits recyceltem Plastik. Dadurch wird der CO2-Dußabdruck der Verpackung reduziert. Die Tücher bleiben biologisch abbaubar. So sorgt Zewa Wisch&Weg für weniger Plastikmüll und mehr Wohlbefinden.",
+        "4 x 48 Blatt",
+        "12,45€/1000 St"],
       "Picture": "../static/Pictures/Zewa Küchenrolle Wisch & Weg Leicht.png",
       "Important": [
-
+        "Die Verpackung ist zu 100% recycelbar und besteht zu mehr als 30% aus bereits recyceltem Plastik. Dadurch wird der CO2-Dußabdruck der Verpackung reduziert. Die Tücher bleiben biologisch abbaubar. So sorgt Zewa Wisch&Weg für weniger Plastikmüll und mehr Wohlbefinden.",
+        "12,45€/1000 St"
       ]
     },
     "3": {
@@ -1661,10 +1669,12 @@
         "Name": "Küchenrollen mit Herzen",
         "Price": "2,99 €"
       },
-      "Details": ["Haushaltstücher 3-lagig, 100% Zellstoff und 4 x 45 Blatt. Alleskönner: Aufwischen, Putzen, Reinigen, Trockentupfen, Dekorieren.","4 x 43 Blatt", "17,38€/1000 St"],
+      "Details": ["Haushaltstücher 3-lagig, 100% Zellstoff und 4 x 45 Blatt. Alleskönner: Aufwischen, Putzen, Reinigen, Trockentupfen, Dekorieren.",
+        "4 x 43 Blatt",
+        "17,38€/1000 St"],
       "Picture": "../static/Pictures/Regina Küchenrollen.png",
       "Important": [
-
+        "17,38€/1000 St"
       ]
     },
     "4": {
@@ -1673,10 +1683,14 @@
         "Name": "Küchentücher 3-lagig",
         "Price": "2,79 €"
       },
-      "Details": ["Mit den Mach mit... Küchentüchern aus 100% Recyclingfasern können Sie kleine Missgeschicke schnell verschwinden lassen und dies mit gutem Gewissen der Umwelt gegenüber. Zum einen leisten Sie durch die Verwendung von Recyclingpapieren gegenüber Frischfaserprodukten einen positiven Beitrag zur Umwelt, zum anderen können Sie Mach mit... Küchentücher durch die Sparblatt-Funktion genau in der Menge verwenden, die Sie gerade benötigen ohne etwas zu verschwenden. Die Küchentücher sind mit dem Blauen Engel ausgezeichnet und tragen das WWF Logo.","4 x 90 Blatt", "7,75€/1000 St"],
+      "Details": ["Mit den Mach mit... Küchentüchern aus 100% Recyclingfasern können Sie kleine Missgeschicke schnell verschwinden lassen und dies mit gutem Gewissen der Umwelt gegenüber. Zum einen leisten Sie durch die Verwendung von Recyclingpapieren gegenüber Frischfaserprodukten einen positiven Beitrag zur Umwelt, zum anderen können Sie Mach mit... Küchentücher durch die Sparblatt-Funktion genau in der Menge verwenden, die Sie gerade benötigen ohne etwas zu verschwenden.",
+        "Die Küchentücher sind mit dem Blauen Engel ausgezeichnet und tragen das WWF Logo.",
+        "4 x 90 Blatt",
+        "7,75€/1000 St"],
       "Picture": "../static/Pictures/Mach Mit Küchentücher.png",
       "Important": [
-
+        "Mit den Mach mit... Küchentüchern aus 100% Recyclingfasern können Sie kleine Missgeschicke schnell verschwinden lassen und dies mit gutem Gewissen der Umwelt gegenüber. Zum einen leisten Sie durch die Verwendung von Recyclingpapieren gegenüber Frischfaserprodukten einen positiven Beitrag zur Umwelt, zum anderen können Sie Mach mit... Küchentücher durch die Sparblatt-Funktion genau in der Menge verwenden, die Sie gerade benötigen ohne etwas zu verschwenden.",
+        "7,75€/1000 St"
       ]
     },
     "5": {
@@ -1685,10 +1699,12 @@
         "Name": "Küchenrolle 2-lagig",
         "Price": "2,49 €"
       },
-      "Details": ["Haushalttücher mit Dekor - für immer und überall.","4 x 45 Blatt","13,83€/1000 St"],
+      "Details": ["Haushalttücher mit Dekor - für immer und überall.",
+        "4 x 45 Blatt",
+        "13,83€/1000 St"],
       "Picture": "../static/Pictures/Dick & Durstig Küchenrolle.png",
       "Important": [
-
+        "13,83€/1000 St"
       ]
     }
   },

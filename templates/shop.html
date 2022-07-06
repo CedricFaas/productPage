@@ -4,13 +4,49 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/shop.css">
-    <script src="http://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" charset="utf-8">
         var intervals = [];
+        var pause = false;
         var productNum = 1;
         var productSet = 1;
         var highlightingTechnique = 0;
-        $(window).on('load', loadData());
+        $(document).ready(function () {
+            const socket = io('');
+
+            socket.on('connect', function() {
+                socket.send('Shop page connected!');
+                socket.emit('loadProduct', null)
+            });
+            socket.on('pause', function () {
+                window.location.href = "/pause";
+                return false;
+            });
+            socket.on('decision', function () {
+                window.location.href = "/decision";
+                return false;
+            });
+            socket.on('questionaire', function () {
+                window.location.href = "/questionaire";
+                return false;
+            });
+
+            socket.on('loadProduct', function (message) {
+                productSet = message['ProductSet']
+                pause = message['Pause']
+                highlightingTechnique = message['HighlightingTechnique']
+                loadData()
+                socket.send('load data');
+            })
+
+            $('#cart').click(function () {
+                socket.emit('loadProduct', {'ProductSet': productSet, 'ProductNumber': productNum});
+                return false;
+            });
+        });
+
+
         //detecting arrow key presses
         document.addEventListener('keydown', function(e) {
             var refresh = false;
@@ -55,10 +91,19 @@
             }
 
         });
+
         function loadData() {
             $.getJSON('../static/data.json', function(data) {
                 //General Information
                 const product = data[productSet.toString()][productNum.toString()];
+                let element = document.getElementById("Price");
+                element.innerHTML = product['Info']['Price'];
+                element = document.getElementById("Brand");
+                element.innerHTML = product['Info']['Brand'];
+                element = document.getElementById("Name");
+                element.innerHTML = product['Info']['Name'];
+                //Picture
+                $("#Picture").attr("src", product['Picture']);
                 //Details
                 const ul = document.getElementById("Details");
                 $(ul).empty();
@@ -97,9 +142,11 @@
                 $("#ad4Picture").attr("src", data['Ads'][ad4.toString()]['Picture']);
             });
         }
+
         function getRandomInteger(min, max) {
             return Math.floor(Math.random() * (max - min + 1) ) + min;
         }
+
         function highlighting (element, info, product) {
             if (highlightingTechnique > 0){
                 if (product["Important"].includes(info)){
@@ -113,13 +160,6 @@
                     }
                 }
             }
-        }
-        function resetStyle (element) {
-            element.style.fontSize = "";
-            element.style.color = "";
-            intervals.forEach(value => clearInterval(value));
-            intervals.length = 0;
-            element.style.opacity = "";
         }
     </script>
     <title>Lebensmittel-Shop</title>
@@ -139,7 +179,7 @@
             </article>
             <article>
                 <div id = "Price"></div>
-                <a href="#" class="cart-btn">In den Einkaufswagen</a>
+                <button class="cart-btn" id="cart">In den Einkaufswagen</button>
             </article>
         </div>
         <div class="productDetail">

@@ -6,6 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/questionaire.css">
     <title>Abschließender Fragebogen</title>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            const socket = io('');
+
+            socket.on('connect', function() {
+                socket.send('Questionaire page connected!');
+            });
+            socket.on('interview', function () {
+                window.location.href = "/interview";
+                return false;
+            })
+
+            $('button#next').click(function () {
+
+                if($("input[name='favVersion']:checked").size() > 0) {
+                    if($("input[name='influence']:checked").size() > 0) {
+                        if($("input[name='largerFont']:checked").size() > 0) {
+                            if($("input[name='redFont']:checked").size() > 0) {
+                                if($("input[name='blinking']:checked").size() > 0) {
+                                    if($("input[name='standard']:checked").size() > 0) {
+                                        socket.emit('interview');
+                                        return false;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="banner">
