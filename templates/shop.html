@@ -14,6 +14,7 @@
         var highlightingTechnique = 0;
         $(document).ready(function () {
             const socket = io('');
+            let timerId;
 
             socket.on('connect', function() {
                 socket.send('Shop page connected!');
@@ -38,10 +39,25 @@
                 highlightingTechnique = message['HighlightingTechnique']
                 loadData()
                 socket.send('load data');
+                let seconds = 60;
+                let timer = seconds.toString()
+                seconds < 10 ? timer = "0"+seconds.toString() : timer = seconds.toString();
+                document.getElementById("timer").innerHTML = "0:"+timer;
+                timerId = setInterval(function () {
+                    seconds = seconds - 1;
+                    seconds < 10 ? timer = "0" + seconds.toString() : timer = seconds.toString();
+                    document.getElementById("timer").innerHTML = "0:" + timer;
+                    if (seconds < 0) {
+                        clearInterval(timerId);
+                        document.getElementById("timer").innerHTML = "EXPIRED";
+                        socket.emit('decision')
+                    }
+                }, 1000);
             })
 
             $('#cart').click(function () {
                 socket.emit('loadProduct', {'ProductSet': productSet, 'ProductNumber': productNum});
+                clearInterval(timerId)
                 return false;
             });
         });
@@ -97,11 +113,17 @@
                 //General Information
                 const product = data[productSet.toString()][productNum.toString()];
                 let element = document.getElementById("Price");
+                resetStyle(element);
                 element.innerHTML = product['Info']['Price'];
+                highlighting(element,product['Info']['Price'],product)
                 element = document.getElementById("Brand");
+                resetStyle(element);
                 element.innerHTML = product['Info']['Brand'];
+                highlighting(element,product['Info']['Brand'],product)
                 element = document.getElementById("Name");
+                resetStyle(element);
                 element.innerHTML = product['Info']['Name'];
+                highlighting(element,product['Info']['Name'],product)
                 //Picture
                 $("#Picture").attr("src", product['Picture']);
                 //Details
@@ -161,12 +183,21 @@
                 }
             }
         }
+
+        function resetStyle (element) {
+            element.style.fontSize = "";
+            element.style.color = "";
+            intervals.forEach(value => clearInterval(value));
+            intervals.length = 0;
+            element.style.opacity = "";
+        }
     </script>
     <title>Lebensmittel-Shop</title>
 </head>
 <body>
 <div class="shopName">
-    <div> Lebensmittel-Shop </div>
+    <div class="Title"> Lebensmittel-Shop </div>
+    <div class="Timer" id="timer"></div>
 </div>
 
 <div class="row">

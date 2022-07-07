@@ -148,7 +148,6 @@ def go_decision():
 
 @socketio.on('loadDecision')
 def go_loadDecision():
-    global productSet
     emit('loadDecision', {'Set': productSet})
 
 @socketio.on('pause')
