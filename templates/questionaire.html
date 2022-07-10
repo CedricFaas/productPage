@@ -28,7 +28,16 @@
                             if($("input[name='redFont']:checked").size() > 0) {
                                 if($("input[name='blinking']:checked").size() > 0) {
                                     if($("input[name='standard']:checked").size() > 0) {
-                                        socket.emit('interview');
+                                        const message = {
+                                            "favVersion": $("input[name='favVersion']:checked").val(),
+                                            "influence": $("input[name='influence']:checked").val(),
+                                            "largerFont": $("input[name='largerFont']:checked").val(),
+                                            "redFont": $("input[name='redFont']:checked").val(),
+                                            "blinking": $("input[name='blinking']:checked").val(),
+                                            "standard": $("input[name='standard']:checked").val()
+                                        }
+
+                                        socket.emit('interview', message);
                                         return false;
                                     }
                                 }
@@ -52,7 +61,7 @@
             <b>Welche Version des Online-Shops hat dir am besten gefallen?</b>
             <br>
             <input type="radio" id="noHighlighting" name="favVersion" value="noHighlighting">
-            <label for="noHighlighting">Ohne Highlighting</label>
+            <label for="noHighlighting">ohne Highlighting</label>
             <input type="radio" id="largerFont" name="favVersion" value="largerFont">
             <label for="largerFont">größere Schrift</label>
             <input type="radio" id="redFont" name="favVersion" value="redFont">
@@ -80,7 +89,7 @@
             <input type="radio" id="largerFont-1" name="largerFont" value="1">
             <label for="largerFont-1">negativ</label>
             <input type="radio" id="largerFont-2" name="largerFont" value="2">
-            <label for="influence-2">eher negativ</label>
+            <label for="largerFont-2">eher negativ</label>
             <input type="radio" id="largerFont-3" name="largerFont" value="3">
             <label for="largerFont-3">neutral</label>
             <input type="radio" id="largerFont-4" name="largerFont" value="4">

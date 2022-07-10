@@ -1640,7 +1640,7 @@
       "Details": ["Das neue Zewa Wisch&Weg: Die innovative Power-X-Struktur hält die Küchenrolle stark und reißfest, während ihre weichen Kissen besonders gut absorbieren. So können die Haushaltstücher durch die verbesserte Wabentechnologie Flüssigkeit aufnehmen - ganz ohne zu reißen. Es eignet sich als perfekter Helfer für den Küchenalltag, ist im Haushalt vielseitig einsetzbar und das Original überzeugt auch optisch mit der Markenbordüre.",
         "4 x 45 Blatt",
         "16,06€/1000 St"],
-      "Picture": "../static/Pictures/Zewa Wisch & Weg Original.png",
+      "Picture": "../static/Pictures/Zewa Wisch & Weg Original.jpg",
       "Important": [
         "16,06€/1000 St"
       ]
@@ -3232,7 +3232,8 @@
       },
       "Details": ["Zuckerfrei",
         "Vegan und ohne Gentechnik",
-        "Diese lecker-cremige Heisse Schokolade von Xucker ist nur mit Xylit gesüßt.",         "200 Gramm",
+        "Diese lecker-cremige Heisse Schokolade von Xucker ist nur mit Xylit gesüßt.",
+        "200 Gramm",
         "19,75 €/kg"],
       "Picture": "../static/Pictures/Xucker Heisse Schokolade.webp",
       "Important": [
@@ -3592,5 +3593,47 @@
       "Price":"6,49 €",
       "Picture":"../static/Pictures/Häagen-Dazs Salted Caramel Eis 460ml.webp"
     }
+  },
+  "categories": {
+    "1": "Äpfel",
+    "2": "Avocados",
+    "3": "Champignongs",
+    "4": "Tomaten",
+    "5": "Cola",
+    "6": "Eistee",
+    "7": "Orangensaft",
+    "8": "Mineralwasser",
+    "9": "Kurkuma",
+    "10": "Paprika",
+    "11": "Pfeffer",
+    "12": "Salz",
+    "13": "Chips",
+    "14": "Gummibären",
+    "15": "Schokolade",
+    "16": "Kekse",
+    "17": "Zucker",
+    "18": "Mehl",
+    "19": "Olivenöl",
+    "20": "Sonnenblumenöl",
+    "21": "Küchenrolle",
+    "22": "Toilettenpapier",
+    "23": "Taschentücherboxen",
+    "24": "Taschentücher",
+    "25": "Seife",
+    "26": "Shampoo",
+    "27": "Duschgel",
+    "28": "Zahnpasta",
+    "29": "Reis",
+    "30": "Nudeln",
+    "31": "Pommes",
+    "32": "Knödel",
+    "33": "Toast",
+    "34": "Brot",
+    "35": "Baguette",
+    "36": "Brötchen",
+    "37": "Tee",
+    "38": "Kaffee",
+    "39": "Kakao",
+    "40": "Trinkschokolade"
   }
 }

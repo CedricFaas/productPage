@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from flask_socketio import SocketIO, emit
-import random
+from particpant import Participant
+import csv
 
 async_mode = None
 
@@ -8,19 +9,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secret!'
 socketio = SocketIO(app, async_mode=async_mode)
 
-global productSets 
-productSets = list(range(1,41))
-random.shuffle(productSets)
-
-global productSet
-
-global highlightingTechniques 
-highlightingTechniques = list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))
-highlightingTechniques = highlightingTechniques + highlightingTechniques
-random.shuffle(highlightingTechniques)
-
-global paused
-paused = True
+global activeParticipant
 
 #Routing Requests
 
@@ -61,6 +50,10 @@ def shop():
 @app.route('/decision')
 def decision():
     return render_template('decision.html')
+
+@app.route('/nextProduct')
+def nextProduct():
+    return render_template('nextProduct.html')
     
 @app.route('/pause')
 def pause():
@@ -85,7 +78,10 @@ def test_message(message):
     app.logger.info('Incoming message: %s',message)
 
 @socketio.on('consent')
-def go_consent():
+def go_consent(message):
+    global activeParticipant 
+    activeParticipant = Participant(message['ParticipantId'])
+    activeParticipant.generateLogFiles()
     app.logger.info('Participant has started a new session')
     emit('consent')
 
@@ -95,7 +91,13 @@ def go_demographics():
     emit('demographics')
 
 @socketio.on('task')
-def go_task():
+def go_task(results):
+    with open('./log/demographics.csv', 'a') as csvfile:
+        filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        filewriter.writerow([str(activeParticipant.participantId),results['gender'],
+                              str(results['age']),results['job'],str(results['amountGroceriesOnline']),
+                              str(results['amountGroceriesOverall']),str(results['decisionTime']),
+                              results['visionCorrection']])
     app.logger.info('Task is presented to Participant!')
     emit('task')
 
@@ -116,30 +118,33 @@ def go_start():
 
 
 @socketio.on('shop')
-def go_shop(selection):
-    if (selection is not None):
-        print('Set:' + str(selection['ProductSet']) + ' Selected Product:' + str(selection['ProductNumber']))
+def go_shop():
     app.logger.info('Participant enters Shop!')
-    emit('shop', None)
-        
-@socketio.on('loadProduct')
-def loadProduct(selection):
+    emit('shop')
+    
+@socketio.on('nextProduct')
+def go_nextProduct(selection):
     if (selection is not None):
-        print('Set:' + str(selection['ProductSet']) + ' Selected Product:' + str(selection['ProductNumber']))
+        activeParticipant.saveDecision(str(selection['ProductSet']),selection['ProductNumber'], selection['InTime'])
         
-    app.logger.info('New Product loaded!')
-    global paused
-    global productSet
-    if (len(productSets) == 0):
+    if (activeParticipant.remainingSets() == 0):
         emit('questionaire')
-    elif (len(productSets) % 10 == 0 and not paused):
-        paused = True
+    elif (activeParticipant.remainingSets() % 10 == 0 and not activeParticipant.isPaused()):
+        activeParticipant.pause()
         emit('pause')
     else:
-        paused = False
-        productSet = productSets.pop()
-        highlightingTechnique = highlightingTechniques.pop()
-        emit('loadProduct', {'ProductSet': productSet, 'HighlightingTechnique': highlightingTechnique})
+        activeParticipant.endPause()
+        emit('nextProduct')
+    
+    
+@socketio.on('loadNextProduct')
+def go_loadNextProduct():
+        emit('loadNextProduct',{'Set': activeParticipant.nextProductSet()})
+        
+@socketio.on('loadProduct')
+def loadProduct():
+    app.logger.info('New Product loaded!')
+    emit('loadProduct', {'ProductSet': activeParticipant.getProductSet(), 'HighlightingTechnique': activeParticipant.nextHighlightingTechnique()})
 
 @socketio.on('decision')
 def go_decision():
@@ -148,7 +153,7 @@ def go_decision():
 
 @socketio.on('loadDecision')
 def go_loadDecision():
-    emit('loadDecision', {'Set': productSet})
+    emit('loadDecision', {'Set': activeParticipant.currentSet()})
 
 @socketio.on('pause')
 def go_pause():
@@ -161,12 +166,18 @@ def go_questionaire():
     emit('questionaire')
 
 @socketio.on('interview')
-def go_interview():
+def go_interview(results):
+    with open('./log/evaluation.csv', 'a') as csvfile:
+        filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        filewriter.writerow([str(activeParticipant.participantId),str(results['favVersion']),
+                              str(results['influence']),str(results['largerFont']),str(results['redFont']),
+                              str(results['blinking']),str(results['standard'])])
     app.logger.info('Participant started interview!')
     emit('interview')
 
 @socketio.on('end')
 def go_end():
+    activeParticipant.printDecisions()
     app.logger.info('Participant finished study!')
     emit('end')
    

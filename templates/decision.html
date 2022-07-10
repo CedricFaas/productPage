@@ -17,9 +17,9 @@
                 socket.send('Decision page connected!');
                 socket.emit('loadDecision')
             });
-            socket.on('shop', function () {
+            socket.on('nextProduct', function () {
                 clearInterval(timerId);
-                window.location.href = "/shop";
+                window.location.href = "/nextProduct";
                 return false;
             })
             socket.on('loadDecision', function (message) {
@@ -31,27 +31,27 @@
 
 
             $('#cart1').click(function () {
-                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 1});
+                socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': 1, 'InTime': 0});
                 return false;
             });
 
             $('#cart2').click(function () {
-                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 2});
+                socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': 2, 'InTime': 0});
                 return false;
             });
 
             $('#cart3').click(function () {
-                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 3});
+                socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': 3, 'InTime': 0});
                 return false;
             });
 
             $('#cart4').click(function () {
-                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 4});
+                socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': 4, 'InTime': 0});
                 return false;
             });
 
             $('#cart5').click(function () {
-                socket.emit('shop', {'ProductSet': productSet, 'ProductNumber': 5});
+                socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': 5, 'InTime': 0});
                 return false;
             });
         });
@@ -82,7 +82,7 @@
                     if (seconds < 0) {
                         clearInterval(timerId);
                         document.getElementById("timer").innerHTML = "EXPIRED";
-                        socket.emit('shop', null)
+                        socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': 0, 'InTime': 0})
                     }
                 },1000)
                 return timerId;

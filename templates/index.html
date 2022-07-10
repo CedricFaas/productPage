@@ -22,8 +22,9 @@
             })
 
             $('button#start').click(function () {
-                if($('#pID').val().length !== 0){
-                        socket.emit('consent');
+                const pId= $('#pID').val()
+                if(pId.length !== 0){
+                        socket.emit('consent',{'ParticipantId': pId});
                         return false;
                 }
             });

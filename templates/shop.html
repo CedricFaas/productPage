@@ -7,18 +7,19 @@
     <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" charset="utf-8">
-        var intervals = [];
-        var pause = false;
-        var productNum = 1;
-        var productSet = 1;
-        var highlightingTechnique = 0;
+        let intervals = [];
+        let pause = false;
+        let productNum = 1;
+        let productSet = 1;
+        let highlightingTechnique = 0;
+        let seconds = 60;
         $(document).ready(function () {
             const socket = io('');
             let timerId;
 
             socket.on('connect', function() {
                 socket.send('Shop page connected!');
-                socket.emit('loadProduct', null)
+                socket.emit('loadProduct')
             });
             socket.on('pause', function () {
                 window.location.href = "/pause";
@@ -32,6 +33,10 @@
                 window.location.href = "/questionaire";
                 return false;
             });
+            socket.on('nextProduct', function () {
+                window.location.href = "/nextProduct";
+                return false;
+            });
 
             socket.on('loadProduct', function (message) {
                 productSet = message['ProductSet']
@@ -39,8 +44,8 @@
                 highlightingTechnique = message['HighlightingTechnique']
                 loadData()
                 socket.send('load data');
-                let seconds = 60;
                 let timer = seconds.toString()
+
                 seconds < 10 ? timer = "0"+seconds.toString() : timer = seconds.toString();
                 document.getElementById("timer").innerHTML = "0:"+timer;
                 timerId = setInterval(function () {
@@ -56,7 +61,7 @@
             })
 
             $('#cart').click(function () {
-                socket.emit('loadProduct', {'ProductSet': productSet, 'ProductNumber': productNum});
+                socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': productNum, 'InTime': seconds});
                 clearInterval(timerId)
                 return false;
             });
@@ -74,31 +79,6 @@
                     break;
                 case "ArrowRight":
                     productNum = (productNum%5)+1;
-                    refresh = true;
-                    break;
-                case "ArrowDown":
-                    productSet--;
-                    if (productSet == 0){productSet = 40}
-                    refresh = true;
-                    break;
-                case "ArrowUp":
-                    productSet = (productSet%40)+1;
-                    refresh = true;
-                    break;
-                case "0":
-                    highlightingTechnique = 0;
-                    refresh = true;
-                    break;
-                case "1":
-                    highlightingTechnique = 1;
-                    refresh = true;
-                    break;
-                case "2":
-                    highlightingTechnique = 2;
-                    refresh = true;
-                    break;
-                case "3":
-                    highlightingTechnique = 3;
                     refresh = true;
                     break;
             }

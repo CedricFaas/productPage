@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Nächstes Produkt</title>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            const socket = io('');
+            let increasePixel = 1;
+            let progress = document.getElementById("progress");
+
+            let timerId = setInterval(function() {
+                increasePixel = increasePixel + 1;
+
+                if (increasePixel <= 300) {
+                    progress.style.width = increasePixel.toString() + "px";
+                }
+                else {
+                    socket.emit('shop');
+                    clearInterval(timerId);
+                }
+            }, 30);
+
+            socket.on('connect', function() {
+                socket.send('Next Product page connected!');
+                socket.emit('loadNextProduct')
+            });
+            socket.on('shop', function () {
+                window.location.href = "/shop";
+                return false;
+            })
+            socket.on('loadNextProduct', function (message) {
+                getSet(message);
+
+                socket.send(message['Set'].toString())
+                return false;
+            })
+
+            $('button#start').click(function () {
+                    socket.emit('shop');
+                    return false;
+            });
+
+            function getSet(message){
+                $.getJSON('../static/data.json', function(data) {
+                    categorie = data['categories'][message['Set'].toString()]
+                    socket.send(categorie);
+                    document.getElementById("categories").innerHTML = categorie
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+<div class="banner">
+    <div>
+        Nächstes Produkt
+    </div>
+</div>
+<div>
+    <article>
+        Als nächstes musst du dich für ein Produkt aus der folgenden Kategorie entscheiden:
+    </article>
+    <article id="categories"></article>
+    <button class = "loadButton" id="start" type="button">
+        <div class="continueShopping">Einkauf fortsetzen</div>
+        <div class="progress" id="progress"></div>
+    </button> <br>
+
+</div>
+</body>
+</html>

@@ -35,6 +35,43 @@ div {
     font-size: xx-large;
 }
 
+.loadButton {
+    position: relative;
+    width: 300px;
+    border: 0px;
+    border-radius: 5px;
+    font-size: xx-large;
+    background-color: #efefef;
+}
+
+.continueShopping {
+    position: absolute;
+    border: 0px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    height: 40px;
+    margin: 0px;
+    z-index: 9;
+    font-size: xx-large;
+    background: rgba(206, 206, 206, 0.5);
+}
+
+.continueShopping:hover{
+    background: rgba(206, 206, 206, 0.75);
+}
+
+
+.progress{
+    position: absolute;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 5px;
+    width: 1px;
+    height: 40px;
+    background-color: #cecece;
+}
+
 label {
     margin: 20px;
 }

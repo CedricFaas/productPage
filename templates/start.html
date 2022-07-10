@@ -15,14 +15,14 @@
             socket.on('connect', function() {
                 socket.send('Start page connected!');
             });
-            socket.on('shop', function () {
-                window.location.href = "/shop";
+            socket.on('nextProduct', function () {
+                window.location.href = "/nextProduct";
                 return false;
             })
 
             $('button#start').click(function () {
                 if (document.getElementById("checkbox").checked) {
-                    socket.emit('shop', null);
+                    socket.emit('nextProduct', null);
                     return false;
                 }
             });
