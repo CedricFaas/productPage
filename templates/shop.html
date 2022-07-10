@@ -31,6 +31,10 @@
                 socket.send('Shop page connected!');
                 socket.emit('loadProduct')
             });
+            socket.on('start', function () {
+                window.location.href = "/start";
+                return false;
+            });
             socket.on('pause', function () {
                 window.location.href = "/pause";
                 return false;

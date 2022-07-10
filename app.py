@@ -38,6 +38,10 @@ def description():
 def calibrate():
     return render_template('calibration.html')
     
+@app.route('/test')
+def test():
+    return render_template('test.html')
+    
 @app.route('/start')
 def start():
     return render_template('start.html')
@@ -111,6 +115,11 @@ def go_calibration():
     app.logger.info('Participant started with calibration!')
     emit('calibration')
 
+@socketio.on('test')
+def go_test():
+    app.logger.info('Participant started with test!')
+    emit('test')
+
 @socketio.on('start')
 def go_start():
     app.logger.info('Participant ready to start the task!')
@@ -126,6 +135,9 @@ def go_shop():
 def go_nextProduct(selection):
     if (selection is not None):
         activeParticipant.saveDecision(str(selection['ProductSet']),selection['ProductNumber'], selection['InTime'])
+        if (selection['ProductSet'] == 0):
+            activeParticipant.test()
+            emit('start')
         
     if (activeParticipant.remainingSets() == 0):
         emit('questionaire')
@@ -139,7 +151,7 @@ def go_nextProduct(selection):
     
 @socketio.on('loadNextProduct')
 def go_loadNextProduct():
-        emit('loadNextProduct',{'Set': activeParticipant.nextProductSet()})
+    emit('loadNextProduct',{'Set': activeParticipant.nextProductSet()})
         
 @socketio.on('loadProduct')
 def loadProduct():

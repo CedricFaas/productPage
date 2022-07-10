@@ -1,4 +1,93 @@
 {
+  "0": {
+    "1": {
+      "Info": {
+        "Brand": "Becel",
+        "Name": "Classic",
+        "Price": "1,99 €"
+      },
+      "Details": [
+        "Diät-Streichfett mit 45% Fett",
+        "Enthält mind. 60% weniger gesättigte Fettsäuren",
+        "Reich an lebenswichtigen mehrfach ungesättigten Fettsäuren",
+        "Vegan",
+        "250 Gramm",
+        "7,96 €/kg"
+      ],
+      "Important": [
+      ],
+      "Picture": "../static/Pictures/Becel Classic.webp"
+    },
+    "2": {
+      "Info": {
+        "Brand": "Lätta",
+        "Name": "Original",
+        "Price": "2,19 €"
+      },
+      "Details": [
+        "Mit bestem Rapsöl und Buttermilch",
+        "Enthält 39% Fett",
+        "Halbfettmargarine",
+        "500 Gramm",
+        "4,38 €/kg"
+      ],
+      "Important": [
+      ],
+      "Picture": "../static/Pictures/Lätta Original.webp"
+    },
+    "3": {
+      "Info": {
+        "Brand": "Meggle",
+        "Name": "Die vegane",
+        "Price": "2,49 €"
+      },
+      "Details": [
+        "Frischer und leichter Geschmack",
+        "Für einen frischen Start in den Tag",
+        "250 Gramm",
+        "9,96 €/kg"
+      ],
+      "Important": [
+      ],
+      "Picture": "../static/Pictures/Meggle Die Vegane.webp"
+    },
+    "4": {
+      "Info": {
+        "Brand": "Rama",
+        "Name": "Margarine",
+        "Price": "2,19 €"
+      },
+      "Details": [
+        "Mit 100% pflanzlichen Zutaten",
+        "Vegan",
+        "Vielseitig einsetzbar: Zum Streichen, Backen & Kochen",
+        "Cremig vollmundiger Geschmack",
+        "Von Natur aus mit Omega 3 & 6",
+        "500 Gramm",
+        "4,38 €/kg"
+      ],
+      "Important": [
+      ],
+      "Picture": "../static/Pictures/Rama Margarine.webp"
+    },
+    "5": {
+      "Info": {
+        "Brand": "Violife",
+        "Name": "Vioblock",
+        "Price": "1,99 €"
+      },
+      "Details": [
+        "Herzgesunde Alternative zu Butter",
+        "Unterstützt ein gesundes Herz-Kreislaufsystem",
+        "Vegan",
+        "250 Gramm",
+        "7,96 €/kg"
+      ],
+      "Important": [
+      ],
+      "Picture": "../static/Pictures/Violife Vegan Vioblock.webp"
+    }
+  },
   "1": {
     "1": {
       "Info": {
@@ -3595,6 +3684,7 @@
     }
   },
   "categories": {
+    "0": "Margarine",
     "1": "Äpfel",
     "2": "Avocados",
     "3": "Champignongs",
@@ -3603,8 +3693,8 @@
     "6": "Eistee",
     "7": "Orangensaft",
     "8": "Mineralwasser",
-    "9": "Kurkuma",
-    "10": "Paprika",
+    "9": "Kurkuma Gewürz",
+    "10": "Paprika Gewürz",
     "11": "Pfeffer",
     "12": "Salz",
     "13": "Chips",

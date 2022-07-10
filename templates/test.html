@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/style.css">
-    <title>Kalibrierung</title>
+    <title>Test</title>
     <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" charset="utf-8">
@@ -13,18 +13,16 @@
             const socket = io('');
 
             socket.on('connect', function() {
-                socket.send('Calibration page connected!');
+                socket.send('Test page connected!');
             });
-            socket.on('test', function () {
-                window.location.href = "/test";
+            socket.on('nextProduct', function () {
+                window.location.href = "/nextProduct";
                 return false;
             })
 
-            $('button#next').click(function () {
-                if(document.getElementById('checkbox').checked){
-                    socket.emit('test');
-                    return false;
-                }
+            $('button#start').click(function () {
+                socket.emit('nextProduct', null);
+                return false;
             });
         });
     </script>
@@ -32,16 +30,15 @@
 <body>
 <div class="banner">
     <div>
-        Kalibrierung
+        Start
     </div>
 </div>
-
 <div>
-    <article>Bitte befolgen Sie die Anweisungen der Aufsichtsperson!</article>
-
-    <label><input id="checkbox" type="checkbox"> Kalibrierung abgeschlossen</label>
-    <br>
-    <button class = "startButton" id="next" type="button">Weiter</button> <br>
+    <article>
+        Bevor wir mit der Aufgabe anfangen, kannst du jetzt eine Probeentscheidung treffen, um dich mit der Aufgabe und
+        dem Onlineshop vertraut zu machen.
+    </article>
+    <button class = "startButton" id="start" type="button">Test starten</button> <br>
 </div>
 </body>
 </html>

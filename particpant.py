@@ -13,13 +13,17 @@ class Participant:
         random.shuffle(self.highlightingTechniques)
         self.currentHighlightingTechnique = None
         self.paused = True
+        self.tested = False
         self.decisions = {}
         
     def getId(self):
         return self.participantId
         
     def nextProductSet(self):
-        self.currentSet = self.productSets.pop()
+        if self.tested:
+            self.currentSet = self.productSets.pop()
+        else:
+            self.currentSet = 0
         return self.currentSet
     
     def getProductSet(self):
@@ -29,8 +33,14 @@ class Participant:
         return len(self.productSets)
     
     def nextHighlightingTechnique(self):
-        self.currentHighlightingTechnique = self.highlightingTechniques.pop()
+        if self.tested:
+            self.currentHighlightingTechnique = self.highlightingTechniques.pop()
+        else:
+            self.currentHighlightingTechnique = 0
         return self.currentHighlightingTechnique
+    
+    def test(self):
+        self.tested = True
     
     def isPaused(self):
         return self.paused

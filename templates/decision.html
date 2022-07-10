@@ -22,6 +22,21 @@
                 window.location.href = "/nextProduct";
                 return false;
             })
+            socket.on('pause', function () {
+                clearInterval(timerId);
+                window.location.href = "/pause";
+                return false;
+            })
+            socket.on('questionaire', function () {
+                clearInterval(timerId);
+                window.location.href = "/questionaire";
+                return false;
+            })
+            socket.on('start', function () {
+                clearInterval(timerId);
+                window.location.href = "/start";
+                return false;
+            })
             socket.on('loadDecision', function (message) {
                 productSet = message['Set'];
                 timerId = loadData(socket,productSet)
