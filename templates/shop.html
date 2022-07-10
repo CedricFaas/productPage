@@ -9,7 +9,17 @@
     <script type="text/javascript" charset="utf-8">
         let intervals = [];
         let pause = false;
-        let productNum = 1;
+        let productNumbers = [1,2,3,4,5]
+        const shuffleArray = array => {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+        shuffleArray(productNumbers);
+        let productNumIndex = 0;
         let productSet = 1;
         let highlightingTechnique = 0;
         let seconds = 60;
@@ -61,7 +71,7 @@
             })
 
             $('#cart').click(function () {
-                socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': productNum, 'InTime': seconds});
+                socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': productNumbers[productNumIndex], 'InTime': seconds});
                 clearInterval(timerId)
                 return false;
             });
@@ -73,12 +83,12 @@
             var refresh = false;
             switch (e.key) {
                 case "ArrowLeft":
-                    productNum--;
-                    if (productNum == 0){productNum = 5}
+                    productNumIndex--;
+                    if (productNumIndex < 0){productNumIndex = 4}
                     refresh = true;
                     break;
                 case "ArrowRight":
-                    productNum = (productNum%5)+1;
+                    productNumIndex = (productNumIndex+1)%5;
                     refresh = true;
                     break;
             }
@@ -91,7 +101,7 @@
         function loadData() {
             $.getJSON('../static/data.json', function(data) {
                 //General Information
-                const product = data[productSet.toString()][productNum.toString()];
+                const product = data[productSet.toString()][productNumbers[productNumIndex].toString()];
                 let element = document.getElementById("Price");
                 resetStyle(element);
                 element.innerHTML = product['Info']['Price'];
