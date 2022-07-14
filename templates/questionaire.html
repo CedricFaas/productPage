@@ -28,17 +28,30 @@
                             if($("input[name='redFont']:checked").size() > 0) {
                                 if($("input[name='blinking']:checked").size() > 0) {
                                     if($("input[name='standard']:checked").size() > 0) {
-                                        const message = {
-                                            "favVersion": $("input[name='favVersion']:checked").val(),
-                                            "influence": $("input[name='influence']:checked").val(),
-                                            "largerFont": $("input[name='largerFont']:checked").val(),
-                                            "redFont": $("input[name='redFont']:checked").val(),
-                                            "blinking": $("input[name='blinking']:checked").val(),
-                                            "standard": $("input[name='standard']:checked").val()
+                                        if($("input[name='confidence']:checked").size() > 0) {
+                                            if($("input[name='attention']:checked").size() > 0) {
+                                                if($("input[name='realism']:checked").size() > 0) {
+                                                    if($("input[name='relevancy']:checked").size() > 0) {
+                                                        const message = {
+                                                            "favVersion": $("input[name='favVersion']:checked").val(),
+                                                            "influence": $("input[name='influence']:checked").val(),
+                                                            "largerFont": $("input[name='largerFont']:checked").val(),
+                                                            "redFont": $("input[name='redFont']:checked").val(),
+                                                            "blinking": $("input[name='blinking']:checked").val(),
+                                                            "standard": $("input[name='standard']:checked").val(),
+                                                            "confidence": $("inpit[name='confidence']:checked").val(),
+                                                            "attention": $("inpit[name='attention']:checked").val(),
+                                                            "realism": $("inpit[name='realism']:checked").val(),
+                                                            "relevancy": $("inpit[name='relevancy']:checked").val()
+                                                        }
+
+                                                        socket.emit('interview', message);
+                                                        return false;
+                                                    }
+                                                }
+                                            }
                                         }
 
-                                        socket.emit('interview', message);
-                                        return false;
                                     }
                                 }
                             }
@@ -138,6 +151,62 @@
             <label for="standard-4">eher positiv</label>
             <input type="radio" id="standard-5" name="standard" value="5">
             <label for="standard-5">positiv</label>
+        </div>
+        <div class="radioarray">
+            <b>Wie sicher bist du dir, dass du gute Entscheidungen getroffen hast?</b>
+            <br>
+            <input type="radio" id="confidence-1" name="confidence" value="1">
+            <label for="confidence-1">unsicher</label>
+            <input type="radio" id="confidence-2" name="confidence" value="2">
+            <label for="confidence-2">eher unsicher</label>
+            <input type="radio" id="confidence-3" name="confidence" value="3">
+            <label for="confidence-3">neutral</label>
+            <input type="radio" id="confidence-4" name="confidence" value="4">
+            <label for="confidence-4">eher sicher</label>
+            <input type="radio" id="confidence-5" name="confidence" value="5">
+            <label for="confidence-5">sicher</label>
+        </div>
+        <div class="radioarray">
+            <b>Wie sehr wurde deine Aufmerksamkeit auf die hervorgehobenen Informationen gelenkt?</b>
+            <br>
+            <input type="radio" id="attention-1" name="attention" value="1">
+            <label for="attention-1">schwach</label>
+            <input type="radio" id="attention-2" name="attention" value="2">
+            <label for="attention-2">eher schwach</label>
+            <input type="radio" id="attention-3" name="attention" value="3">
+            <label for="attention-3">neutral</label>
+            <input type="radio" id="attention-4" name="attention" value="4">
+            <label for="attention-4">eher stark</label>
+            <input type="radio" id="attention-5" name="attention" value="5">
+            <label for="attention-5">stark</label>
+        </div>
+        <div class="radioarray">
+            <b>Fandest du die Auswahl der Produkte und Informationen realistisch?</b>
+            <br>
+            <input type="radio" id="realism-1" name="realism" value="1">
+            <label for="realism-1">unrealistisch</label>
+            <input type="radio" id="realism-2" name="realism" value="2">
+            <label for="realism-2">eher unrealistisch</label>
+            <input type="radio" id="realism-3" name="realism" value="3">
+            <label for="realism-3">neutral</label>
+            <input type="radio" id="realism-4" name="realism" value="4">
+            <label for="realism-4">eher realistisch</label>
+            <input type="radio" id="realism-5" name="realism" value="5">
+            <label for="realism-5">realistisch</label>
+        </div>
+        <div class="radioarray">
+            <b>Waren die hervorgehobenen Informationen relevant für deine Entscheidungen?</b>
+            <br>
+            <input type="radio" id="relevancy-1" name="relevancy" value="1">
+            <label for="relevancy-1">irrelevant</label>
+            <input type="radio" id="relevancy-2" name="relevancy" value="2">
+            <label for="relevancy-2">eher irrelevant</label>
+            <input type="radio" id="relevancy-3" name="relevancy" value="3">
+            <label for="relevancy-3">neutral</label>
+            <input type="radio" id="relevancy-4" name="relevancy" value="4">
+            <label for="relevancy-4">eher relevant</label>
+            <input type="radio" id="relevancy-5" name="relevancy" value="5">
+            <label for="relevancy-5">relevant</label>
         </div>
     </form>
     <button id="next" type="button">Weiter</button> <br>
