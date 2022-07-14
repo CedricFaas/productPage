@@ -8,7 +8,7 @@ class Participant:
         self.participantId = id
         self.productSets = list(range(1,41))
         random.shuffle(self.productSets)
-        self.currentSet = None
+        self.currentSet = 0
         self.highlightingTechniques = list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))
         random.shuffle(self.highlightingTechniques)
         self.currentHighlightingTechnique = None
@@ -22,8 +22,6 @@ class Participant:
     def nextProductSet(self):
         if self.tested:
             self.currentSet = self.productSets.pop()
-        else:
-            self.currentSet = 0
         return self.currentSet
     
     def getProductSet(self):

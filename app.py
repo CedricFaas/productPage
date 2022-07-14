@@ -165,7 +165,7 @@ def go_decision():
 
 @socketio.on('loadDecision')
 def go_loadDecision():
-    emit('loadDecision', {'Set': activeParticipant.currentSet()})
+    emit('loadDecision', {'Set': activeParticipant.currentSet})
 
 @socketio.on('pause')
 def go_pause():

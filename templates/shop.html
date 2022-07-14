@@ -7,7 +7,6 @@
     <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" charset="utf-8">
-        let intervals = [];
         let pause = false;
         let productNumbers = [1,2,3,4,5]
         const shuffleArray = array => {
@@ -22,6 +21,7 @@
         let productNumIndex = 0;
         let productSet = 1;
         let highlightingTechnique = 0;
+        let intervals = [];
         let seconds = 60;
         $(document).ready(function () {
             const socket = io('');
@@ -93,6 +93,10 @@
                     break;
                 case "ArrowRight":
                     productNumIndex = (productNumIndex+1)%5;
+                    refresh = true;
+                    break;
+                case "3":
+                    highlightingTechnique = 3;
                     refresh = true;
                     break;
             }
@@ -171,7 +175,16 @@
                     } else if (highlightingTechnique === 2){
                         element.style.color = "red";
                     } else if (highlightingTechnique === 3){
-                        const Id = setInterval(function() {element.style.opacity = (element.style.opacity === "1" ? "0.5" : "1");}, 300)
+                        const Id = setInterval(function() {
+                            if (element.style.backgroundColor === "") {
+                                element.style.backgroundColor = "#ffd366";
+                                element.style.borderColor = "#ffd366";
+                            }
+                            else {
+                                element.style.backgroundColor = "";
+                                element.style.borderColor = ""
+                            }
+                            }, 500)
                         intervals.push(Id);
                     }
                 }
@@ -181,9 +194,9 @@
         function resetStyle (element) {
             element.style.fontSize = "";
             element.style.color = "";
+            element.style.backgroundColor = ""
+            element.style.borderColor = ""
             intervals.forEach(value => clearInterval(value));
-            intervals.length = 0;
-            element.style.opacity = "";
         }
     </script>
     <title>Lebensmittel-Shop</title>
