@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Einverständniserklärung</title>
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" charset="utf-8">
+        $(document).ready(function() {
+            const socket = io('');
+
+            socket.on('connect', function() {
+                socket.send('Consent page connected!');
+            });
+            socket.on('demographics', function () {
+                window.location.href = "/demographics";
+                return false;
+            })
+
+            $('button#start').click(function () {
+                if(document.getElementById('consent').checked){
+                        socket.emit('demographics');
+                        return false;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="banner">
+    <div>
+        Einverständniserklärung
+    </div>
+</div>
+<div>
+    Starte die Studie erst, wenn du alle Informationen erhalten hast <br> und du die Einverständniserklärung unterschrieben hast.
+    <form id = "participant id">
+        <div class="radioarray">
+
+            <label><input type="checkbox" id="consent" name="consent">  Einverständnis gegeben </label>
+
+        </div>
+    </form>
+    <button class = "startButton" id="start" type="button">Starten</button> <br>
+</div>
+</body>
+</html>
