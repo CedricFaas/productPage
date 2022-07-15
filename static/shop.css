@@ -47,16 +47,6 @@ html, body, .container{
 .leftcolumn li{
     margin: 15px;
     display : table;
-    border: solid #efefef;
-    border-radius: 5px;
-}
-
-.leftcolumn article {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 10px;
 }
 
 img {
@@ -109,10 +99,15 @@ img {
 .productTitle {
     display: flex;
     font-size: 24px;
-    text-align: left;
+    text-align: center;
     align-self: center;
     border: solid #efefef;
     border-radius: 5px;
+}
+
+.productName {
+    text-align: left;
+    vertical-align: text-bottom;
 }
 
 .productBrand {
@@ -152,4 +147,5 @@ img {
 
 ul {
     list-style-type: none;
+    line-height: 24px;
 }

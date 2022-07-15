@@ -95,10 +95,6 @@
                     productNumIndex = (productNumIndex+1)%5;
                     refresh = true;
                     break;
-                case "3":
-                    highlightingTechnique = 3;
-                    refresh = true;
-                    break;
             }
             if (refresh){
                 loadData();
@@ -109,19 +105,17 @@
         function loadData() {
             $.getJSON('../static/data.json', function(data) {
                 //General Information
+                resetStyle();
                 const product = data[productSet.toString()][productNumbers[productNumIndex].toString()];
                 let element = document.getElementById("Price");
-                resetStyle(element);
                 element.innerHTML = product['Info']['Price'];
-                highlighting(element,product['Info']['Price'],product)
+                selectHighlighting(element,product);
                 element = document.getElementById("Brand");
-                resetStyle(element);
                 element.innerHTML = product['Info']['Brand'];
-                highlighting(element,product['Info']['Brand'],product)
+                selectHighlighting(element,product);
                 element = document.getElementById("Name");
-                resetStyle(element);
                 element.innerHTML = product['Info']['Name'];
-                highlighting(element,product['Info']['Name'],product)
+                selectHighlighting(element,product);
                 //Picture
                 $("#Picture").attr("src", product['Picture']);
                 //Details
@@ -129,10 +123,12 @@
                 $(ul).empty();
                 product['Details'].forEach(function (element) {
                     const li = document.createElement("li");
-                    $(document.createTextNode(element)).appendTo(li);
-                    highlighting(li,element,product);
+                    //$(document.createTextNode(element)).appendTo(li);
+                    li.innerHTML = element;
+                    selectHighlighting(li,product)
                     $(li).appendTo(ul);
                 });
+                highlight();
                 //Ad
                 const ads = 70;
                 const ad1 = getRandomInteger(1, ads);
@@ -167,36 +163,51 @@
             return Math.floor(Math.random() * (max - min + 1) ) + min;
         }
 
-        function highlighting (element, info, product) {
+        function selectHighlighting (element, product) {
             if (highlightingTechnique > 0){
-                if (product["Important"].includes(info)){
-                    if (highlightingTechnique === 1) {
-                        element.style.fontSize = "125%";
-                    } else if (highlightingTechnique === 2){
-                        element.style.color = "red";
-                    } else if (highlightingTechnique === 3){
-                        const Id = setInterval(function() {
-                            if (element.style.backgroundColor === "") {
-                                element.style.backgroundColor = "#ffd366";
-                                element.style.borderColor = "#ffd366";
-                            }
-                            else {
-                                element.style.backgroundColor = "";
-                                element.style.borderColor = ""
-                            }
-                            }, 500)
-                        intervals.push(Id);
+                product["Important"].forEach(function(searchTerm){
+                    let index = element.innerHTML.indexOf(searchTerm);
+                    if (index >= 0) {
+                        element.innerHTML = element.innerHTML.substring(0,index) + " <a>" + element.innerHTML.substring(index,index+searchTerm.length) + "</a> " + element.innerHTML.substring(index + searchTerm.length);
                     }
-                }
+                });
             }
         }
 
-        function resetStyle (element) {
-            element.style.fontSize = "";
-            element.style.color = "";
-            element.style.backgroundColor = ""
-            element.style.borderColor = ""
-            intervals.forEach(value => clearInterval(value));
+        function highlight(){
+            let highlights = document.querySelectorAll('a')
+            highlights.forEach(function (element){
+                if (highlightingTechnique === 1) {
+                    element.style.fontSize = "125%";
+                } else if (highlightingTechnique === 2){
+                    element.style.color = "red";
+                } else if (highlightingTechnique === 3){
+                    const Id = setInterval(function() {
+                        if (element.style.backgroundColor === "") {
+                            element.style.backgroundColor = "#ffd366";
+                            element.style.borderColor = "#ffd366";
+                            element.style.borderRadius = "5px";
+                        }
+                        else {
+                            element.style.backgroundColor = "";
+                            element.style.borderColor = "#efefef"
+                        }
+                    }, 500)
+                    intervals.push(Id);
+                }
+            })
+
+        }
+
+        function resetStyle () {
+            let highlights = document.querySelectorAll('a')
+            highlights.forEach(function (element) {
+                element.style.fontSize = "";
+                element.style.color = "";
+                element.style.backgroundColor = ""
+                element.style.borderColor = ""
+                intervals.forEach(value => clearInterval(value));
+            });
         }
     </script>
     <title>Lebensmittel-Shop</title>
@@ -211,14 +222,14 @@
     <div class="leftcolumn" >
         <img id = "Picture"/>
         <div class="productTitle">
-            <article>
+            <div>
                 <div id = "Brand" class="productBrand"></div>
-                <div id = "Name" class="productTitle"></div>
-            </article>
-            <article>
+                <div id = "Name" class="productName"></div>
+            </div>
+            <div>
                 <div id = "Price"></div>
                 <button class="cart-btn" id="cart">In den Einkaufswagen</button>
-            </article>
+            </div>
         </div>
         <div class="productDetail">
             Produktbeschreibung
