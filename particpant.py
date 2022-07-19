@@ -1,6 +1,9 @@
 import random
 import csv
 import os
+import tracker
+import analyse
+from element import Element 
 
 class Participant:
     
@@ -15,6 +18,9 @@ class Participant:
         self.paused = True
         self.tested = False
         self.decisions = {}
+        self.currPath = ""
+        self.eyeTracker = None
+        self.elements = []
         
     def getId(self):
         return self.participantId
@@ -59,7 +65,6 @@ class Participant:
             dirName = dirName+'_IdColl'
             
         os.mkdir(dirName)
-            
     
     def printDecisions(self):    
         with open(dirName + '/decisions.csv', 'a') as csvfile:
@@ -67,4 +72,40 @@ class Participant:
             while self.decisions:
                 item = self.decisions.popitem()
                 filewriter.writerow([item[1][0],item[1][1],item[1][2],item[1][3]])
+    
+    def generateElement(self, aoiCode, x1, y1, x2, y2):
+        self.elements.append(Element(aoiCode, x1, y1, x2, y2))
+    
+    def startTracking(self, currProd):
+        global n 
+        n = 1
+        self.currPath = dirName + "/gazeData/gaze" + "_" + str(self.currentSet)+"_"+str(currProd) + "_" + str(self.currentHighlightingTechnique) + str(n)
+        while os.path.exists(self.currPath):
+            n = n+1
+            self.currPath = dirName + "/gazeData/gaze" + "_" + str(self.currentSet)+"_"+str(currProd) + "_" + str(self.currentHighlightingTechnique) + str(n)
+        self.eyeTracker = tracker.startTracking(self.currPath)
+        
+    
+    def stopTracking(self, prod):
+        tracker.stopTracking(self.eyeTracker)
+        self.eyeTracker = None
+        
+        self.elements = analyse.analyseDataset(self.elements,self.currSet,prod,self.currPath+".csv")
+        with open(dirName+'/metrics.csv', 'a') as csvfile:
+            filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            for elem in self.elements:
+                row = []
+                row.append(str(self.participantID))
+                row.append(str(self.currentSet))
+                row.append(str(prod))
+                row.append(str(n))
+                row.append(str(self.currentHighlightingTechnique()))
+                row.append(str(elem.aoiCode))
+                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['timeToFirstFixation']))
+                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['firstPassGazeDuration']))
+                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['secondPassGazeDuration']))
+                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['refixationsCount']))
+                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['sumOfFixations']))
+                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['overallDwellTime']))
+                filewriter.writerow(row)
         

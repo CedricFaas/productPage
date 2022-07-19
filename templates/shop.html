@@ -9,6 +9,7 @@
     <script type="text/javascript" charset="utf-8">
         let pause = false;
         let productNumbers = [1,2,3,4,5]
+        const socket = io('');
         const shuffleArray = array => {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -24,7 +25,6 @@
         let intervals = [];
         let seconds = 60;
         $(document).ready(function () {
-            const socket = io('');
             let timerId;
 
             socket.on('connect', function() {
@@ -75,6 +75,7 @@
             })
 
             $('#cart').click(function () {
+                socket.emit('stopTracking')
                 socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': productNumbers[productNumIndex], 'InTime': seconds});
                 clearInterval(timerId)
                 return false;
@@ -87,11 +88,13 @@
             var refresh = false;
             switch (e.key) {
                 case "ArrowLeft":
+                    socket.emit('stopTracking')
                     productNumIndex--;
                     if (productNumIndex < 0){productNumIndex = 4}
                     refresh = true;
                     break;
                 case "ArrowRight":
+                    socket.emit('stopTracking')
                     productNumIndex = (productNumIndex+1)%5;
                     refresh = true;
                     break;
@@ -175,6 +178,7 @@
         }
 
         function highlight(){
+            let n = 1
             let highlights = document.querySelectorAll('a')
             highlights.forEach(function (element){
                 if (highlightingTechnique === 1) {
@@ -195,8 +199,14 @@
                     }, 500)
                     intervals.push(Id);
                 }
+                const rect = element.getBoundingClientRect()
+                const x1 = rect.left;
+                const y1 = rect.top;
+                const x2 = rect.right;
+                const y2 = rect.bottom;
+                socket.emit('coordinates',{'Id': n.toString(), 'x1': x1,'y1': y1,'x2': x2,'y2': y2});
             })
-
+            socket.emit('startTracking',{'Prod': productNumbers[productNumIndex]})
         }
 
         function resetStyle () {

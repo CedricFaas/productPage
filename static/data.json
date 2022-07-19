@@ -239,7 +239,7 @@
         "EG-Bio"],
       "Picture": "../static/Pictures/Bio Avocado Hass Genussreif.jpg",
       "Important": [
-        "1,99 €","EG-Bio"
+        "1,99 €","Bio"
       ]
     },
     "4": {
@@ -256,7 +256,7 @@
         "Herkunftsland: Spanien"],
       "Picture": "../static/Pictures/Naturwert Bio Avocado.png",
       "Important": [
-        "Bio Avocado","1,99 €"
+        "Bio","1,99 €"
       ]
     },
     "5": {
@@ -287,7 +287,7 @@
         "Champignons können vielseitig eingesetzt werden. Ob als Suppe, gegrillt als Antipasti, roh in Salaten oder würzig angebraten in der Pfanne - Champignons sind einfach in der Zubereitung und immer wieder ein Genuss."],
       "Picture": "../static/Pictures/Bio Champignon Braun.jpg",
       "Important": [
-        "1kg = 10,36€","Bioland"
+        "1kg = 10,36€","Bio"
       ]
     },
     "2": {
@@ -836,7 +836,7 @@
         "66,94€/kg"],
       "Picture": "../static/Pictures/Ankerkraut Bio Kurkuma.png",
       "Important": [
-        "Bio Kurkuma",
+        "Bio",
         "66,94€/kg"
       ]
     },
@@ -1531,7 +1531,7 @@
         "Name": "Weizenmehl",
         "Price": "1,09 €"
       },
-      "Details": ["Das aromatische EDEKA BIO Weizenmehl ist von besonders lockerer Natur und lässt sich sehr gleichmäßig verbacken. Es eignet sich insbesondere für ein feines Gebäck und luftige Kuchen.",
+      "Details": ["Das aromatische Edeka Bio Weizenmehl ist von besonders lockerer Natur und lässt sich sehr gleichmäßig verbacken. Es eignet sich insbesondere für ein feines Gebäck und luftige Kuchen.",
         "1000 Gramm",
         "1,09 €/kg"],
       "Picture": "../static/Pictures/EDEKA Bio Weizenmehl Type 550.jpg",
@@ -2641,7 +2641,7 @@
         "11,07 €/kg"],
       "Picture": "../static/Pictures/Alnatura Kartoffelknödel halb & halb.png",
       "Important": [
-        "Bio Kartoffelknödel",
+        "Bio",
         "Vegan",
         "11,07 €/kg"
       ]

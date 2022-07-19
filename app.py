@@ -125,6 +125,15 @@ def go_start():
     app.logger.info('Participant ready to start the task!')
     emit('start')
 
+@socketio.on('coordinates')
+def go_coordinates(c):
+    app.logger.info('Shop sent coordinates')
+    activeParticipant.generateElement(c['Id'], c['x1'], c['y1'], c['x2'], c['y2'])
+
+@socketio.on('startTracking')
+def go_Tracking(message):
+    app.logger.info('Tracking started')
+    activeParticipant.startTracking(message['Prod'])
 
 @socketio.on('shop')
 def go_shop():
