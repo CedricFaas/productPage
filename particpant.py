@@ -65,6 +65,11 @@ class Participant:
             dirName = dirName+'_IdColl'
             
         os.mkdir(dirName)
+        os.mkdir(dirName+"/gazeData")
+
+        with open(dirName+'/metrics.csv', 'a') as csvfile:
+            filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            filewriter.writerow(['ID','AdCount','AdId','State','AOI','TFF','FPG','SPG','RFX','SFX','ODT'])
     
     def printDecisions(self):    
         with open(dirName + '/decisions.csv', 'a') as csvfile:
@@ -79,10 +84,10 @@ class Participant:
     def startTracking(self, currProd):
         global n 
         n = 1
-        self.currPath = dirName + "/gazeData/gaze" + "_" + str(self.currentSet)+"_"+str(currProd) + "_" + str(self.currentHighlightingTechnique) + str(n)
+        self.currPath = dirName + "/gazeData/gaze" + "_" + str(self.currentSet)+"_"+str(currProd) + "_" + str(self.currentHighlightingTechnique) + "_" + str(n)
         while os.path.exists(self.currPath):
             n = n+1
-            self.currPath = dirName + "/gazeData/gaze" + "_" + str(self.currentSet)+"_"+str(currProd) + "_" + str(self.currentHighlightingTechnique) + str(n)
+            self.currPath = dirName + "/gazeData/gaze" + "_" + str(self.currentSet)+"_"+str(currProd) + "_" + str(self.currentHighlightingTechnique) + "_" + str(n)
         self.eyeTracker = tracker.startTracking(self.currPath)
         
     
