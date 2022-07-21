@@ -69,13 +69,14 @@
                     if (seconds < 0) {
                         clearInterval(timerId);
                         document.getElementById("timer").innerHTML = "EXPIRED";
-                        socket.emit('decision')
+                        socket.emit('decision');
+                        socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]})
                     }
                 }, 1000);
             })
 
             $('#cart').click(function () {
-                socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]})
+                socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
                 socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': productNumbers[productNumIndex], 'InTime': seconds});
                 clearInterval(timerId)
                 return false;
@@ -88,13 +89,13 @@
             var refresh = false;
             switch (e.key) {
                 case "ArrowLeft":
-                    socket.emit('stopTracking')
+                    socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
                     productNumIndex--;
                     if (productNumIndex < 0){productNumIndex = 4}
                     refresh = true;
                     break;
                 case "ArrowRight":
-                    socket.emit('stopTracking')
+                    socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
                     productNumIndex = (productNumIndex+1)%5;
                     refresh = true;
                     break;

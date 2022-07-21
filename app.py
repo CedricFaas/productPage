@@ -136,7 +136,7 @@ def go_Tracking(message):
     activeParticipant.startTracking(message['Prod'])
 
 @socketio.on('stopTracking')
-def end_Tracking(message):
+def go_stopTracking(message):
     app.logger.info('Tracking stopped')
     activeParticipant.stopTracking(message['Prod'])
 
