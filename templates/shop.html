@@ -75,7 +75,7 @@
             })
 
             $('#cart').click(function () {
-                socket.emit('stopTracking')
+                socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]})
                 socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': productNumbers[productNumIndex], 'InTime': seconds});
                 clearInterval(timerId)
                 return false;
@@ -126,7 +126,6 @@
                 $(ul).empty();
                 product['Details'].forEach(function (element) {
                     const li = document.createElement("li");
-                    //$(document.createTextNode(element)).appendTo(li);
                     li.innerHTML = element;
                     selectHighlighting(li,product)
                     $(li).appendTo(ul);
@@ -204,7 +203,8 @@
                 const y1 = rect.top;
                 const x2 = rect.right;
                 const y2 = rect.bottom;
-                socket.emit('coordinates',{'Id': n.toString(), 'x1': x1,'y1': y1,'x2': x2,'y2': y2});
+                socket.emit('coordinates',{'Id': "AoI " + n.toString(), 'x1': x1,'y1': y1,'x2': x2,'y2': y2});
+                n = n+1;
             })
             socket.emit('startTracking',{'Prod': productNumbers[productNumIndex]})
         }

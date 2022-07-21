@@ -29,29 +29,34 @@
                                 if($("input[name='blinking']:checked").size() > 0) {
                                     if($("input[name='standard']:checked").size() > 0) {
                                         if($("input[name='confidence']:checked").size() > 0) {
-                                            if($("input[name='attention']:checked").size() > 0) {
-                                                if($("input[name='realism']:checked").size() > 0) {
-                                                    if($("input[name='relevancy']:checked").size() > 0) {
-                                                        const message = {
-                                                            "favVersion": $("input[name='favVersion']:checked").val(),
-                                                            "influence": $("input[name='influence']:checked").val(),
-                                                            "largerFont": $("input[name='largerFont']:checked").val(),
-                                                            "redFont": $("input[name='redFont']:checked").val(),
-                                                            "blinking": $("input[name='blinking']:checked").val(),
-                                                            "standard": $("input[name='standard']:checked").val(),
-                                                            "confidence": $("inpit[name='confidence']:checked").val(),
-                                                            "attention": $("inpit[name='attention']:checked").val(),
-                                                            "realism": $("inpit[name='realism']:checked").val(),
-                                                            "relevancy": $("inpit[name='relevancy']:checked").val()
-                                                        }
+                                            if($("input[name='attention1']:checked").size() > 0) {
+                                                if($("input[name='attention2']:checked").size() > 0) {
+                                                    if($("input[name='search_strategy']:checked").size() > 0) {
+                                                        if($("input[name='realism']:checked").size() > 0) {
+                                                            if ($("input[name='relevancy']:checked").size() > 0) {
+                                                                const message = {
+                                                                    "favVersion": $("input[name='favVersion']:checked").val(),
+                                                                    "influence": $("input[name='influence']:checked").val(),
+                                                                    "largerFont": $("input[name='largerFont']:checked").val(),
+                                                                    "redFont": $("input[name='redFont']:checked").val(),
+                                                                    "blinking": $("input[name='blinking']:checked").val(),
+                                                                    "standard": $("input[name='standard']:checked").val(),
+                                                                    "confidence": $("inpit[name='confidence']:checked").val(),
+                                                                    "attention1": $("inpit[name='attention1']:checked").val(),
+                                                                    "attention2": $("inpit[name='attention2']:checked").val(),
+                                                                    "search_strategy": $("inpit[name='search_strategy']:checked").val(),
+                                                                    "realism": $("inpit[name='realism']:checked").val(),
+                                                                    "relevancy": $("inpit[name='relevancy']:checked").val()
+                                                                }
 
-                                                        socket.emit('interview', message);
-                                                        return false;
+                                                                socket.emit('interview', message);
+                                                                return false;
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
                                         }
-
                                     }
                                 }
                             }
@@ -169,16 +174,44 @@
         <div class="radioarray">
             <b>Wie sehr wurde deine Aufmerksamkeit auf die hervorgehobenen Informationen gelenkt?</b>
             <br>
-            <input type="radio" id="attention-1" name="attention" value="1">
-            <label for="attention-1">schwach</label>
-            <input type="radio" id="attention-2" name="attention" value="2">
-            <label for="attention-2">eher schwach</label>
-            <input type="radio" id="attention-3" name="attention" value="3">
-            <label for="attention-3">neutral</label>
-            <input type="radio" id="attention-4" name="attention" value="4">
-            <label for="attention-4">eher stark</label>
-            <input type="radio" id="attention-5" name="attention" value="5">
-            <label for="attention-5">stark</label>
+            <input type="radio" id="attention1-1" name="attention1" value="1">
+            <label for="attention1-1">schwach</label>
+            <input type="radio" id="attention1-2" name="attention1" value="2">
+            <label for="attention1-2">eher schwach</label>
+            <input type="radio" id="attention1-3" name="attention1" value="3">
+            <label for="attention1-3">neutral</label>
+            <input type="radio" id="attention1-4" name="attention1" value="4">
+            <label for="attention1-4">eher stark</label>
+            <input type="radio" id="attention1-5" name="attention1" value="5">
+            <label for="attention1-5">stark</label>
+        </div>
+        <div class="radioarray">
+            <b>Wie sehr hast du deine Aufmerksamkeit auf die hervorgehobenen Informationen gelenkt?</b>
+            <br>
+            <input type="radio" id="attention2-1" name="attention2" value="1">
+            <label for="attention2-1">schwach</label>
+            <input type="radio" id="attention2-2" name="attention2" value="2">
+            <label for="attention2-2">eher schwach</label>
+            <input type="radio" id="attention2-3" name="attention2" value="3">
+            <label for="attention2-3">neutral</label>
+            <input type="radio" id="attention2-4" name="attention2" value="4">
+            <label for="attention2-4">eher stark</label>
+            <input type="radio" id="attention2-5" name="attention2" value="5">
+            <label for="attention2-5">stark</label>
+        </div>
+        <div class="radioarray">
+            <b>Hat sich dein Suchverhalten verändert, wenn Informationen hervorgehoben wurden?</b>
+            <br>
+            <input type="radio" id="search_strategy-1" name="search_strategy" value="1">
+            <label for="search_strategy-1">nein</label>
+            <input type="radio" id="search_strategy-2" name="search_strategy" value="2">
+            <label for="search_strategy-2">eher nein</label>
+            <input type="radio" id="search_strategy-3" name="search_strategy" value="3">
+            <label for="search_strategy-3">neutral</label>
+            <input type="radio" id="search_strategy-4" name="search_strategy" value="4">
+            <label for="search_strategy-4">eher ja</label>
+            <input type="radio" id="search_strategy-5" name="search_strategy" value="5">
+            <label for="search_strategy-5">ja</label>
         </div>
         <div class="radioarray">
             <b>Fandest du die Auswahl der Produkte und Informationen realistisch?</b>

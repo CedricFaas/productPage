@@ -13,7 +13,7 @@ def analyseDataset(elements,Set,Prod,dataset):
     elements = elements
     #Add new metric entry to metrics dictionairy of each element
     for elem in elements:
-        elem.metrics[str(Set)][str(Prod)] = {
+        elem.metrics[str(10*Set+Prod)] = {
         'timeToFirstFixation' : 0,
         'firstPassGazeDuration': 0,
         'secondPassGazeDuration': 0,
@@ -182,29 +182,29 @@ def computeTemporalFixationMetrices(fixations,elements,Set,Prod):
         aoi_one = mapToAOI(fixations[i][3], fixations[i][4],elements)
         aoi_two = mapToAOI(fixations[i + 1][3], fixations[i + 1][4], elements)
         elem = getElementOfAOI(elements, aoi_one)
-        if elem.metrics[str(Set)][str(Prod)]['timeToFirstFixation'] == 0:
-            elem.metrics[str(Set)][str(Prod)]['timeToFirstFixation'] = fixations[i][0]
+        if elem.metrics[str(10*Set+Prod)]['timeToFirstFixation'] == 0:
+            elem.metrics[str(10*Set+Prod)]['timeToFirstFixation'] = fixations[i][0]
             firstPass = fixations[i][2]
         secondPass = secondPass + fixations[i][2]
         if aoi_one == aoi_two:
             firstPass = firstPass+fixations[i+1][2]
             secondPass = secondPass + fixations[i+1][2]
         else:
-            if elem.metrics[str(Set)][str(Prod)]['refixationsCount'] == 0:
-                elem.metrics[str(Set)][str(Prod)]['firstPassGazeDuration'] = firstPass
-            elif elem.metrics[str(Set)][str(Prod)]['refixationsCount'] == 1:
-                elem.metrics[str(Set)][str(Prod)]['secondPassGazeDuration'] = secondPass
+            if elem.metrics[str(10*Set+Prod)]['refixationsCount'] == 0:
+                elem.metrics[str(10*Set+Prod)]['firstPassGazeDuration'] = firstPass
+            elif elem.metrics[str(10*Set+Prod)]['refixationsCount'] == 1:
+                elem.metrics[str(10*Set+Prod)]['secondPassGazeDuration'] = secondPass
             firstPass = 0
             secondPass = 0
-            elem.metrics[str(Set)][str(Prod)]['refixationsCount'] += 1
+            elem.metrics[str(10*Set+Prod)]['refixationsCount'] += 1
     aoi_last = mapToAOI(fixations[(len(fixations) - 1)][3], fixations[(len(fixations) - 1)][4], elements)
     elem = getElementOfAOI(elements, aoi_last)
     if firstPass != 0 or secondPass != 0:
-        if elem.metrics[str(Set)][str(Prod)]['refixationsCount'] == 0:
-            elem.metrics[str(Set)][str(Prod)]['firstPassGazeDuration'] = firstPass
-        elif elem.metrics[str(Set)][str(Prod)]['refixationsCount'] == 1:
-            elem.metrics[str(Set)][str(Prod)]['secondPassGazeDuration'] = secondPass
-    elem.metrics[str(Set)][str(Prod)]['refixationsCount'] += 1
+        if elem.metrics[str(10*Set+Prod)]['refixationsCount'] == 0:
+            elem.metrics[str(10*Set+Prod)]['firstPassGazeDuration'] = firstPass
+        elif elem.metrics[str(10*Set+Prod)]['refixationsCount'] == 1:
+            elem.metrics[str(10*Set+Prod)]['secondPassGazeDuration'] = secondPass
+    elem.metrics[str(10*Set+Prod)]['refixationsCount'] += 1
     return elements
 
 #Compute sum of fixations
@@ -212,7 +212,7 @@ def computeSumOfFixations(fixations,elements,Set,Prod):
     for fix in fixations:
         aoi_hit = mapToAOI(fix[3],fix[4],elements)
         elem = getElementOfAOI(elements,aoi_hit)
-        elem.metrics[str(Set)][str(Prod)]['sumOfFixations'] += 1
+        elem.metrics[str(10*Set+Prod)]['sumOfFixations'] += 1
     return elements
 
 #Compute overall Dwell Time
@@ -234,7 +234,7 @@ def computeDwellTime(x_gazePoints,y_gazePoints,timestamps,elements,Set,Prod):
             try:
                 d = lastT - startT  # add to aoi dwell time
                 e = getElementOfAOI(elements, current)
-                e.metrics[str(Set)][str(Prod)]['overallDwellTime'] = e.metrics[str(Set)][str(Prod)]['overallDwellTime'] + d
+                e.metrics[str(10*Set+Prod)]['overallDwellTime'] = e.metrics[str(10*Set+Prod)]['overallDwellTime'] + d
                 current = aoi
                 startT = t
                 lastT = t

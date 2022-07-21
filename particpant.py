@@ -69,7 +69,7 @@ class Participant:
 
         with open(dirName+'/metrics.csv', 'a') as csvfile:
             filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-            filewriter.writerow(['ID','AdCount','AdId','State','AOI','TFF','FPG','SPG','RFX','SFX','ODT'])
+            filewriter.writerow(['ID','Set','ProductId','Visited','Highlighting','AOI','TFF','FPG','SPG','RFX','SFX','ODT'])
     
     def printDecisions(self):    
         with open(dirName + '/decisions.csv', 'a') as csvfile:
@@ -95,22 +95,22 @@ class Participant:
         tracker.stopTracking(self.eyeTracker)
         self.eyeTracker = None
         
-        self.elements = analyse.analyseDataset(self.elements,self.currSet,prod,self.currPath+".csv")
+        self.elements = analyse.analyseDataset(self.elements,self.currentSet,prod,self.currPath+".csv")
         with open(dirName+'/metrics.csv', 'a') as csvfile:
             filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             for elem in self.elements:
                 row = []
-                row.append(str(self.participantID))
+                row.append(str(self.participantId))
                 row.append(str(self.currentSet))
                 row.append(str(prod))
                 row.append(str(n))
-                row.append(str(self.currentHighlightingTechnique()))
+                row.append(str(self.currentHighlightingTechnique))
                 row.append(str(elem.aoiCode))
-                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['timeToFirstFixation']))
-                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['firstPassGazeDuration']))
-                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['secondPassGazeDuration']))
-                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['refixationsCount']))
-                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['sumOfFixations']))
-                row.append(str(elem.metrics[str(self.currentSet)][str(prod)]['overallDwellTime']))
+                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['timeToFirstFixation']))
+                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['firstPassGazeDuration']))
+                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['secondPassGazeDuration']))
+                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['refixationsCount']))
+                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['sumOfFixations']))
+                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['overallDwellTime']))
                 filewriter.writerow(row)
         

@@ -135,6 +135,11 @@ def go_Tracking(message):
     app.logger.info('Tracking started')
     activeParticipant.startTracking(message['Prod'])
 
+@socketio.on('stopTracking')
+def end_Tracking(message):
+    app.logger.info('Tracking stopped')
+    activeParticipant.stopTracking(message['Prod'])
+
 @socketio.on('shop')
 def go_shop():
     app.logger.info('Participant enters Shop!')
