@@ -2,7 +2,6 @@ import random
 import csv
 import os
 import tracker
-import analyse
 from element import Element 
 
 class Participant:
@@ -67,10 +66,7 @@ class Participant:
         os.mkdir(dirName)
         os.mkdir(dirName+"/gazeData")
 
-        with open(dirName+'/metrics.csv', 'a') as csvfile:
-            filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-            filewriter.writerow(['ID','Set','ProductId','Visited','Highlighting','AOI','TFF','FPG','SPG','RFX','SFX','ODT'])
-    
+            
     def printDecisions(self):    
         with open(dirName + '/decisions.csv', 'a') as csvfile:
             filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -85,7 +81,7 @@ class Participant:
         global n 
         n = 1
         self.currPath = dirName + "/gazeData/gaze" + "_" + str(self.currentSet)+"_"+str(currProd) + "_" + str(self.currentHighlightingTechnique) + "_" + str(n)
-        while os.path.exists(self.currPath):
+        while os.path.exists(self.currPath + ".csv"):
             n = n+1
             self.currPath = dirName + "/gazeData/gaze" + "_" + str(self.currentSet)+"_"+str(currProd) + "_" + str(self.currentHighlightingTechnique) + "_" + str(n)
         self.eyeTracker = tracker.startTracking(self.currPath)
@@ -95,22 +91,4 @@ class Participant:
         tracker.stopTracking(self.eyeTracker)
         self.eyeTracker = None
         
-        self.elements = analyse.analyseDataset(self.elements,self.currentSet,prod,self.currPath+".csv")
-        with open(dirName+'/metrics.csv', 'a') as csvfile:
-            filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-            for elem in self.elements:
-                row = []
-                row.append(str(self.participantId))
-                row.append(str(self.currentSet))
-                row.append(str(prod))
-                row.append(str(n))
-                row.append(str(self.currentHighlightingTechnique))
-                row.append(str(elem.aoiCode))
-                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['timeToFirstFixation']))
-                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['firstPassGazeDuration']))
-                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['secondPassGazeDuration']))
-                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['refixationsCount']))
-                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['sumOfFixations']))
-                row.append(str(elem.metrics[str(self.currentSet*10+prod)]['overallDwellTime']))
-                filewriter.writerow(row)
         
