@@ -63,7 +63,7 @@
                 socket.send('load data');
 
                 timerId = setInterval(function () {
-                    //seconds = seconds - 1;
+                    seconds = seconds - 1;
                     if (seconds === 30 || seconds === 15) {
                         let oscillator = context.createOscillator();
                         oscillator.type = "sine";
@@ -102,14 +102,6 @@
                 case "ArrowRight":
                     socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
                     productNumIndex = (productNumIndex+1)%5;
-                    refresh = true;
-                    break;
-                case "ArrowUp":
-                    highlightingTechnique++;
-                    refresh = true;
-                    break;
-                case "ArrowDown":
-                    highlightingTechnique--;
                     refresh = true;
                     break;
             }

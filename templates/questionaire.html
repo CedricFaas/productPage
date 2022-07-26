@@ -42,6 +42,7 @@
                                                                                     if ($("input[name='relevancy']:checked").size() > 0) {
                                                                                         if ($("input[name='time']:checked").size() > 0) {
                                                                                             if ($("input[name='pressure']:checked").size() > 0) {
+                                                                                                socket.send("if");
                                                                                                 const message = {
                                                                                                     "favVersion": $("input[name='favVersion']:checked").val(),
                                                                                                     "influence": $("input[name='influence']:checked").val(),
@@ -49,21 +50,21 @@
                                                                                                     "redFont": $("input[name='redFont']:checked").val(),
                                                                                                     "blinking": $("input[name='blinking']:checked").val(),
                                                                                                     "standard": $("input[name='standard']:checked").val(),
-                                                                                                    "confidence": $("inpit[name='confidence']:checked").val(),
-                                                                                                    "attentionLargerFont1": $("inpit[name='attentionLargerFont1']:checked").val(),
-                                                                                                    "attentionLargerFont2": $("inpit[name='attentionLargerFont2']:checked").val(),
-                                                                                                    "search_strategyLargerFont": $("inpit[name='search_strategyLargerFont']:checked").val()
-                                                                                                    "attentionRedFont1": $("inpit[name='attentionRedFont1']:checked").val(),
-                                                                                                    "attentionRedFont2": $("inpit[name='attentionRedFont2']:checked").val(),
-                                                                                                    "search_strategyRedFont": $("inpit[name='search_strategyRedFont']:checked").val(),
-                                                                                                    "attentionBlinking1": $("inpit[name='attentionBlinking1']:checked").val(),
-                                                                                                    "attentionBlinking2": $("inpit[name='attentionBlinking2']:checked").val(),
-                                                                                                    "search_strategyBlinking": $("inpit[name='search_strategyBlinking']:checked").val(),
-                                                                                                    "realism": $("inpit[name='realism']:checked").val(),
-                                                                                                    "relevancy": $("inpit[name='relevancy']:checked").val(),
-                                                                                                    "time": $("inpit[name='time']:checked").val(),
-                                                                                                    "pressure": $("inpit[name='pressure']:checked").val()
-                                                                                                }
+                                                                                                    "confidence": $("input[name='confidence']:checked").val(),
+                                                                                                    "attentionLargerFont1": $("input[name='attentionLargerFont1']:checked").val(),
+                                                                                                    "attentionLargerFont2": $("input[name='attentionLargerFont2']:checked").val(),
+                                                                                                    "search_strategyLargerFont": $("input[name='search_strategyLargerFont']:checked").val(),
+                                                                                                    "attentionRedFont1": $("input[name='attentionRedFont1']:checked").val(),
+                                                                                                    "attentionRedFont2": $("input[name='attentionRedFont2']:checked").val(),
+                                                                                                    "search_strategyRedFont": $("input[name='search_strategyRedFont']:checked").val(),
+                                                                                                    "attentionBlinking1": $("input[name='attentionBlinking1']:checked").val(),
+                                                                                                    "attentionBlinking2": $("input[name='attentionBlinking2']:checked").val(),
+                                                                                                    "search_strategyBlinking": $("input[name='search_strategyBlinking']:checked").val(),
+                                                                                                    "realism": $("input[name='realism']:checked").val(),
+                                                                                                    "relevancy": $("input[name='relevancy']:checked").val(),
+                                                                                                    "time": $("input[name='time']:checked").val(),
+                                                                                                    "pressure": $("input[name='pressure']:checked").val()
+                                                                                                };
 
                                                                                                 socket.emit('interview', message);
                                                                                                 return false;
@@ -366,7 +367,7 @@
             <b>Die hervorgehobenen Informationen waren relevant für meine Entscheidungen.</b>
             <br>
             <input type="radio" id="relevancy-1" name="relevancy" value="1">
-            <label for="relevancy-1">trifft eher zu</label>
+            <label for="relevancy-1">trifft nicht zu</label>
             <input type="radio" id="relevancy-2" name="relevancy" value="2">
             <label for="relevancy-2">trifft eher nicht zu</label>
             <input type="radio" id="relevancy-3" name="relevancy" value="3">
@@ -380,7 +381,7 @@
             <b>Die Zeit war ausreichend um eine Entscheidung zu treffen.</b>
             <br>
             <input type="radio" id="time-1" name="time" value="1">
-            <label for="time-1">trifft eher zu</label>
+            <label for="time-1">trifft nicht zu</label>
             <input type="radio" id="time-2" name="time" value="2">
             <label for="time-2">trifft eher nicht zu</label>
             <input type="radio" id="time-3" name="time" value="3">
@@ -394,7 +395,7 @@
             <b>Ich fühlte mich während dem Entscheidungsprozess unter Druck gesetzt.</b>
             <br>
             <input type="radio" id="pressure-1" name="pressure" value="1">
-            <label for="pressure-1">trifft eher zu</label>
+            <label for="pressure-1">trifft nicht zu</label>
             <input type="radio" id="pressure-2" name="pressure" value="2">
             <label for="pressure-2">trifft eher nicht zu</label>
             <input type="radio" id="pressure-3" name="pressure" value="3">

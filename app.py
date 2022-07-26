@@ -202,7 +202,8 @@ def go_interview(results):
                               str(results['search_strategyLargerFont']),str(results['attentionRedFont1']),
                               str(results['attentionRedFont2']),str(results['search_strategyRedFont']),
                               str(results['attentionBlinking1']),str(results['attentionBlinking2']),
-                              str(results['search_strategyBlinking']),str(results['time']),str(results['pressur'])])
+                              str(results['search_strategyBlinking']),str(results['realism']),
+                              str(results['relevancy']),str(results['time']),str(results['pressure'])])
     app.logger.info('Participant started interview!')
     emit('interview')
 
