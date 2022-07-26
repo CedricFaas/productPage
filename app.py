@@ -197,7 +197,12 @@ def go_interview(results):
         filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
         filewriter.writerow([str(activeParticipant.participantId),str(results['favVersion']),
                               str(results['influence']),str(results['largerFont']),str(results['redFont']),
-                              str(results['blinking']),str(results['standard'])])
+                              str(results['blinking']),str(results['standard']), str(results['confidence']),
+                              str(results['attentionLargerFont1']),str(results['attentionLargerFont2']),
+                              str(results['search_strategyLargerFont']),str(results['attentionRedFont1']),
+                              str(results['attentionRedFont2']),str(results['search_strategyRedFont']),
+                              str(results['attentionBlinking1']),str(results['attentionBlinking2']),
+                              str(results['search_strategyBlinking']),str(results['time']),str(results['pressur'])])
     app.logger.info('Participant started interview!')
     emit('interview')
 

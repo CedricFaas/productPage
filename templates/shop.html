@@ -25,12 +25,14 @@
         let highlightingTechnique = 0;
         let intervals = [];
         let seconds = 60;
+        context = new AudioContext();
+
         $(document).ready(function () {
             let timerId;
 
             socket.on('connect', function() {
                 socket.send('Shop page connected!');
-                socket.emit('loadProduct')
+                socket.emit('loadProduct');
             });
             socket.on('start', function () {
                 window.location.href = "/start";
@@ -54,22 +56,24 @@
             });
 
             socket.on('loadProduct', function (message) {
-                productSet = message['ProductSet']
-                pause = message['Pause']
-                highlightingTechnique = message['HighlightingTechnique']
-                loadData()
+                productSet = message['ProductSet'];
+                pause = message['Pause'];
+                highlightingTechnique = message['HighlightingTechnique'];
+                loadData();
                 socket.send('load data');
-                let timer = seconds.toString()
 
-                seconds < 10 ? timer = "0"+seconds.toString() : timer = seconds.toString();
-                document.getElementById("timer").innerHTML = "0:"+timer;
                 timerId = setInterval(function () {
-                    seconds = seconds - 1;
-                    seconds < 10 ? timer = "0" + seconds.toString() : timer = seconds.toString();
-                    document.getElementById("timer").innerHTML = "0:" + timer;
+                    //seconds = seconds - 1;
+                    if (seconds === 30 || seconds === 15) {
+                        let oscillator = context.createOscillator();
+                        oscillator.type = "sine";
+                        oscillator.frequency.value = 800;
+                        oscillator.connect(context.destination);
+                        oscillator.start();
+                        oscillator.stop(context.currentTime + 0.5);
+                    }
                     if (seconds < 0) {
                         clearInterval(timerId);
-                        document.getElementById("timer").innerHTML = "EXPIRED";
                         socket.emit('decision');
                         socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
                     }
@@ -78,9 +82,6 @@
 
             $('#cart').click(function () {
                 socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
-                while(!ready){
-                }
-                ready = false;
                 socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': productNumbers[productNumIndex], 'InTime': seconds});
                 clearInterval(timerId);
                 return false;
@@ -90,7 +91,7 @@
 
         //detecting arrow key presses
         document.addEventListener('keydown', function(e) {
-            var refresh = false;
+            let refresh = false;
             switch (e.key) {
                 case "ArrowLeft":
                     socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
@@ -101,6 +102,14 @@
                 case "ArrowRight":
                     socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
                     productNumIndex = (productNumIndex+1)%5;
+                    refresh = true;
+                    break;
+                case "ArrowUp":
+                    highlightingTechnique++;
+                    refresh = true;
+                    break;
+                case "ArrowDown":
+                    highlightingTechnique--;
                     refresh = true;
                     break;
             }
@@ -209,9 +218,6 @@
                 const x2 = rect.right;
                 const y2 = rect.bottom;
                 socket.emit('coordinates',{'Id': "AoI " + n.toString(), 'x1': x1,'y1': y1,'x2': x2,'y2': y2});
-                while(!ready){
-                }
-                ready = false;
                 n = n+1;
             })
             socket.emit('startTracking',{'Prod': productNumbers[productNumIndex]});
@@ -233,7 +239,6 @@
 <body>
 <div class="shopName">
     <div class="Title"> Lebensmittel-Shop </div>
-    <div class="Timer" id="timer"></div>
 </div>
 
 <div class="row">

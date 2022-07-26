@@ -11,8 +11,15 @@ class Participant:
         self.productSets = list(range(1,41))
         random.shuffle(self.productSets)
         self.currentSet = 0
-        self.highlightingTechniques = list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))+list(range(4))
-        random.shuffle(self.highlightingTechniques)
+        self.higlightS = [11,12,17,19,20,33,34,35,36,37,38,39,40]
+        self.higlightM = [2,3,4,5,9,13,14,15,16,18,24,29,30,31,32]
+        self.higlightL = [1,6,7,8,10,21,22,23,25,26,27,28]
+        self.highlightingTechniquesS = list(range(4))+list(range(4))+list(range(4))+[0]
+        self.highlightingTechniquesM = list(range(4))+list(range(4))+list(range(4))+list(range(1,4))
+        self.highlightingTechniquesL = list(range(4))+list(range(4))+list(range(4))
+        random.shuffle(self.highlightingTechniquesS)
+        random.shuffle(self.highlightingTechniquesM)
+        random.shuffle(self.highlightingTechniquesL)
         self.currentHighlightingTechnique = None
         self.paused = True
         self.tested = False
@@ -37,7 +44,12 @@ class Participant:
     
     def nextHighlightingTechnique(self):
         if self.tested:
-            self.currentHighlightingTechnique = self.highlightingTechniques.pop()
+            if (self.currentSet in self.higlightS):
+                self.currentHighlightingTechnique = self.highlightingTechniquesS.pop()
+            elif (self.currentSet in self.higlightM):
+                self.currentHighlightingTechnique = self.highlightingTechniquesM.pop()
+            else:
+                self.currentHighlightingTechnique = self.highlightingTechniquesL.pop()
         else:
             self.currentHighlightingTechnique = 0
         return self.currentHighlightingTechnique

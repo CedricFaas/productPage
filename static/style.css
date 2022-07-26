@@ -76,6 +76,26 @@ label {
     margin: 20px;
 }
 
+.media {
+    display: flex;
+    flex-direction: row;
+}
+figure{
+    display: table;
+}
+figcaption {
+    display: table-caption;
+    caption-side: top;
+}
+
+img {
+    width: 35vh;
+}
+
+video {
+    width: 35vh;
+}
+
 article{
     text-align: start;
     font-size: xx-large;
