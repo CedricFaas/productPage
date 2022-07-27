@@ -43,15 +43,14 @@ class Participant:
         return len(self.productSets)
     
     def nextHighlightingTechnique(self):
+        self.currentHighlightingTechnique = 0
         if self.tested:
             if (self.currentSet in self.higlightS):
                 self.currentHighlightingTechnique = self.highlightingTechniquesS.pop()
             elif (self.currentSet in self.higlightM):
                 self.currentHighlightingTechnique = self.highlightingTechniquesM.pop()
-            else:
+            elif (self.currentSet in self.higlightL):
                 self.currentHighlightingTechnique = self.highlightingTechniquesL.pop()
-        else:
-            self.currentHighlightingTechnique = 0
         return self.currentHighlightingTechnique
     
     def test(self):

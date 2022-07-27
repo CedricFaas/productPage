@@ -1,0 +1,12 @@
+RightPupilValidity,RightPupilDiameter,LeftPupilValidity,LeftPupilDiameter,RightGazePointValidity,RightGazePointOnDisplayAreaX,RightGazePointOnDisplayAreaY,RightGazePointInUserCoordinateSystemX,RightGazePointInUserCoordinateSystemY,RightGazePointInUserCoordinateSystemZ,LeftGazePointValidity,LeftGazePointOnDisplayAreaX,LeftGazePointOnDisplayAreaY,LeftGazePointInUserCoordinateSystemX,LeftGazePointInUserCoordinateSystemY,LeftGazePointInUserCoordinateSystemZ,RightGazeOriginValidity,RightGazeOriginInUserCoordinateSystemX,RightGazeOriginInUserCoordinateSystemY,RightGazeOriginInUserCoordinateSystemZ,RightGazeOriginInTrackboxCoordinateSystemX,RightGazeOriginInTrackboxCoordinateSystemY,RightGazeOriginInTrackboxCoordinateSystemZ,LeftGazeOriginValidity,LeftGazeOriginInUserCoordinateSystemX,LeftGazeOriginInUserCoordinateSystemY,LeftGazeOriginInUserCoordinateSystemZ,LeftGazeOriginInTrackboxCoordinateSystemX,LeftGazeOriginInTrackboxCoordinateSystemY,LeftGazeOriginInTrackboxCoordinateSystemZ,SystemTimestamp,DeviceTimestamp
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101861872,1958341995
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101870211,1958350327
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101878551,1958358660
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101886891,1958366993
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101895222,1958375326
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101903555,1958383660
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101911887,1958391993
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101920219,1958400327
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101928551,1958408660
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101936884,1958416994
+0,nan,0,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,0,nan,nan,nan,nan,nan,nan,601101945215,1958425327
