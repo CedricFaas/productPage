@@ -195,15 +195,38 @@ def go_questionaire():
 def go_interview(results):
     with open('./log/evaluation.csv', 'a') as csvfile:
         filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        filewriter.writerow([str(activeParticipant.participantId),str(results['favVersion']),
-                              str(results['influence']),str(results['largerFont']),str(results['redFont']),
-                              str(results['blinking']),str(results['standard']), str(results['confidence']),
-                              str(results['attentionLargerFont1']),str(results['attentionLargerFont2']),
-                              str(results['search_strategyLargerFont']),str(results['attentionRedFont1']),
-                              str(results['attentionRedFont2']),str(results['search_strategyRedFont']),
-                              str(results['attentionBlinking1']),str(results['attentionBlinking2']),
-                              str(results['search_strategyBlinking']),str(results['realism']),
-                              str(results['relevancy']),str(results['time']),str(results['pressure'])])
+        filewriter.writerow([str(activeParticipant.participantId),
+                             str(results['favVersion']),
+                             str(results['influence']),
+                             str(results['largerFont']),
+                             str(results['redFont']),
+                             str(results['blinking']),
+                             str(results['standard']), 
+                             str(results['confidenceLargerFont']),
+                             str(results['attentionLargerFont1']),
+                             str(results['attentionLargerFont2']),
+                             str(results['search_strategyLargerFont']),
+                             str(results['recognitionBiasLargerFont']),
+                             str(results['autonomousLargerFont']),
+                             str(results['reasonResponsiveLargerFont']),
+                             str(results['confidenceRedFont']),
+                             str(results['attentionRedFont1']),
+                             str(results['attentionRedFont2']),
+                             str(results['search_strategyRedFont']),
+                             str(results['recognitionBiasRedFont']),
+                             str(results['autonomousRedFont']),
+                             str(results['reasonResponsiveRedFont']),
+                             str(results['confidenceBlinking']),
+                             str(results['attentionBlinking1']),
+                             str(results['attentionBlinking2']),
+                             str(results['search_strategyBlinking']),
+                             str(results['recognitionBiasBlinking']),
+                             str(results['autonomousBlinking']),
+                             str(results['reasonResponsiveBlinking']),
+                             str(results['realism']),
+                             str(results['relevancy']),
+                             str(results['time']),
+                             str(results['pressure'])])
     app.logger.info('Participant started interview!')
     emit('interview')
 

@@ -1,3 +1,6 @@
-Id,  favVersion, Influence, largerFont, redFont, blinking, standard,confidence,attentionLargerFont1,attentionLargerFont2,search_strategyLargerFont,attentionRedFont1,attentionRedFont2,search_strategyRedFont,attentionBlinking1,attentionBlinking2,search_strategyBlinking,realism,relevancy,time,pressure
-300,blinking,4,2,4,5,1,4,4,2,4,4,5,5,5,5,5,5,5,3,4
-301,largerFont,2,5,4,2,4,4,3,1,2,4,2,4,5,1,3,5,4,3,4
+Id,  favVersion, Influence, largerFont, redFont, blinking, standard,confidenceLargerFont,attentionLargerFont1,attentionLargerFont2,search_strategyLargerFont,recognitionBiasLargerFont,autonomousLargerFont,reasonsResponsiveLargerFont,confidenceRedFont,attentionRedFont1,attentionRedFont2,search_strategyRedFont,recognitionBiasRedFont,autonomousRedFont,reasonsResponsiveRedFont,confidenceBlinking,attentionBlinking1,attentionBlinking2,search_strategyBlinking,recognitionBiasBlinking,autonomousBlinking,reasonsResponsiveBlinking,realism,relevancy,time,pressure
+300,blinking,4,2,4,5,1,4,4,2,4,4,5,5,5,5,5,5,5,3,4
+
+301,largerFont,2,5,4,2,4,4,3,1,2,4,2,4,5,1,3,5,4,3,4
+
+3,blinking,4,3,2,1,2,3,4,5,4,3,2,1,2,3,4,5,4,3,2,1,2,3,4,5,4,3,2,1,2,3
