@@ -28,46 +28,78 @@
                             if($("input[name='redFont']:checked").size() > 0) {
                                 if($("input[name='blinking']:checked").size() > 0) {
                                     if($("input[name='standard']:checked").size() > 0) {
-                                        if($("input[name='confidence']:checked").size() > 0) {
+                                        if($("input[name='confidenceLargerFont']:checked").size() > 0) {
                                             if($("input[name='attentionLargerFont1']:checked").size() > 0) {
                                                 if($("input[name='attentionLargerFont2']:checked").size() > 0) {
                                                     if($("input[name='search_strategyLargerFont']:checked").size() > 0) {
-                                                        if ($("input[name='attentionRedFont1']:checked").size() > 0) {
-                                                            if ($("input[name='attentionRedFont2']:checked").size() > 0) {
-                                                                if ($("input[name='search_strategyRedFont']:checked").size() > 0) {
-                                                                    if ($("input[name='attentionBlinking1']:checked").size() > 0) {
-                                                                        if ($("input[name='attentionBlinking2']:checked").size() > 0) {
-                                                                            if ($("input[name='search_strategyBlinking']:checked").size() > 0) {
-                                                                                if ($("input[name='realism']:checked").size() > 0) {
-                                                                                    if ($("input[name='relevancy']:checked").size() > 0) {
-                                                                                        if ($("input[name='time']:checked").size() > 0) {
-                                                                                            if ($("input[name='pressure']:checked").size() > 0) {
-                                                                                                socket.send("if");
-                                                                                                const message = {
-                                                                                                    "favVersion": $("input[name='favVersion']:checked").val(),
-                                                                                                    "influence": $("input[name='influence']:checked").val(),
-                                                                                                    "largerFont": $("input[name='largerFont']:checked").val(),
-                                                                                                    "redFont": $("input[name='redFont']:checked").val(),
-                                                                                                    "blinking": $("input[name='blinking']:checked").val(),
-                                                                                                    "standard": $("input[name='standard']:checked").val(),
-                                                                                                    "confidence": $("input[name='confidence']:checked").val(),
-                                                                                                    "attentionLargerFont1": $("input[name='attentionLargerFont1']:checked").val(),
-                                                                                                    "attentionLargerFont2": $("input[name='attentionLargerFont2']:checked").val(),
-                                                                                                    "search_strategyLargerFont": $("input[name='search_strategyLargerFont']:checked").val(),
-                                                                                                    "attentionRedFont1": $("input[name='attentionRedFont1']:checked").val(),
-                                                                                                    "attentionRedFont2": $("input[name='attentionRedFont2']:checked").val(),
-                                                                                                    "search_strategyRedFont": $("input[name='search_strategyRedFont']:checked").val(),
-                                                                                                    "attentionBlinking1": $("input[name='attentionBlinking1']:checked").val(),
-                                                                                                    "attentionBlinking2": $("input[name='attentionBlinking2']:checked").val(),
-                                                                                                    "search_strategyBlinking": $("input[name='search_strategyBlinking']:checked").val(),
-                                                                                                    "realism": $("input[name='realism']:checked").val(),
-                                                                                                    "relevancy": $("input[name='relevancy']:checked").val(),
-                                                                                                    "time": $("input[name='time']:checked").val(),
-                                                                                                    "pressure": $("input[name='pressure']:checked").val()
-                                                                                                };
+                                                        if ($("input[name='recognitionBiasLargerFont']:checked").size() > 0) {
+                                                            if ($("input[name='autonomousLargerFont']:checked").size() > 0){
+                                                                if ($("input[name='reasonResponsiveLargerFont']:checked").size() > 0) {
+                                                                    if($("input[name='confidenceRedFont']:checked").size() > 0) {
+                                                                        if ($("input[name='attentionRedFont1']:checked").size() > 0) {
+                                                                            if ($("input[name='attentionRedFont2']:checked").size() > 0) {
+                                                                                if ($("input[name='search_strategyRedFont']:checked").size() > 0) {
+                                                                                    if ($("input[name='recognitionBiasRedFont']:checked").size() > 0) {
+                                                                                        if ($("input[name='autonomousRedFont']:checked").size() > 0){
+                                                                                            if ($("input[name='reasonResponsiveRedFont']:checked").size() > 0) {
+                                                                                                if($("input[name='confidenceBlinking']:checked").size() > 0) {
+                                                                                                    if ($("input[name='attentionBlinking1']:checked").size() > 0) {
+                                                                                                        if ($("input[name='attentionBlinking2']:checked").size() > 0) {
+                                                                                                            if ($("input[name='search_strategyBlinking']:checked").size() > 0) {
+                                                                                                                if ($("input[name='recognitionBiasBlinking']:checked").size() > 0) {
+                                                                                                                    if ($("input[name='autonomousBlinking']:checked").size() > 0) {
+                                                                                                                        if ($("input[name='reasonResponsiveBlinking']:checked").size() > 0) {
+                                                                                                                            if ($("input[name='realism']:checked").size() > 0) {
+                                                                                                                                if ($("input[name='relevancy']:checked").size() > 0) {
+                                                                                                                                    if ($("input[name='time']:checked").size() > 0) {
+                                                                                                                                        if ($("input[name='pressure']:checked").size() > 0) {
+                                                                                                                                            const message = {
+                                                                                                                                                "favVersion": $("input[name='favVersion']:checked").val(),
+                                                                                                                                                "influence": $("input[name='influence']:checked").val(),
+                                                                                                                                                "largerFont": $("input[name='largerFont']:checked").val(),
+                                                                                                                                                "redFont": $("input[name='redFont']:checked").val(),
+                                                                                                                                                "blinking": $("input[name='blinking']:checked").val(),
+                                                                                                                                                "standard": $("input[name='standard']:checked").val(),
+                                                                                                                                                "confidenceLargerFont": $("input[name='confidenceLargerFont']:checked").val(),
+                                                                                                                                                "attentionLargerFont1": $("input[name='attentionLargerFont1']:checked").val(),
+                                                                                                                                                "attentionLargerFont2": $("input[name='attentionLargerFont2']:checked").val(),
+                                                                                                                                                "search_strategyLargerFont": $("input[name='search_strategyLargerFont']:checked").val(),
+                                                                                                                                                "recognitionBiasLargerFont": $("input[name='recognitionBiasLargerFont']:checked").val(),
+                                                                                                                                                "autonomousLargerFont": $("input[name='autonomousLargerFont']:checked").val(),
+                                                                                                                                                "reasonResponsiveLargerFont": $("input[name='reasonResponsiveLargerFont']:checked").val(),
+                                                                                                                                                "confidenceRedFont": $("input[name='confidenceRedFont']:checked").val(),
+                                                                                                                                                "attentionRedFont1": $("input[name='attentionRedFont1']:checked").val(),
+                                                                                                                                                "attentionRedFont2": $("input[name='attentionRedFont2']:checked").val(),
+                                                                                                                                                "search_strategyRedFont": $("input[name='search_strategyRedFont']:checked").val(),
+                                                                                                                                                "recognitionBiasRedFont": $("input[name='recognitionBiasRedFont']:checked").val(),
+                                                                                                                                                "autonomousRedFont": $("input[name='autonomousRedFont']:checked").val(),
+                                                                                                                                                "reasonResponsiveRedFont": $("input[name='reasonResponsiveRedFont']:checked").val(),
+                                                                                                                                                "confidenceBlinking": $("input[name='confidenceBlinking']:checked").val(),
+                                                                                                                                                "attentionBlinking1": $("input[name='attentionBlinking1']:checked").val(),
+                                                                                                                                                "attentionBlinking2": $("input[name='attentionBlinking2']:checked").val(),
+                                                                                                                                                "search_strategyBlinking": $("input[name='search_strategyBlinking']:checked").val(),
+                                                                                                                                                "recognitionBiasBlinking": $("input[name='recognitionBiasBlinking']:checked").val(),
+                                                                                                                                                "autonomousBlinking": $("input[name='autonomousBlinking']:checked").val(),
+                                                                                                                                                "reasonResponsiveBlinking": $("input[name='reasonResponsiveBlinking']:checked").val(),
+                                                                                                                                                "realism": $("input[name='realism']:checked").val(),
+                                                                                                                                                "relevancy": $("input[name='relevancy']:checked").val(),
+                                                                                                                                                "time": $("input[name='time']:checked").val(),
+                                                                                                                                                "pressure": $("input[name='pressure']:checked").val()
+                                                                                                                                            };
 
-                                                                                                socket.emit('interview', message);
-                                                                                                return false;
+                                                                                                                                            socket.emit('interview', message);
+                                                                                                                                            return false;
+                                                                                                                                        }
+                                                                                                                                    }
+                                                                                                                                }
+                                                                                                                            }
+                                                                                                                        }
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
                                                                                             }
                                                                                         }
                                                                                     }
@@ -210,18 +242,18 @@
             <label for="standard-5">trifft zu</label>
         </div>
         <div class="radioarray">
-            <b>Ich bin sicher, dass ich gute Entscheidungen getroffen habe.</b>
+            <b>Ich bin sicher, dass ich gute Entscheidungen getroffen habe, wenn Informationen mit größerer Schrift hervorgehoben wurden.</b>
             <br>
-            <input type="radio" id="confidence-1" name="confidence" value="1">
-            <label for="confidence-1">trifft nicht zu</label>
-            <input type="radio" id="confidence-2" name="confidence" value="2">
-            <label for="confidence-2">trifft eher nicht zu</label>
-            <input type="radio" id="confidence-3" name="confidence" value="3">
-            <label for="confidence-3">neutral</label>
-            <input type="radio" id="confidence-4" name="confidence" value="4">
-            <label for="confidence-4">trifft eher zu</label>
-            <input type="radio" id="confidence-5" name="confidence" value="5">
-            <label for="confidence-5">trifft zu</label>
+            <input type="radio" id="confidenceLargerFont-1" name="confidenceLargerFont" value="1">
+            <label for="confidenceLargerFont-1">trifft nicht zu</label>
+            <input type="radio" id="confidenceLargerFont-2" name="confidenceLargerFont" value="2">
+            <label for="confidenceLargerFont-2">trifft eher nicht zu</label>
+            <input type="radio" id="confidenceLargerFont-3" name="confidenceLargerFont" value="3">
+            <label for="confidenceLargerFont-3">neutral</label>
+            <input type="radio" id="confidenceLargerFont-4" name="confidenceLargerFont" value="4">
+            <label for="confidenceLargerFont-4">trifft eher zu</label>
+            <input type="radio" id="confidenceLargerFont-5" name="confidenceLargerFont" value="5">
+            <label for="confidenceLargerFont-5">trifft zu</label>
         </div>
         <div class="radioarray">
             <b>Mein Blick wurde von den mit größerer Schrift hervorgehobenen Informationen stark angezogen.</b>
@@ -266,6 +298,62 @@
             <label for="search_strategyLargerFont-5">trifft zu</label>
         </div>
         <div class="radioarray">
+            <b>Ich habe mich für Produkte entschieden, weil sie mir bekannt waren, wenn Informationen mit größerer Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="recognitionBiasLargerFont-1" name="recognitionBiasLargerFont" value="1">
+            <label for="recognitionBiasLargerFont-1">trifft nicht zu</label>
+            <input type="radio" id="recognitionBiasLargerFont-2" name="recognitionBiasLargerFont" value="2">
+            <label for="recognitionBiasLargerFont-2">trifft eher nicht zu</label>
+            <input type="radio" id="recognitionBiasLargerFont-3" name="recognitionBiasLargerFont" value="3">
+            <label for="recognitionBiasLargerFont-3">neutral</label>
+            <input type="radio" id="recognitionBiasLargerFont-4" name="recognitionBiasLargerFont" value="4">
+            <label for="recognitionBiasLargerFont-4">trifft eher zu</label>
+            <input type="radio" id="recognitionBiasLargerFont-5" name="recognitionBiasLargerFont" value="5">
+            <label for="recognitionBiasLargerFont-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Ich fühle mich in meiner Entscheidung selbstbestimmt, wenn Informationen mit größerer Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="autonomousLargerFont-1" name="autonomousLargerFont" value="1">
+            <label for="autonomousLargerFont-1">trifft nicht zu</label>
+            <input type="radio" id="autonomousLargerFont-2" name="autonomousLargerFont" value="2">
+            <label for="autonomousLargerFont-2">trifft eher nicht zu</label>
+            <input type="radio" id="autonomousLargerFont-3" name="autonomousLargerFont" value="3">
+            <label for="autonomousLargerFont-3">neutral</label>
+            <input type="radio" id="autonomousLargerFont-4" name="autonomousLargerFont" value="4">
+            <label for="autonomousLargerFont-4">trifft eher zu</label>
+            <input type="radio" id="autonomousLargerFont-5" name="autonomousLargerFont" value="5">
+            <label for="autonomousLargerFont-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Meine Entscheidungen basieren auf guten Gründen, wenn Informationen mit größerer Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="reasonResponsiveLargerFont-1" name="reasonResponsiveLargerFont" value="1">
+            <label for="reasonResponsiveLargerFont-1">trifft nicht zu</label>
+            <input type="radio" id="reasonResponsiveLargerFont-2" name="reasonResponsiveLargerFont" value="2">
+            <label for="reasonResponsiveLargerFont-2">trifft eher nicht zu</label>
+            <input type="radio" id="reasonResponsiveLargerFont-3" name="reasonResponsiveLargerFont" value="3">
+            <label for="reasonResponsiveLargerFont-3">neutral</label>
+            <input type="radio" id="reasonResponsiveLargerFont-4" name="reasonResponsiveLargerFont" value="4">
+            <label for="reasonResponsiveLargerFont-4">trifft eher zu</label>
+            <input type="radio" id="reasonResponsiveLargerFont-5" name="reasonResponsiveLargerFont" value="5">
+            <label for="reasonResponsiveLargerFont-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Ich bin sicher, dass ich gute Entscheidungen getroffen habe, wenn Informationen mit roter Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="confidenceRedFont-1" name="confidenceRedFont" value="1">
+            <label for="confidenceRedFont-1">trifft nicht zu</label>
+            <input type="radio" id="confidenceRedFont-2" name="confidenceRedFont" value="2">
+            <label for="confidenceRedFont-2">trifft eher nicht zu</label>
+            <input type="radio" id="confidenceRedFont-3" name="confidenceRedFont" value="3">
+            <label for="confidenceRedFont-3">neutral</label>
+            <input type="radio" id="confidenceRedFont-4" name="confidenceRedFont" value="4">
+            <label for="confidenceRedFont-4">trifft eher zu</label>
+            <input type="radio" id="confidenceRedFont-5" name="confidenceRedFont" value="5">
+            <label for="confidenceRedFont-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
             <b>Mein Blick wurde von den mit roter Schrift hervorgehobenen Informationen stark angezogen.</b>
             <br>
             <input type="radio" id="attentionRedFont1-1" name="attentionRedFont1" value="1">
@@ -308,6 +396,62 @@
             <label for="search_strategyRedFont-5">trifft zu</label>
         </div>
         <div class="radioarray">
+            <b>Ich habe mich für Produkte entschieden, weil sie mir bekannt waren, wenn Informationen mit roter Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="recognitionBiasRedFont-1" name="recognitionBiasRedFont" value="1">
+            <label for="recognitionBiasRedFont-1">trifft nicht zu</label>
+            <input type="radio" id="recognitionBiasRedFont-2" name="recognitionBiasRedFont" value="2">
+            <label for="recognitionBiasRedFont-2">trifft eher nicht zu</label>
+            <input type="radio" id="recognitionBiasRedFont-3" name="recognitionBiasRedFont" value="3">
+            <label for="recognitionBiasRedFont-3">neutral</label>
+            <input type="radio" id="recognitionBiasRedFont-4" name="recognitionBiasRedFont" value="4">
+            <label for="recognitionBiasRedFont-4">trifft eher zu</label>
+            <input type="radio" id="recognitionBiasRedFont-5" name="recognitionBiasRedFont" value="5">
+            <label for="recognitionBiasRedFont-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Ich fühle mich in meiner Entscheidung selbstbestimmt, wenn Informationen mit roter Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="autonomousRedFont-1" name="autonomousRedFont" value="1">
+            <label for="autonomousRedFont-1">trifft nicht zu</label>
+            <input type="radio" id="autonomousRedFont-2" name="autonomousRedFont" value="2">
+            <label for="autonomousRedFont-2">trifft eher nicht zu</label>
+            <input type="radio" id="autonomousRedFont-3" name="autonomousRedFont" value="3">
+            <label for="autonomousRedFont-3">neutral</label>
+            <input type="radio" id="autonomousRedFont-4" name="autonomousRedFont" value="4">
+            <label for="autonomousRedFont-4">trifft eher zu</label>
+            <input type="radio" id="autonomousRedFont-5" name="autonomousRedFont" value="5">
+            <label for="autonomousRedFont-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Meine Entscheidungen basieren auf guten Gründen, wenn Informationen mit roter Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="reasonResponsiveRedFont-1" name="reasonResponsiveRedFont" value="1">
+            <label for="reasonResponsiveRedFont-1">trifft nicht zu</label>
+            <input type="radio" id="reasonResponsiveRedFont-2" name="reasonResponsiveRedFont" value="2">
+            <label for="reasonResponsiveRedFont-2">trifft eher nicht zu</label>
+            <input type="radio" id="reasonResponsiveRedFont-3" name="reasonResponsiveRedFont" value="3">
+            <label for="reasonResponsiveRedFont-3">neutral</label>
+            <input type="radio" id="reasonResponsiveRedFont-4" name="reasonResponsiveRedFont" value="4">
+            <label for="reasonResponsiveRedFont-4">trifft eher zu</label>
+            <input type="radio" id="reasonResponsiveRedFont-5" name="reasonResponsiveRedFont" value="5">
+            <label for="reasonResponsiveRedFont-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Ich bin sicher, dass ich gute Entscheidungen getroffen habe, wenn Informationen mit blinkender Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="confidenceBlinking-1" name="confidenceBlinking" value="1">
+            <label for="confidenceBlinking-1">trifft nicht zu</label>
+            <input type="radio" id="confidenceBlinking-2" name="confidenceBlinking" value="2">
+            <label for="confidenceBlinking-2">trifft eher nicht zu</label>
+            <input type="radio" id="confidenceBlinking-3" name="confidenceBlinking" value="3">
+            <label for="confidenceBlinking-3">neutral</label>
+            <input type="radio" id="confidenceBlinking-4" name="confidenceBlinking" value="4">
+            <label for="confidenceBlinking-4">trifft eher zu</label>
+            <input type="radio" id="confidenceBlinking-5" name="confidenceBlinking" value="5">
+            <label for="confidenceBlinking-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
             <b>Mein Blick wurde von den mit blinkender Schrift hervorgehobenen Informationen stark angezogen.</b>
             <br>
             <input type="radio" id="attentionBlinking1-1" name="attentionBlinking1" value="1">
@@ -348,6 +492,48 @@
             <label for="search_strategyBlinking-4">trifft eher zu</label>
             <input type="radio" id="search_strategyBlinking-5" name="search_strategyBlinking" value="5">
             <label for="search_strategyBlinking-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Ich habe mich für Produkte entschieden, weil sie mir bekannt waren, wenn Informationen mit blinkender Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="recognitionBiasBlinking-1" name="recognitionBiasBlinking" value="1">
+            <label for="recognitionBiasBlinking-1">trifft nicht zu</label>
+            <input type="radio" id="recognitionBiasBlinking-2" name="recognitionBiasBlinking" value="2">
+            <label for="recognitionBiasBlinking-2">trifft eher nicht zu</label>
+            <input type="radio" id="recognitionBiasBlinking-3" name="recognitionBiasBlinking" value="3">
+            <label for="recognitionBiasBlinking-3">neutral</label>
+            <input type="radio" id="recognitionBiasBlinking-4" name="recognitionBiasBlinking" value="4">
+            <label for="recognitionBiasBlinking-4">trifft eher zu</label>
+            <input type="radio" id="recognitionBiasBlinking-5" name="recognitionBiasBlinking" value="5">
+            <label for="recognitionBiasBlinking-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Ich fühle mich in meiner Entscheidung selbstbestimmt, wenn Informationen mit blinkender Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="autonomousBlinking-1" name="autonomousBlinking" value="1">
+            <label for="autonomousBlinking-1">trifft nicht zu</label>
+            <input type="radio" id="autonomousBlinking-2" name="autonomousBlinking" value="2">
+            <label for="autonomousBlinking-2">trifft eher nicht zu</label>
+            <input type="radio" id="autonomousBlinking-3" name="autonomousBlinking" value="3">
+            <label for="autonomousBlinking-3">neutral</label>
+            <input type="radio" id="autonomousBlinking-4" name="autonomousBlinking" value="4">
+            <label for="autonomousBlinking-4">trifft eher zu</label>
+            <input type="radio" id="autonomousBlinking-5" name="autonomousBlinking" value="5">
+            <label for="autonomousBlinking-5">trifft zu</label>
+        </div>
+        <div class="radioarray">
+            <b>Meine Entscheidungen basieren auf guten Gründen, wenn Informationen mit blinkender Schrift hervorgehoben wurden.</b>
+            <br>
+            <input type="radio" id="reasonResponsiveBlinking-1" name="reasonResponsiveBlinking" value="1">
+            <label for="reasonResponsiveBlinking-1">trifft nicht zu</label>
+            <input type="radio" id="reasonResponsiveBlinking-2" name="reasonResponsiveBlinking" value="2">
+            <label for="reasonResponsiveBlinking-2">trifft eher nicht zu</label>
+            <input type="radio" id="reasonResponsiveBlinking-3" name="reasonResponsiveBlinking" value="3">
+            <label for="reasonResponsiveBlinking-3">neutral</label>
+            <input type="radio" id="reasonResponsiveBlinking-4" name="reasonResponsiveBlinking" value="4">
+            <label for="reasonResponsiveBlinking-4">trifft eher zu</label>
+            <input type="radio" id="reasonResponsiveBlinking-5" name="reasonResponsiveBlinking" value="5">
+            <label for="reasonResponsiveBlinking-5">trifft zu</label>
         </div>
         <div class="radioarray">
             <b>Die Auswahl der Produkte und Informationen war realistisch.</b>

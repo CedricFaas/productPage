@@ -19,13 +19,17 @@
                 window.location.href = "/test";
                 return false;
             })
+        });
 
-            $('button#next').click(function () {
-                if(document.getElementById('checkbox').checked){
+
+        //detecting arrow key presses
+        document.addEventListener('keydown', function(e) {
+            let refresh = false;
+            switch (e.key) {
+                case "Enter":
                     socket.emit('test');
-                    return false;
-                }
-            });
+                    break;
+            }
         });
     </script>
 </head>
@@ -38,10 +42,6 @@
 
 <div>
     <article>Bitte befolgen Sie die Anweisungen der Aufsichtsperson!</article>
-
-    <label><input id="checkbox" type="checkbox"> Kalibrierung abgeschlossen</label>
-    <br>
-    <button class = "startButton" id="next" type="button">Weiter</button> <br>
 </div>
 </body>
 </html>
