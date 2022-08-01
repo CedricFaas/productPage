@@ -102,3 +102,27 @@ article{
     line-height: 45px;
     padding: 20px;
 }
+
+.centerContent
+{
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    position: fixed ;
+    top: 10% ;
+    bottom: 10% ;
+    left: 10% ;
+    right: 10% ;
+}
+
+.dot{
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    height: 50px;
+    width: 50px;
+    background-color: #020202;
+    opacity: 0.4;
+    border-radius: 50%;
+    position: fixed;
+}

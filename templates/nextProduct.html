@@ -30,8 +30,8 @@
                 socket.send('Next Product page connected!');
                 socket.emit('loadNextProduct')
             });
-            socket.on('shop', function () {
-                window.location.href = "/shop";
+            socket.on('confidence', function () {
+                window.location.href = "/confidence";
                 return false;
             })
             socket.on('loadNextProduct', function (message) {
@@ -42,7 +42,7 @@
             })
 
             $('button#start').click(function () {
-                    socket.emit('shop');
+                    socket.emit('confidence');
                     return false;
             });
 
@@ -64,6 +64,7 @@
 </div>
 <div>
     <article>
+        Bitte richte deinen Blick auf den Punkt in der Mitte des nächsten Bildschirms, bis der Shop erscheint. <br>
         Als nächstes musst du dich für ein Produkt aus der folgenden Kategorie entscheiden:
     </article>
     <article id="categories"></article>

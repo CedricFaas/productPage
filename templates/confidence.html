@@ -9,40 +9,28 @@
     <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" charset="utf-8">
-        const socket = io('');
-
         $(document).ready(function() {
+            const socket = io('');
+
             socket.on('connect', function() {
-                socket.send('Calibration page connected!');
+                socket.send('Confidence page connected!');
             });
-            socket.on('test', function () {
-                window.location.href = "/test";
+            socket.on('shop', function () {
+                window.location.href = "/shop";
                 return false;
-            })
-        });
+            });
 
-
-        document.addEventListener('keydown', function(e) {
-            switch (e.key) {
-                case "Enter":
-                    socket.emit('test');
-                    break;
-            }
+            socket.emit('startTracking')
+            socket.emit('saveProduct', 0)
+            setTimeout(function ()  {
+                socket.emit('shop')
+            },3000);
         });
     </script>
 </head>
 <body>
-<div class="banner">
-    <div>
-        Kalibrierung
-    </div>
-</div>
-
-<div>
-    <article>Bitte bewege deinen Kopf nach der Kalibrierung so wenig wie möglich und
-        verlasse den Bildschirm nicht mit deinem Blick. Versuche außerdem dir nicht mit
-        den Händen in dein Gesicht zu greifen.</article>
-    <article>Bitte befolgen Sie die Anweisungen der Aufsichtsperson!</article>
+<div class="centerContent">
+    <span class="dot"></span>
 </div>
 </body>
 </html>

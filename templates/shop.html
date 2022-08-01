@@ -75,13 +75,13 @@
                     if (seconds < 0) {
                         clearInterval(timerId);
                         socket.emit('decision');
-                        socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
+                        socket.emit('stopTracking');
                     }
                 }, 1000);
             })
 
             $('#cart').click(function () {
-                socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
+                socket.emit('stopTracking');
                 socket.emit('nextProduct', {'ProductSet': productSet, 'ProductNumber': productNumbers[productNumIndex], 'InTime': seconds});
                 clearInterval(timerId);
                 return false;
@@ -94,18 +94,17 @@
             let refresh = false;
             switch (e.key) {
                 case "ArrowLeft":
-                    socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
                     productNumIndex--;
                     if (productNumIndex < 0){productNumIndex = 4}
                     refresh = true;
                     break;
                 case "ArrowRight":
-                    socket.emit('stopTracking', {'Prod': productNumbers[productNumIndex]});
                     productNumIndex = (productNumIndex+1)%5;
                     refresh = true;
                     break;
             }
             if (refresh){
+                socket.emit('saveProduct',productNumbers[productNumIndex]);
                 loadData();
             }
 
@@ -212,7 +211,6 @@
                 socket.emit('coordinates',{'Id': "AoI " + n.toString(), 'x1': x1,'y1': y1,'x2': x2,'y2': y2});
                 n = n+1;
             })
-            socket.emit('startTracking',{'Prod': productNumbers[productNumIndex]});
         }
 
         function resetStyle () {

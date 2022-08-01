@@ -47,6 +47,11 @@ def start():
     return render_template('start.html')
     
 
+@app.route('/confidence')
+def confidence(): 
+    return render_template('confidence.html')
+    
+
 @app.route('/shop')
 def shop(): 
     return render_template('shop.html')
@@ -131,19 +136,23 @@ def go_coordinates(c):
     activeParticipant.generateElement(c['Id'], c['x1'], c['y1'], c['x2'], c['y2'])
 
 @socketio.on('startTracking')
-def go_Tracking(message):
+def go_Tracking():
     app.logger.info('Tracking started')
-    activeParticipant.startTracking(message['Prod'])
+    activeParticipant.startTracking()
 
 @socketio.on('stopTracking')
-def go_stopTracking(message):
+def go_stopTracking():
     app.logger.info('Tracking stopped')
-    activeParticipant.stopTracking(message['Prod'])
+    activeParticipant.stopTracking()
 
 @socketio.on('shop')
 def go_shop():
     app.logger.info('Participant enters Shop!')
     emit('shop')
+
+@socketio.on('confidence')
+def go_confidence():
+    emit('confidence')
     
 @socketio.on('nextProduct')
 def go_nextProduct(selection):
@@ -170,7 +179,11 @@ def go_loadNextProduct():
 @socketio.on('loadProduct')
 def loadProduct():
     app.logger.info('New Product loaded!')
-    emit('loadProduct', {'ProductSet': activeParticipant.getProductSet(), 'HighlightingTechnique': activeParticipant.nextHighlightingTechnique()})
+    emit('loadProduct', {'ProductSet': activeParticipant.getProductSet(), 'HighlightingTechnique': activeParticipant.getHighlightingTechnique()})
+        
+@socketio.on('saveProduct')
+def saveProduct(message):
+    activeParticipant.saveProduct(message);
 
 @socketio.on('decision')
 def go_decision():
