@@ -4,14 +4,18 @@ import os
 import tobii_research as tobii
 from element import Element 
 
+#Find available eye tracker
+def findEyeTracker():
+    temp = tobii.find_all_eyetrackers()
+    if (len(temp) == 0):
+        return findEyeTracker()
+    else:
+        et = temp[0]
+        return et
+
 class Participant:
     
     filePath = None
-    visit1 = 0
-    visit2 = 0
-    visit3 = 0
-    visit4 = 0
-    visit5 = 0
     
     def __init__(self,id):
         self.participantId = id
@@ -36,6 +40,11 @@ class Participant:
         self.currPath = ""
         self.eyeTracker = None
         self.elements = []
+        self.visit1 = 0
+        self.visit2 = 0
+        self.visit3 = 0
+        self.visit4 = 0
+        self.visit5 = 0
         
     def getId(self):
         return self.participantId
@@ -43,14 +52,15 @@ class Participant:
     def nextProductSet(self):
         self.currentHighlightingTechnique = 0
         if self.tested:
+            self.currentSet = self.productSets.pop()
             if (self.currentSet in self.higlightS):
                 self.currentHighlightingTechnique = self.highlightingTechniquesS.pop()
             elif (self.currentSet in self.higlightM):
                 self.currentHighlightingTechnique = self.highlightingTechniquesM.pop()
             elif (self.currentSet in self.higlightL):
                 self.currentHighlightingTechnique = self.highlightingTechniquesL.pop()
-            
-        self.currentSet = self.productSets.pop()
+        else:
+            self.currentSet = 0
         return self.currentSet
     
     def getProductSet(self):
@@ -65,25 +75,20 @@ class Participant:
     def saveProduct(self, prod):
         self.currentProduct = prod
         if (prod == 1):
-            global visit1
-            visit1 = visit1 + 1
-            self.currentVisit = visit1
+            self.visit1 = self.visit1 + 1
+            self.currentVisit = self.visit1
         elif (prod == 2):
-            global visit2
-            visit2 = visit2 + 1
-            self.currentVisit = visit2
+            self.visit2 = self.visit2 + 1
+            self.currentVisit = self.visit2
         elif (prod == 3):
-            global visit3
-            visit3 = visit3 + 1
-            self.currentVisit = visit3
+            self.visit3 = self.visit3 + 1
+            self.currentVisit = self.visit3
         elif (prod == 4):
-            global visit4
-            visit4 = visit4 + 1
-            self.currentVisit = visit4
+            self.visit4 = self.visit4 + 1
+            self.currentVisit = self.visit4
         elif (prod == 5):
-            global visit5
-            visit5 = visit5 + 1
-            self.currentVisit = visit5
+            self.visit5 = self.visit5 + 1
+            self.currentVisit = self.visit5
                 
                 
     
@@ -126,7 +131,7 @@ class Participant:
         global filePath
         self.currPath = dirName + "/gazeData/gaze" + "_" + str(self.currentSet)+ "_"+ str(self.currentHighlightingTechnique)
         filePath = self.currPath
-        self.eyeTracker = tobii.findEyeTracker()
+        self.eyeTracker = findEyeTracker()
         with open(filePath + '.csv',  'a') as csvfile, open(filePath + '_FULL' + '.csv', "a") as full_csvfile:
             filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
             full_filewriter = csv.writer(full_csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -159,16 +164,11 @@ class Participant:
         self.eyeTracker.unsubscribe_from(tobii.EYETRACKER_GAZE_DATA, self.gaze_data_callback)
         filePath = None
         self.eyeTracker = None
-        global visit1
-        global visit2
-        global visit3
-        global visit4
-        global visit5
-        visit1 = 0
-        visit2 = 0
-        visit3 = 0
-        visit4 = 0
-        visit5 = 0
+        self.visit1 = 0
+        self.visit2 = 0
+        self.visit3 = 0
+        self.visit4 = 0
+        self.visit5 = 0
         self.currentVisit = 0
 
     ##### Callback function for eye tracker #####
