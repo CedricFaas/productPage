@@ -59,6 +59,7 @@
                 productSet = message['ProductSet'];
                 pause = message['Pause'];
                 highlightingTechnique = message['HighlightingTechnique'];
+                socket.emit('saveProduct',productNumbers[productNumIndex]);
                 loadData();
                 socket.send('load data');
 
