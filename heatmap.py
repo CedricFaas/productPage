@@ -11,6 +11,8 @@ def heatmap(path,pId):
     file["Y"] = round(((file["LeftGazePointY"] + file["RightGazePointY"]) / 2)*100)
     file = file[file.X <= 100]
     file = file[file.Y <= 100]
+    file = file[file.X >= 0]
+    file = file[file.Y >= 0]
     file = file.drop(file.columns[[0,1,2,3,4,5,6,7,8]], axis=1) 
     myArray = np.zeros((101,101))
     grid = pandas.DataFrame(myArray)
@@ -24,4 +26,4 @@ def heatmap(path,pId):
                origin = 'lower')
     plt.show()
 
-heatmap('./log/p201/gazeData/gaze_2_0.csv',2)
+heatmap('./log/p501/gazeData/gaze_24_3.csv',5)
