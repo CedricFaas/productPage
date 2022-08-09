@@ -10,3 +10,4 @@ ParticipantID,Gender,Age,Job,amountGroceriesOnline,amountGroceriesOverall,decisi
 501,male,25,Student,3,3,4,contacts
 502,divers,25,Arbeitslos,0,3,3,glasses
 503,male,27,Student,2,4,4,none
+504,female,22,Studentin,1,3,3,none
