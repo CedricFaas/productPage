@@ -22,13 +22,13 @@
         });
 
 
-            document.addEventListener('keydown', function(e) {
-                switch (e.key) {
-                    case "Enter":
-                        socket.emit('nextProduct',null);
-                        break;
+        document.addEventListener('keydown', function(e) {
+            switch (e.key) {
+                case "Enter":
+                    socket.emit('nextProduct',null);
+                    break;                
                 }
-            });
+        });    
     </script>
 </head>
 <body>
