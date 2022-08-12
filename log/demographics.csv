@@ -16,3 +16,5 @@ ParticipantID,Gender,Age,Job,amountGroceriesOnline,amountGroceriesOverall,decisi
 507,female,19,Studentin,1,2,2,none
 508,female,21,Studentin,1,3,3,none
 509,male,23,Student,1,3,4,none
+510,divers,29,Studentin,2,2,4,none
+511,male,27,Student,1,3,5,none
