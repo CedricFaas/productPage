@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/aoi.css">
+    <script src="//code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.js" integrity="sha512-2RDFHqfLZW8IhPRvQYmK9bTLfj/hddxGXQAred2wNZGkrKQkLGj8RCkXfRJPHlDerdHHIzTFaahq4s/P4V6Qig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" charset="utf-8">
+        let pause = false;
+        let ready = false;
+        let productNumbers = [1,2,3,4,5]
+        let productNumIndex = 0
+        const socket = io('');
+        let productSet = 40;
+        let highlightingTechnique = 3;
+        let intervals = [];
+        let seconds = 1;
+
+        $(document).ready(function () {
+            let timerId;
+
+            socket.on('connect', function() {
+                socket.send('Shop page connected!');
+                loadData();
+
+                timerId = setInterval(function () {
+                    seconds = seconds - 1;
+                    if (seconds < 0) {
+                        seconds = 1;
+                        if (productNumIndex <= 3){
+                            productNumIndex = productNumIndex + 1;
+                            loadData()
+                        } else {
+                            if (productSet <= 40){
+                                productNumIndex = 0;
+                                productSet = productSet + 1;
+                                loadData()
+                            } else {
+                                clearInterval(timerId);
+                                socket.emit('end')
+                            }
+                        }
+                    }
+                }, 1000);
+            })
+        });
+
+        function loadData() {
+            $.getJSON('../static/data.json', function(data) {
+                //General Information
+                resetStyle();
+                const product = data[productSet.toString()][productNumbers[productNumIndex].toString()];
+                let element = document.getElementById("Price");
+                element.innerHTML = product['Info']['Price'];
+                selectHighlighting(element,product);
+                element = document.getElementById("Brand");
+                element.innerHTML = product['Info']['Brand'];
+                selectHighlighting(element,product);
+                element = document.getElementById("Name");
+                element.innerHTML = product['Info']['Name'];
+                selectHighlighting(element,product);
+                //Picture
+                $("#Picture").attr("src", product['Picture']);
+                //Details
+                const ul = document.getElementById("Details");
+                $(ul).empty();
+                product['Details'].forEach(function (element) {
+                    const li = document.createElement("li");
+                    li.innerHTML = element;
+                    selectHighlighting(li,product)
+                    $(li).appendTo(ul);
+                });
+                highlight();
+                //Ad
+                const ads = 70;
+                const ad1 = getRandomInteger(1, ads);
+                document.getElementById("ad1Name").innerHTML = data['Ads'][ad1.toString()]['Name'];
+                document.getElementById("ad1Price").innerHTML = data['Ads'][ad1.toString()]['Price'];
+                $("#ad1Picture").attr("src", data['Ads'][ad1.toString()]['Picture']);
+                let ad2 = getRandomInteger(1,ads);
+                while (ad2 === ad1){
+                    ad2 = getRandomInteger(1,ads)
+                }
+                document.getElementById("ad2Name").innerHTML = data['Ads'][ad2.toString()]['Name'];
+                document.getElementById("ad2Price").innerHTML = data['Ads'][ad2.toString()]['Price'];
+                $("#ad2Picture").attr("src", data['Ads'][ad2.toString()]['Picture']);
+                let ad3 = getRandomInteger(1,ads);
+                while (ad3 === ad2 || ad3 === ad1){
+                    ad3 = getRandomInteger(1,ads)
+                }
+                document.getElementById("ad3Name").innerHTML = data['Ads'][ad3.toString()]['Name'];
+                document.getElementById("ad3Price").innerHTML = data['Ads'][ad3.toString()]['Price'];
+                $("#ad3Picture").attr("src", data['Ads'][ad3.toString()]['Picture']);
+                let ad4 = getRandomInteger(1,ads);
+                while (ad4 === ad3 || ad4 === ad2 || ad4 === ad1){
+                    ad4 = getRandomInteger(1,ads)
+                }
+                document.getElementById("ad4Name").innerHTML = data['Ads'][ad4.toString()]['Name'];
+                document.getElementById("ad4Price").innerHTML = data['Ads'][ad4.toString()]['Price'];
+                $("#ad4Picture").attr("src", data['Ads'][ad4.toString()]['Picture']);
+            });
+        }
+
+        function getRandomInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+
+        function selectHighlighting (element, product) {
+            if (highlightingTechnique > 0){
+                product["Important"].forEach(function(searchTerm){
+                    let index = element.innerHTML.indexOf(searchTerm);
+                    if (index >= 0) {
+                        element.innerHTML = element.innerHTML.substring(0,index) + " <a>" + element.innerHTML.substring(index,index+searchTerm.length) + "</a> " + element.innerHTML.substring(index + searchTerm.length);
+                    }
+                });
+            }
+        }
+
+        function highlight(){
+            let n = 1
+            let highlights = document.querySelectorAll('a')
+            highlights.forEach(function (element){
+                if (highlightingTechnique === 1) {
+                    element.style.fontSize = "125%";
+                } else if (highlightingTechnique === 2){
+                    element.style.color = "red";
+                } else if (highlightingTechnique === 3){
+                    const Id = setInterval(function() {
+                        if (element.style.backgroundColor === "") {
+                            element.style.backgroundColor = "#ffd366";
+                            element.style.borderColor = "#ffd366";
+                            element.style.borderRadius = "5px";
+                        }
+                        else {
+                            element.style.backgroundColor = "";
+                            element.style.borderColor = "#efefef"
+                        }
+                    }, 500)
+                    intervals.push(Id);
+                }
+                const rect = element.getBoundingClientRect()
+                const x1 = rect.left;
+                const y1 = rect.top;
+                const x2 = rect.right;
+                const y2 = rect.bottom;
+                socket.emit('coordinates',{'Id':  (productSet*100+productNumbers[productNumIndex]*10+n).toString(), 'x1': x1,'y1': y1,'x2': x2,'y2': y2});
+                n = n+1;
+            })
+        }
+
+        function resetStyle () {
+            let highlights = document.querySelectorAll('a')
+            highlights.forEach(function (element) {
+                element.style.fontSize = "";
+                element.style.color = "";
+                element.style.backgroundColor = ""
+                element.style.borderColor = ""
+                intervals.forEach(value => clearInterval(value));
+            });
+        }
+    </script>
+    <title>Lebensmittel-Shop</title>
+</head>
+<body>
+<div class="shopName">
+    <div class="Title"> Lebensmittel-Shop </div>
+</div>
+
+<div class="row">
+    <div class="leftcolumn" >
+        <img id = "Picture"/>
+        <div class="productTitle">
+            <div>
+                <div id = "Brand" class="productBrand"></div>
+                <div id = "Name" class="productName"></div>
+            </div>
+            <div>
+                <div id = "Price"></div>
+                <button class="cart-btn" id="cart">In den Einkaufswagen</button>
+            </div>
+        </div>
+        <div class="productDetail">
+            Produktbeschreibung
+        </div>
+        <ul id = "Details">
+        </ul>
+    </div>
+
+    <div class="rightcolumn">
+        <div>
+            <article>
+                <p id="ad1Name"></p>
+                <br>
+                <p id="ad1Price"></p>
+            </article>
+            <img id = "ad1Picture"/>
+        </div>
+        <div>
+            <article>
+                <p id="ad2Name"></p>
+                <br>
+                <p id="ad2Price"></p>
+            </article>
+            <img id = "ad2Picture"/>
+        </div>
+        <div>
+            <article>
+                <p id="ad3Name"></p>
+                <br>
+                <p id="ad3Price"></p>
+            </article>
+            <img id = "ad3Picture"/>
+        </div>
+        <div>
+            <article>
+                <p id="ad4Name"></p>
+                <br>
+                <p id="ad4Price"></p>
+            </article>
+            <img id = "ad4Picture"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>

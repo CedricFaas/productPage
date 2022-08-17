@@ -23,7 +23,9 @@ def heatmap(path,pId):
         x = int(row["X"])
         y = int(row["Y"])
         grid.at[y,x] = grid.at[y,x] + 1.0
+        
+    
     plt.imshow(grid,cmap='hot',interpolation=None, vmin=0.0, vmax=0.1)
     plt.show()
 
-heatmap('./log/p501/gazeData/gaze_18_2.csv',1)
+heatmap('./log/p501/gazeData/gaze_14_0.csv',1)

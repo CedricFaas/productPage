@@ -3,17 +3,20 @@ import pandas as pd
 import numpy as np
 import ctypes
 import detectors
+import csv
+from element import Element
+from os.path import exists
 
 """"
 Inputs dataset and list of all UI elements
 Computes all metrics for each element
 Returns updated version of elements
 """
-def analyseDataset(elements,Set,Prod,dataset):
+def analyseDataset(elements,prodId,dataset):
     elements = elements
     #Add new metric entry to metrics dictionairy of each element
     for elem in elements:
-        elem.metrics[str(10*Set+Prod)] = {
+        elem.metrics[prodId] = {
         'timeToFirstFixation' : 0,
         'firstPassGazeDuration': 0,
         'secondPassGazeDuration': 0,
@@ -23,7 +26,7 @@ def analyseDataset(elements,Set,Prod,dataset):
     }
 
     #Loading new dataset
-    gazeData = pd.read_csv(dataset)
+    gazeData = dataset
 
     #Run validity check and filtering
     gazeData = filterUnvalidEntries(gazeData)
@@ -59,13 +62,13 @@ def analyseDataset(elements,Set,Prod,dataset):
     #First pass gaze duration -- Orientation
     #Second pass gaze duration -- Evaluation
     #Refixations count -- Evaluation
-    elements = computeTemporalFixationMetrices(fixations,elements,Set,Prod)
+    elements = computeTemporalFixationMetrices(fixations,elements,prodId)
 
     #Sum of fixations -- Verification
-    elements = computeSumOfFixations(fixations,elements,Set,Prod)
+    elements = computeSumOfFixations(fixations,elements,prodId)
 
     #Overall Dwell Time -- Verification
-    elements = computeDwellTime(x_gazePoints,y_gazePoints,timestamps,elements,Set,Prod)
+    elements = computeDwellTime(x_gazePoints,y_gazePoints,timestamps,elements,prodId)
 
     return elements
 
@@ -175,48 +178,48 @@ def discardEdgeGazePoints(x_gazePoints, y_gazePoints, timestamp, elements):
 #Compute temporal fixation metrices
 #Inputs list of detected fixations and elements
 #Computes Time to firs fixation, first- and second-pass-gaze as well as refixation count
-def computeTemporalFixationMetrices(fixations,elements,Set,Prod):
+def computeTemporalFixationMetrices(fixations,elements,prodId):
     firstPass = 0
     secondPass = 0
     for i in np.arange(0, len(fixations)-1, 1):
         aoi_one = mapToAOI(fixations[i][3], fixations[i][4],elements)
         aoi_two = mapToAOI(fixations[i + 1][3], fixations[i + 1][4], elements)
         elem = getElementOfAOI(elements, aoi_one)
-        if elem.metrics[str(10*Set+Prod)]['timeToFirstFixation'] == 0:
-            elem.metrics[str(10*Set+Prod)]['timeToFirstFixation'] = fixations[i][0]
+        if elem.metrics[prodId]['timeToFirstFixation'] == 0:
+            elem.metrics[prodId]['timeToFirstFixation'] = fixations[i][0]
             firstPass = fixations[i][2]
         secondPass = secondPass + fixations[i][2]
         if aoi_one == aoi_two:
             firstPass = firstPass+fixations[i+1][2]
             secondPass = secondPass + fixations[i+1][2]
         else:
-            if elem.metrics[str(10*Set+Prod)]['refixationsCount'] == 0:
-                elem.metrics[str(10*Set+Prod)]['firstPassGazeDuration'] = firstPass
-            elif elem.metrics[str(10*Set+Prod)]['refixationsCount'] == 1:
-                elem.metrics[str(10*Set+Prod)]['secondPassGazeDuration'] = secondPass
+            if elem.metrics[prodId]['refixationsCount'] == 0:
+                elem.metrics[prodId]['firstPassGazeDuration'] = firstPass
+            elif elem.metrics[prodId]['refixationsCount'] == 1:
+                elem.metrics[prodId]['secondPassGazeDuration'] = secondPass
             firstPass = 0
             secondPass = 0
-            elem.metrics[str(10*Set+Prod)]['refixationsCount'] += 1
+            elem.metrics[prodId]['refixationsCount'] += 1
     aoi_last = mapToAOI(fixations[(len(fixations) - 1)][3], fixations[(len(fixations) - 1)][4], elements)
     elem = getElementOfAOI(elements, aoi_last)
     if firstPass != 0 or secondPass != 0:
-        if elem.metrics[str(10*Set+Prod)]['refixationsCount'] == 0:
-            elem.metrics[str(10*Set+Prod)]['firstPassGazeDuration'] = firstPass
-        elif elem.metrics[str(10*Set+Prod)]['refixationsCount'] == 1:
-            elem.metrics[str(10*Set+Prod)]['secondPassGazeDuration'] = secondPass
-    elem.metrics[str(10*Set+Prod)]['refixationsCount'] += 1
+        if elem.metrics[prodId]['refixationsCount'] == 0:
+            elem.metrics[prodId]['firstPassGazeDuration'] = firstPass
+        elif elem.metrics[prodId]['refixationsCount'] == 1:
+            elem.metrics[prodId]['secondPassGazeDuration'] = secondPass
+    elem.metrics[prodId]['refixationsCount'] += 1
     return elements
 
 #Compute sum of fixations
-def computeSumOfFixations(fixations,elements,Set,Prod):
+def computeSumOfFixations(fixations,elements,prodId):
     for fix in fixations:
         aoi_hit = mapToAOI(fix[3],fix[4],elements)
         elem = getElementOfAOI(elements,aoi_hit)
-        elem.metrics[str(10*Set+Prod)]['sumOfFixations'] += 1
+        elem.metrics[prodId]['sumOfFixations'] += 1
     return elements
 
 #Compute overall Dwell Time
-def computeDwellTime(x_gazePoints,y_gazePoints,timestamps,elements,Set,Prod):
+def computeDwellTime(x_gazePoints,y_gazePoints,timestamps,elements,prodId):
     current = 0
     startT = 0
     lastT = 0
@@ -234,7 +237,7 @@ def computeDwellTime(x_gazePoints,y_gazePoints,timestamps,elements,Set,Prod):
             try:
                 d = lastT - startT  # add to aoi dwell time
                 e = getElementOfAOI(elements, current)
-                e.metrics[str(10*Set+Prod)]['overallDwellTime'] = e.metrics[str(10*Set+Prod)]['overallDwellTime'] + d
+                e.metrics[prodId]['overallDwellTime'] = e.metrics[prodId]['overallDwellTime'] + d
                 current = aoi
                 startT = t
                 lastT = t
@@ -243,3 +246,175 @@ def computeDwellTime(x_gazePoints,y_gazePoints,timestamps,elements,Set,Prod):
                 print ('Error')
                 print (i)
     return elements
+# reads area of interest elements out of csv file
+# returns a set containing 40 sets (one for each decision), which contain
+# 5 sets each (one for each product), containg the aois of each product 
+def readElements():
+    file = pd.read_csv('./calcAoI/aois.csv')
+    sets = []
+    products1 = []
+    sets.append(products1)
+    products2 = []
+    sets.append(products2)
+    products3 = []
+    sets.append(products3)
+    products4 = []
+    sets.append(products4)
+    products5 = []
+    sets.append(products5)
+    products6 = []
+    sets.append(products6)
+    products7 = []
+    sets.append(products7)
+    products8 = []
+    sets.append(products8)
+    products9 = []
+    sets.append(products9)
+    products10 = []
+    sets.append(products10)
+    products11 = []
+    sets.append(products11)
+    products12 = []
+    sets.append(products12)
+    products13 = []
+    sets.append(products13)
+    products14 = []
+    sets.append(products14)
+    products15 = []
+    sets.append(products15)
+    products16 = []
+    sets.append(products16)
+    products17 = []
+    sets.append(products17)
+    products18 = []
+    sets.append(products18)
+    products19 = []
+    sets.append(products19)
+    products20 = []
+    sets.append(products20)
+    products21 = []
+    sets.append(products21)
+    products22 = []
+    sets.append(products22)
+    products23 = []
+    sets.append(products23)
+    products24 = []
+    sets.append(products24)
+    products25 = []
+    sets.append(products25)
+    products26 = []
+    sets.append(products26)
+    products27 = []
+    sets.append(products27)
+    products28 = []
+    sets.append(products28)
+    products29 = []
+    sets.append(products29)
+    products30 = []
+    sets.append(products30)
+    products31 = []
+    sets.append(products31)
+    products32 = []
+    sets.append(products32)
+    products33 = []
+    sets.append(products33)
+    products34 = []
+    sets.append(products34)
+    products35 = []
+    sets.append(products35)
+    products36 = []
+    sets.append(products36)
+    products37 = []
+    sets.append(products37)
+    products38 = []
+    sets.append(products38)
+    products39 = []
+    sets.append(products39)
+    products40 = []
+    sets.append(products40)
+    for index, row in file.iterrows():
+        aoiId = int(row['Id'])
+        setId = int(aoiId / 100)
+        sets[setId-1].append(Element(aoiId,row['x1'],row['y1'],row['y2'],row['x2']))
+    newSets = []
+    for productSet in sets:
+        product = []
+        aois1 = []
+        product.append(aois1)
+        aois2 = []
+        product.append(aois2)
+        aois3 = []
+        product.append(aois3)
+        aois4 = []
+        product.append(aois4)
+        aois5 = []
+        product.append(aois5)
+        for aoi in productSet:
+            aoiId = int((aoi.aoiCode % 100)/10)
+            product[aoiId-1].append(aoi)
+        newSets.append(product)
+    return newSets
+
+def analyse():
+    sets = readElements()
+    pId = 501
+    productSet = 40
+    highlighting = 0
+    while (pId <= 511):
+        while (productSet <= 40):
+            file = None
+            
+            if exists('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_0.csv'):
+                highlighting = 0
+                file = pd.read_csv('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_0.csv')
+                
+            elif exists('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_1.csv'):
+                highlighting = 1
+                file = pd.read_csv('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_1.csv')
+                
+            elif exists('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_2.csv'):
+                highlighting = 2
+                file = pd.read_csv('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_2.csv')
+                
+            elif exists('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_3.csv'):
+                highlighting = 3
+                file = pd.read_csv('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_3.csv')
+            
+            if file is not None:
+                gaze1 = file[file.ProductId == 1]
+                gaze2 = file[file.ProductId == 2]
+                gaze3 = file[file.ProductId == 3]
+                gaze4 = file[file.ProductId == 4]
+                gaze5 = file[file.ProductId == 5]
+                sets[productSet-1][0] = analyseDataset(sets[productSet-1][0], (10*productSet+1), gaze1)
+                sets[productSet-1][1] = analyseDataset(sets[productSet-1][1], (10*productSet+2), gaze2)
+                sets[productSet-1][2] = analyseDataset(sets[productSet-1][2], (10*productSet+3), gaze3)
+                sets[productSet-1][3] = analyseDataset(sets[productSet-1][3], (10*productSet+4), gaze4)
+                sets[productSet-1][4] = analyseDataset(sets[productSet-1][4], (10*productSet+5), gaze5)
+                
+                i = 1
+                dirName = './log/p'+str(pId)
+                with open(dirName+'/metrics.csv', 'a') as csvfile:
+                    filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+                print('Yo')
+                while (i <= 5):
+                    aois = sets[productSet-1][i]
+                    print(aois)
+                    for elem in aois:
+                            print('Hey')
+                            row = []
+                            row.append(str(pId))
+                            row.append(str(highlighting))
+                            row.append(str(elem.aoiCode))
+                            row.append(str(elem.metrics[str(10*productSet+i)]['timeToFirstFixation']))
+                            row.append(str(elem.metrics[str(10*productSet+i)]['firstPassGazeDuration']))
+                            row.append(str(elem.metrics[str(10*productSet+i)]['secondPassGazeDuration']))
+                            row.append(str(elem.metrics[str(10*productSet+i)]['refixationsCount']))
+                            row.append(str(elem.metrics[str(10*productSet+i)]['sumOfFixations']))
+                            row.append(str(elem.metrics[str(10*productSet+i)]['overallDwellTime']))
+                            filewriter.writerow(row)
+            
+            productSet = productSet + 1
+        pId = pId + 1
+        
+analyse()
