@@ -46,7 +46,7 @@ def analyseDataset(elements,prodId,dataset):
     y_gazePoints, height = getYGazePointsAsPixel(gazeData)
     x_gazePoints, y_gazePoints, timestamps = discardEdgeGazePoints(x_gazePoints,y_gazePoints,timestamps, elements)
 
-    fixations = detectors.fixation_detection(x_gazePoints, y_gazePoints, timestamps)
+    fixations = detectors.fixation_detection(x_gazePoints, y_gazePoints, timestamps, mindur=10)
 
     #If no fixation were detected return elements
     if len(fixations) == 0 or len(timestamps) == 0:
@@ -78,6 +78,9 @@ def analyseDataset(elements,prodId,dataset):
 #Map points to elements
 def mapToAOI(x,y,elements):
     for e in elements:
+        print(x)
+        print(y)
+        print(e.boundaries)
         if (x in np.arange(e.boundaries[0],e.boundaries[2]+1)):
             if (y in np.arange(e.boundaries[1],e.boundaries[3]+1)):
                 return e.aoiCode
@@ -137,7 +140,7 @@ def  getTimestampsInMilliseconds(dataframe):
     t_temp = []
     initalTime = time[1]/1000
     for t in time[1:]:
-        #print round(t/1000-initalTime)
+        #print(round(t/1000-initalTime))
         t_temp.append(t/1000-initalTime)
     return t_temp
 
@@ -335,7 +338,25 @@ def readElements():
     for index, row in file.iterrows():
         aoiId = int(row['Id'])
         setId = int(aoiId / 100)
-        sets[setId-1].append(Element(aoiId,row['x1'],row['y1'],row['y2'],row['x2']))
+        
+        x1 = row['x1']
+        x2 = row['x2']
+        y1 = row['y1']
+        y2 = row['y2']
+        
+        diffX = x2 - x1
+        diffY = y2 - y1
+        
+        if (diffX <= 50):
+            diffX = int((50-diffX)/2)
+            x1 = x1 - diffX
+            x2 = x2 - diffX
+        if (diffY <= 50):
+            diffY = int((50-diffY)/2)
+            y1 = y1 - diffY
+            y2 = y2 + diffY
+        
+        sets[setId-1].append(Element(aoiId,x1,y1,x2,y2))
     newSets = []
     for productSet in sets:
         product = []
@@ -358,11 +379,12 @@ def readElements():
 def analyse():
     sets = readElements()
     pId = 501
-    productSet = 40
-    highlighting = 0
     while (pId <= 511):
+        productSet = 1
+        dirName = './log/p'+str(pId)
         while (productSet <= 40):
             file = None
+            highlighting = 0
             
             if exists('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_0.csv'):
                 highlighting = 0
@@ -386,22 +408,18 @@ def analyse():
                 gaze3 = file[file.ProductId == 3]
                 gaze4 = file[file.ProductId == 4]
                 gaze5 = file[file.ProductId == 5]
-                sets[productSet-1][0] = analyseDataset(sets[productSet-1][0], (10*productSet+1), gaze1)
-                sets[productSet-1][1] = analyseDataset(sets[productSet-1][1], (10*productSet+2), gaze2)
-                sets[productSet-1][2] = analyseDataset(sets[productSet-1][2], (10*productSet+3), gaze3)
-                sets[productSet-1][3] = analyseDataset(sets[productSet-1][3], (10*productSet+4), gaze4)
-                sets[productSet-1][4] = analyseDataset(sets[productSet-1][4], (10*productSet+5), gaze5)
+                sets[productSet-1][0] = analyseDataset(sets[productSet-1][0], str(10*productSet+1), gaze1)
+                sets[productSet-1][1] = analyseDataset(sets[productSet-1][1], str(10*productSet+2), gaze2)
+                sets[productSet-1][2] = analyseDataset(sets[productSet-1][2], str(10*productSet+3), gaze3)
+                sets[productSet-1][3] = analyseDataset(sets[productSet-1][3], str(10*productSet+4), gaze4)
+                sets[productSet-1][4] = analyseDataset(sets[productSet-1][4], str(10*productSet+5), gaze5)
                 
                 i = 1
-                dirName = './log/p'+str(pId)
-                with open(dirName+'/metrics.csv', 'a') as csvfile:
-                    filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
-                print('Yo')
                 while (i <= 5):
-                    aois = sets[productSet-1][i]
-                    print(aois)
+                    aois = sets[productSet-1][i-1]
                     for elem in aois:
-                            print('Hey')
+                        with open(dirName+'/metrics'+str(pId)+'_1.csv', 'a') as csvfile:
+                            filewriter = csv.writer(csvfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
                             row = []
                             row.append(str(pId))
                             row.append(str(highlighting))
@@ -413,7 +431,7 @@ def analyse():
                             row.append(str(elem.metrics[str(10*productSet+i)]['sumOfFixations']))
                             row.append(str(elem.metrics[str(10*productSet+i)]['overallDwellTime']))
                             filewriter.writerow(row)
-            
+                    i=i+1
             productSet = productSet + 1
         pId = pId + 1
         
