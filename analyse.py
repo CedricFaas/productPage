@@ -441,6 +441,25 @@ def analyse():
                     i=i+1
             productSet = productSet + 1
         pId = pId + 1
+        
+    
+def drawNormalDist(data,steps):
+    # Fit a normal distribution to the data:
+    mu = np.average(data)
+    std = np.std(data)
+
+    # Plot the histogram.
+
+    plt.hist(data,steps,density=(True))
+
+    # Plot the PDF.
+    l, r = plt.xlim()
+    x = np.linspace(l, r, steps)
+    p = norm.pdf(x, mu, std)
+    plt.plot(x, p, 'k', linewidth=2)
+    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
+    plt.title(title)
+    plt.show()
     
 def createDiagrams():
     #[total sum of fixations, amount of aois]
@@ -519,21 +538,21 @@ def createDiagrams():
                 
         pId = pId + 1
         
-    drawNormalDist(sumOfFixations0[1], 100)
-    drawNormalDist(sumOfFixations1[1], 100)
-    drawNormalDist(sumOfFixations2[1], 100)
-    drawNormalDist(sumOfFixations3[1], 100)
+    drawNormalDist(sumOfFixations0[0], 100)
+    drawNormalDist(sumOfFixations1[0], 100)
+    drawNormalDist(sumOfFixations2[0], 100)
+    drawNormalDist(sumOfFixations3[0], 100)
     
     
-    drawNormalDist(timeToFirstFixation0[1], 100)
-    drawNormalDist(timeToFirstFixation1[1], 100)
-    drawNormalDist(timeToFirstFixation2[1], 100)
-    drawNormalDist(timeToFirstFixation3[1], 100)
+    drawNormalDist(timeToFirstFixation0[0], 100)
+    drawNormalDist(timeToFirstFixation1[0], 100)
+    drawNormalDist(timeToFirstFixation2[0], 100)
+    drawNormalDist(timeToFirstFixation3[0], 100)
     
-    drawNormalDist(overallDwellTime0[1], 100)
-    drawNormalDist(overallDwellTime1[1], 100)
-    drawNormalDist(overallDwellTime2[1], 100)
-    drawNormalDist(overallDwellTime3[1], 100)
+    drawNormalDist(overallDwellTime0[0], 100)
+    drawNormalDist(overallDwellTime1[0], 100)
+    drawNormalDist(overallDwellTime2[0], 100)
+    drawNormalDist(overallDwellTime3[0], 100)
     
 def revisit():
     pId = 501
@@ -587,24 +606,6 @@ def revisit():
     for visit in visits:
         drawNormalDist(visit,50)
     
-def drawNormalDist(data,steps):
-    # Fit a normal distribution to the data:
-    mu = np.average(data)
-    std = np.std(data)
-
-    # Plot the histogram.
-
-    plt.hist(data,steps,density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, steps)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
 revisit()
 #analyse()
-#createDiagrams()
+createDiagrams()
