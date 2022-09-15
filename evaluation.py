@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas
+from scipy.stats import norm
 
 likert = ('Strongly Disagree','Disagree','Neutral','Agree','Strongly Agree')
 
@@ -32,14 +33,16 @@ def createDecisionBarChart(noHighlighting,largerText,redText,blinking,s):
 
     plt.show()
     
-def createQuestionaireBarChart(values,objects,title):
+def createQuestionaireBarChart(values,objects,title,y1=0,y2=21,ylabel='Amount Answer'):
     x = np.arange(len(objects))  # the label locations
     
-    plt.bar(x,values, align='center', alpha=0.5)
+    rects = plt.bar(x,values, align='center', alpha=0.5)
+    plt.bar_label(rects, values)
 
     plt.xticks(x, objects,rotation='vertical')
-    plt.yticks(range(21))
-    plt.ylabel('Amount Answer')
+    plt.yticks(range(y1,y2))
+    plt.ylim(y1,y2)
+    plt.ylabel(ylabel)
     plt.title(title)
     plt.show()
 
@@ -102,22 +105,54 @@ def createComparisonAllBarChart(noHighlighting,largerText,redText,blinking,title
 
 def evaluateDecisions():
     decisions = [[[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0],[0,0,0,0,0]] for x in range(41)]
+    #decisionTime = [0,0,0,0]
+    #decisionTime = [[0 for x in range(61)],[0 for x in range(61)],[0 for x in range(61)],[0 for x in range(61)]]
+    decisionTime = [[],[],[],[]]
+    timeHighlighting = [0,0,0,0]
     id = 501
     
-    while (id <= 511):
+    while (id <= 518):
         path = './log/p'+str(id)+'/decisions.csv'
         file = pandas.read_csv(path, header=None)
         file.sort_values(by=0, inplace=True)
         file.set_index(0,inplace=True)
         
         for index, row in file.iterrows():
-            #TODO if intime
-            decisions[index][int(row[2])][int(row[1])-1]=decisions[index][int(row[2])][int(row[1])-1]+1
+            if row[3] > 0 :
+                decisions[index][int(row[2])][int(row[1])-1]=decisions[index][int(row[2])][int(row[1])-1]+1
+                if index > 0:
+                    #decisionTime[row[2]] = decisionTime[row[2]]+60-row[3]
+                    decisionTime[row[2]].append(60-row[3]) 
+                    
+                    #decisionTime[row[2]][60-row[3]] = decisionTime[row[2]][60-row[3]] + 1 
+                    timeHighlighting[row[2]] = timeHighlighting[row[2]] + 1
             
         id = id+1
-    for i in range(41):
-        createDecisionBarChart(decisions[i][0], decisions[i][1], decisions[i][2], decisions[i][3],i)
-
+    #for i in range(41):
+        #createDecisionBarChart(decisions[i][0], decisions[i][1], decisions[i][2], decisions[i][3],i)
+        
+    for i in range(len(decisionTime)):
+        #decisionTime[i] = statistics.median(decisionTime[i])
+        #decisionTime[i].sort()
+        data = decisionTime[i]
+        
+        # Fit a normal distribution to the data:
+        mu = np.average(data)
+        std = np.std(data)
+        
+        # Plot the histogram.
+        
+        plt.hist(data,61,density=(True))
+        
+        # Plot the PDF.
+        x = np.linspace(0, 60, 100)
+        p = norm.pdf(x, mu, std)
+        plt.plot(x, p, 'k', linewidth=2)
+        title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
+        plt.title(title)
+        plt.show()
+    #createQuestionaireBarChart(decisionTime, ('no Highlighting','larger Font','red Font','blinking'),'Mean time until decision is made, depending on highlighting technique',20,30, 'Mean decision making time')
+    
 def evaluateDemographicsQuestionaire():
     gender = [0,0,0]
     age = []
@@ -265,13 +300,10 @@ def evaluateEvaluationQuestionaire():
     createQuestionaireBarChart(time, likert, 'I had enought time to make a decision')
     createQuestionaireBarChart(pressure, likert, 'I was under pressure during decision making.')
     
-    
-def evaluateTracker():
-    return None
 
-evaluateDemographicsQuestionaire()
+#evaluateDemographicsQuestionaire()
 evaluateDecisions()
-evaluateEvaluationQuestionaire()
+#evaluateEvaluationQuestionaire()
 
 
 

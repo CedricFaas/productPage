@@ -138,12 +138,12 @@ def go_coordinates(c):
 @socketio.on('startTracking')
 def go_Tracking():
     app.logger.info('Tracking started')
-    activeParticipant.startTracking()
+    #activeParticipant.startTracking()
 
 @socketio.on('stopTracking')
 def go_stopTracking():
     app.logger.info('Tracking stopped')
-    activeParticipant.stopTracking()
+    #activeParticipant.stopTracking()
 
 @socketio.on('shop')
 def go_shop():
