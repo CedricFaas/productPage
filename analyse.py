@@ -8,6 +8,7 @@ import csv
 from element import Element
 from os.path import exists
 from scipy.stats import norm
+import numbers
 
 pAmount = 518
 
@@ -141,7 +142,6 @@ def  getTimestampsInMilliseconds(dataframe):
     t_temp = []
     initalTime = time[1]/1000
     for t in time[1:]:
-        #print(round(t/1000-initalTime))
         t_temp.append(t/1000-initalTime)
     return t_temp
 
@@ -441,83 +441,8 @@ def analyse():
                     i=i+1
             productSet = productSet + 1
         pId = pId + 1
-        
+    
 def createDiagrams():
-    #[total sum of fixations, amount of aois]
-    sumOfFixations0 = [0,0]
-    sumOfFixations1 = [0,0]
-    sumOfFixations2 = [0,0]
-    sumOfFixations3 = [0,0]
-    
-    timeToFirstFixation0 = [0,0]
-    timeToFirstFixation1 = [0,0]
-    timeToFirstFixation2 = [0,0]
-    timeToFirstFixation3 = [0,0]
-    
-    overallDwellTime0 = [0,0]
-    overallDwellTime1 = [0,0]
-    overallDwellTime2 = [0,0]
-    overallDwellTime3 = [0,0]
-    
-    pId = 501
-    
-    while pId <= pAmount:
-        path = './log/p'+str(pId)+'/metrics'+str(pId)+'_50px_10ms.csv'
-        if (exists(path)):
-            file = pd.read_csv(path)
-            for row in file.itertuples():
-                
-                if (row[2]==0):
-                    if (row[8]!=0):
-                        sumOfFixations0[0] = sumOfFixations0[0] + row[8]
-                        sumOfFixations0[1] = sumOfFixations0[1] + 1
-                    if (row[4]!=0):
-                        timeToFirstFixation0[0] = timeToFirstFixation0[0] + row[4]
-                        timeToFirstFixation0[1] = timeToFirstFixation0[1] + 1
-                    if (row[9]!=0):
-                        overallDwellTime0[0] = overallDwellTime0[0] + row[9]
-                        overallDwellTime0[1] = overallDwellTime0[1] + 1
-                elif (row[2]==1):
-                    if (row[8]!=0):
-                        sumOfFixations1[0] = sumOfFixations1[0] + row[8]
-                        sumOfFixations1[1] = sumOfFixations1[1] + 1
-                    if (row[4]!=0):
-                        timeToFirstFixation1[0] = timeToFirstFixation1[0] + row[4]
-                        timeToFirstFixation1[1] = timeToFirstFixation1[1] + 1
-                    if (row[9]!=0):
-                        overallDwellTime1[0] = overallDwellTime1[0] + row[9]
-                        overallDwellTime1[1] = overallDwellTime1[1] + 1
-                elif (row[2]==2):
-                    if (row[8]!=0):
-                        sumOfFixations2[0] = sumOfFixations2[0] + row[8]
-                        sumOfFixations2[1] = sumOfFixations2[1] + 1
-                    if (row[4]!=0):
-                        timeToFirstFixation2[0] = timeToFirstFixation2[0] + row[4]
-                        timeToFirstFixation2[1] = timeToFirstFixation2[1] + 1
-                    if (row[9]!=0):
-                        overallDwellTime2[0] = overallDwellTime2[0] + row[9]
-                        overallDwellTime2[1] = overallDwellTime2[1] + 1
-                elif (row[2]==3):
-                    if (row[8]!=0):
-                        sumOfFixations3[0] = sumOfFixations3[0] + row[8]
-                        sumOfFixations3[1] = sumOfFixations3[1] + 1
-                    if (row[4]!=0):
-                        timeToFirstFixation3[0] = timeToFirstFixation3[0] + row[4]
-                        timeToFirstFixation3[1] = timeToFirstFixation3[1] + 1
-                    if (row[9]!=0):
-                        overallDwellTime3[0] = overallDwellTime3[0] + row[9]
-                        overallDwellTime3[1] = overallDwellTime3[1] + 1
-                                                                                
-                
-        pId = pId + 1
-    sumOfFixations = [sumOfFixations0[0]/sumOfFixations0[1],sumOfFixations1[0]/sumOfFixations1[1],sumOfFixations2[0]/sumOfFixations2[1],sumOfFixations3[0]/sumOfFixations3[1]]
-    timeToFirstFixation = [timeToFirstFixation0[0]/timeToFirstFixation0[1],timeToFirstFixation1[0]/timeToFirstFixation1[1],timeToFirstFixation2[0]/timeToFirstFixation2[1],timeToFirstFixation3[0]/timeToFirstFixation3[1]]
-    overallDwellTime = [overallDwellTime0[0]/overallDwellTime0[1],overallDwellTime1[0]/overallDwellTime1[1],overallDwellTime2[0]/overallDwellTime2[1],overallDwellTime3[0]/overallDwellTime3[1]]
-    print(sumOfFixations)
-    print(timeToFirstFixation)
-    print(overallDwellTime)
-    
-def createDiagramsStd():
     #[total sum of fixations, amount of aois]
     sumOfFixations0 = [[],0]
     sumOfFixations1 = [[],0]
@@ -593,211 +518,93 @@ def createDiagramsStd():
                                                                                 
                 
         pId = pId + 1
-    
         
-    # Fit a normal distribution to the data:
-    mu = np.average(sumOfFixations0[0])
-    std = np.std(sumOfFixations0[0])
+    drawNormalDist(sumOfFixations0[1], 100)
+    drawNormalDist(sumOfFixations1[1], 100)
+    drawNormalDist(sumOfFixations2[1], 100)
+    drawNormalDist(sumOfFixations3[1], 100)
     
-    # Plot the histogram.
     
-    plt.hist(sumOfFixations0[0],density=(True))
+    drawNormalDist(timeToFirstFixation0[1], 100)
+    drawNormalDist(timeToFirstFixation1[1], 100)
+    drawNormalDist(timeToFirstFixation2[1], 100)
+    drawNormalDist(timeToFirstFixation3[1], 100)
     
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
+    drawNormalDist(overallDwellTime0[1], 100)
+    drawNormalDist(overallDwellTime1[1], 100)
+    drawNormalDist(overallDwellTime2[1], 100)
+    drawNormalDist(overallDwellTime3[1], 100)
     
-    # Fit a normal distribution to the data:
-    mu = np.average(sumOfFixations1[0])
-    std = np.std(sumOfFixations1[0])
-
-    # Plot the histogram.
-
-    plt.hist(sumOfFixations1[0],density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(sumOfFixations2[0])
-    std = np.std(sumOfFixations2[0])
-
-    # Plot the histogram.
-
-    plt.hist(sumOfFixations2[0],density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(sumOfFixations3[0])
-    std = np.std(sumOfFixations3[0])
-
-    # Plot the histogram.
-
-    plt.hist(sumOfFixations3[0],density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(timeToFirstFixation0[0])
-    std = np.std(timeToFirstFixation0[0])
-
-    # Plot the histogram.
-
-    plt.hist(timeToFirstFixation0[0],100,density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(timeToFirstFixation1[0])
-    std = np.std(timeToFirstFixation1[0])
-
-    # Plot the histogram.
-
-    plt.hist(timeToFirstFixation1[0],100,density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(timeToFirstFixation2[0])
-    std = np.std(timeToFirstFixation2[0])
-
-    # Plot the histogram.
-
-    plt.hist(timeToFirstFixation2[0],100,density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(timeToFirstFixation3[0])
-    std = np.std(timeToFirstFixation3[0])
-
-    # Plot the histogram.
-
-    plt.hist(timeToFirstFixation3[0],100,density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(overallDwellTime0[0])
-    std = np.std(overallDwellTime0[0])
-
-    # Plot the histogram.
-
-    plt.hist(overallDwellTime0[0],100,density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(overallDwellTime1[0])
-    std = np.std(overallDwellTime1[0])
-
-    # Plot the histogram.
-
-    plt.hist(overallDwellTime1[0],100,density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(overallDwellTime2[0])
-    std = np.std(overallDwellTime2[0])
-
-    # Plot the histogram.
-
-    plt.hist(overallDwellTime2[0],100,density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
-    
-    # Fit a normal distribution to the data:
-    mu = np.average(overallDwellTime3[0])
-    std = np.std(overallDwellTime3[0])
-
-    # Plot the histogram.
-
-    plt.hist(overallDwellTime3[0],100,density=(True))
-
-    # Plot the PDF.
-    l, r = plt.xlim()
-    x = np.linspace(l, r, 100)
-    p = norm.pdf(x, mu, std)
-    plt.plot(x, p, 'k', linewidth=2)
-    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
-    plt.title(title)
-    plt.show()
+def revisit():
+    pId = 501
+    visits = [[],[],[],[]]
+    while (pId <= pAmount):
+        productSet = 1
+        while (productSet <= 40):
+            file = None
+            highlighting = 0
+            
+            if exists('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_0.csv'):
+                highlighting = 0
+                file = pd.read_csv('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_0.csv')
+                
+            elif exists('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_1.csv'):
+                highlighting = 1
+                file = pd.read_csv('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_1.csv')
+                
+            elif exists('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_2.csv'):
+                highlighting = 2
+                file = pd.read_csv('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_2.csv')
+                
+            elif exists('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_3.csv'):
+                highlighting = 3
+                file = pd.read_csv('./log/p'+str(pId)+'/gazeData/gaze_'+str(productSet)+'_3.csv')
+            
+            if file is not None:
+                gaze1 = file[file.ProductId == 1]
+                column = gaze1["Visited"]
+                if not (pd.isna(column.max())):
+                    visits[highlighting].append(column.max())
+                gaze2 = file[file.ProductId == 2]
+                column = gaze2["Visited"]
+                if not (pd.isna(column.max())):
+                    visits[highlighting].append(column.max())
+                gaze3 = file[file.ProductId == 3]
+                column = gaze3["Visited"]
+                if not (pd.isna(column.max())):
+                    visits[highlighting].append(column.max())
+                gaze4 = file[file.ProductId == 4]
+                column = gaze4["Visited"]
+                if not (pd.isna(column.max())):
+                    visits[highlighting].append(column.max())
+                gaze5 = file[file.ProductId == 5]
+                column = gaze5["Visited"]
+                if not (pd.isna(column.max())):
+                    visits[highlighting].append(column.max())
+            productSet = productSet + 1
+        pId = pId + 1
         
+    for visit in visits:
+        drawNormalDist(visit,50)
+    
+def drawNormalDist(data,steps):
+    # Fit a normal distribution to the data:
+    mu = np.average(data)
+    std = np.std(data)
+
+    # Plot the histogram.
+
+    plt.hist(data,steps,density=(True))
+
+    # Plot the PDF.
+    l, r = plt.xlim()
+    x = np.linspace(l, r, steps)
+    p = norm.pdf(x, mu, std)
+    plt.plot(x, p, 'k', linewidth=2)
+    title = "Fit results: mu = %.2f,  std = %.2f" % (mu, std)
+    plt.title(title)
+    plt.show()
+    
+revisit()
 #analyse()
-createDiagramsStd()
+#createDiagrams()
