@@ -2,8 +2,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas
 import os
+import matplotlib.image as mpimg
 
+#Draws heatmap for given product
 def heatmap(path,pId):
+    imgSource = path[25:-6]
+    if (pId == 0):
+        img = mpimg.imread('./images/confidence.jpg')
+    else:
+        img = mpimg.imread('./images/'+imgSource+'_'+str(pId)+'.jpg')
+    
     file = pandas.read_csv(path)
     file = file[file.ProductId == pId]
     file = file[file.LeftGazePointValidity == 1]
@@ -26,12 +34,13 @@ def heatmap(path,pId):
         grid.at[y,x] = grid.at[y,x] + 1.0
         
     plt.title(path)
-    plt.imshow(grid,cmap='hot',interpolation=None, vmin=0.0, vmax=0.1)
+    plt.imshow(img)
+    plt.imshow(grid, alpha=.5,cmap='YlOrRd',interpolation=None, vmin=0.0, vmax=0.1)
     plt.show()
 
 
-currId = 501
-while currId <= 515:
+currId = 518
+while currId <= 518:
         
     dirPath = './log/p'+str(currId)+'/gazeData/'
     if (os.path.exists(dirPath)):
