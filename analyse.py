@@ -304,8 +304,6 @@ def computeDwellTime(x_gazePoints, y_gazePoints, timestamps, elements, prodId):
 ##
 
 # Filter the gaze data with a weighted average filter and a gaussian kernel function
-
-
 def filterData(gazePoints):
     filteredPoints = []
     weightFunc = gauss()
@@ -321,8 +319,6 @@ def filterData(gazePoints):
     return filteredPoints
 
 # Calculate weights for each gaze point according to gaussian kernel function
-
-
 def gauss():
     array = np.arange(1, 41)
     gauss = []
@@ -335,8 +331,6 @@ def gauss():
 # Reads area of interest elements out of csv file
 # Returns a set containing 40 sets (one for each decision), which contain
 # 5 sets each (one for each product), containg the aois of each product
-
-
 def readElements():
     file = pd.read_csv('./calcAoI/aois.csv')
     sets = []
@@ -468,8 +462,6 @@ pAmount = 518
 
 # Analyzes the gaze data of each participant
 # Saves calculated gaze metrics in a cvs file
-
-
 def analyse():
     sets = readElements()
     pId = 501
@@ -549,8 +541,6 @@ def analyse():
         pId = pId + 1
 
 # Draw Histogram with a normaldistribution fitted to the data
-
-
 def drawNormalDist(data, steps, metric):
     # Fit a normal distribution to the data:
     mu = np.average(data)
@@ -571,8 +561,6 @@ def drawNormalDist(data, steps, metric):
     plt.show()
 
 # Reads metrics from cvs file, draws Histograms for each gaze metric and runs statistical tests
-
-
 def createDiagrams():
     sumOfFixations = [[], [], [], []]
     refixationCount = [[], [], [], []]
@@ -651,9 +639,8 @@ def createDiagrams():
     print(stats.shapiro(areasPerDecision[2]))
     print(stats.shapiro(areasPerDecision[3]))
     print(AnovaRM(data=dataframe, depvar='Data', subject='Participant',within=['Highlighting'], aggregate_func='mean').fit())
-    print(stats.friedmanchisquare(areasPerDecision[0], areasPerDecision[1], areasPerDecision[2], areasPerDecision[3]))
-    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point", cut = 0)
-    plot.set(xlabel="Test Condition",ylabel="Amount of AoIs fixated per Decision:")
+    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point")
+    plot.set(xlabel="Test Condition",ylabel="Amount of AoIs fixated per Decision:", ylim=0)
     plt.show()
 
     data = [item for sublist in fixatedAreas for item in sublist]
@@ -668,9 +655,8 @@ def createDiagrams():
     print(stats.shapiro(fixatedAreas[2]))
     print(stats.shapiro(fixatedAreas[3]))
     print(AnovaRM(data=dataframe, depvar='Data', subject='Participant',within=['Highlighting'], aggregate_func='mean').fit())
-    print(stats.friedmanchisquare(fixatedAreas[0], fixatedAreas[1], fixatedAreas[2], fixatedAreas[3]))
-    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point", cut = 0)
-    plot.set(xlabel="Test Condition",ylabel="Proportion of fixated Areas of Interest:")
+    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point")
+    plot.set(xlabel="Test Condition",ylabel="Proportion of fixated Areas of Interest:", ylim=0)
     plt.show()
 
     data = [item for sublist in refixationCount for item in sublist]
@@ -685,9 +671,8 @@ def createDiagrams():
     print(stats.shapiro(refixationCount[2]))
     print(stats.shapiro(refixationCount[3]))
     print(AnovaRM(data=dataframe, depvar='Data', subject='Participant',within=['Highlighting'], aggregate_func='mean').fit())
-    print(stats.friedmanchisquare(refixationCount[0], refixationCount[1], refixationCount[2], refixationCount[3]))
-    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point", cut = 0)
-    plot.set(xlabel="Test Condition", ylabel="Refixation Count")
+    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point")
+    plot.set(xlabel="Test Condition", ylabel="Refixation Count", ylim=0)
     plt.show()
 
     data = [item for sublist in sumOfFixations for item in sublist]
@@ -702,9 +687,8 @@ def createDiagrams():
     print(stats.shapiro(sumOfFixations[2]))
     print(stats.shapiro(sumOfFixations[3]))
     print(AnovaRM(data=dataframe, depvar='Data', subject='Participant', within=['Highlighting'], aggregate_func='mean').fit())
-    print(stats.friedmanchisquare(sumOfFixations[0], sumOfFixations[1], sumOfFixations[2], sumOfFixations[3]))
-    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point", cut = 0)
-    plot.set(xlabel="Test Condition", ylabel="Sum of Fixations")
+    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point")
+    plot.set(xlabel="Test Condition", ylabel="Sum of Fixations", ylim=0)
     plt.show()
 
     data = [item for sublist in timeToFirstFixation for item in sublist]
@@ -718,10 +702,9 @@ def createDiagrams():
     print(stats.shapiro(timeToFirstFixation[1]))
     print(stats.shapiro(timeToFirstFixation[2]))
     print(stats.shapiro(timeToFirstFixation[3]))
-    print(AnovaRM(data=dataframe, depvar='Data', subject='Participant',within=['Highlighting'], aggregate_func='mean').fit())
     print(stats.friedmanchisquare(timeToFirstFixation[0], timeToFirstFixation[1], timeToFirstFixation[2], timeToFirstFixation[3]))
-    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point", cut = 0)
-    plot.set(xlabel="Test Condition",ylabel="Time to first Fixation in milliseconds")
+    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point")
+    plot.set(xlabel="Test Condition",ylabel="Time to first Fixation in milliseconds", ylim=0)
     plt.show()
     
     data = [item for sublist in overallDwellTime for item in sublist]
@@ -736,9 +719,8 @@ def createDiagrams():
     print(stats.shapiro(overallDwellTime[2]))
     print(stats.shapiro(overallDwellTime[3]))
     print(AnovaRM(data=dataframe, depvar='Data', subject='Participant',within=['Highlighting'], aggregate_func='mean').fit())
-    print(stats.friedmanchisquare(overallDwellTime[0], overallDwellTime[1], overallDwellTime[2], overallDwellTime[3]))
-    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point", cut = 0)
-    plot.set(xlabel="Test Condition",ylabel="Overall Dwell time in milliseconds")
+    plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='Data', inner="point")
+    plot.set(xlabel="Test Condition",ylabel="Overall Dwell time in milliseconds", ylim=0)
     plt.show()
     runPairedTTest(overallDwellTime[0],overallDwellTime[1],overallDwellTime[2],overallDwellTime[3])
 
@@ -821,6 +803,6 @@ def revisit():
         drawNormalDist(visit, 50, "Visits: ")
 
 
-# revisit()
-# analyse()
+revisit()
+analyse()
 createDiagrams()

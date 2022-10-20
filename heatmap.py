@@ -39,8 +39,8 @@ def heatmap(path,pId):
     plt.show()
 
 
-currId = 518
-while currId <= 518:
+currId = 517
+while currId <= 517:
         
     dirPath = './log/p'+str(currId)+'/gazeData/'
     if (os.path.exists(dirPath)):

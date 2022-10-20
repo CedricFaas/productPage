@@ -60,8 +60,7 @@ class Participant:
             elif (self.currentSet in self.higlightL):
                 self.currentHighlightingTechnique = self.highlightingTechniquesL.pop()
         else:
-            self.currentSet = 0    
-        
+            self.currentSet = 0  
         return self.currentSet
     
     def getProductSet(self):

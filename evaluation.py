@@ -138,8 +138,8 @@ def evaluateDecisions():
         decisionTime[3].append(np.mean(data))
         id = id+1
     
-    #for i in range(41):
-        #createDecisionBarChart(decisions[i][0], decisions[i][1], decisions[i][2], decisions[i][3],i)
+    for i in range(41):
+        createDecisionBarChart(decisions[i][0], decisions[i][1], decisions[i][2], decisions[i][3],i)
     
     decisionTimes = [item for sublist in decisionTime for item in sublist]
     participants = np.tile([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],4)
@@ -155,7 +155,7 @@ def evaluateDecisions():
     print(stats.shapiro(decisionTime[3]))
     print(AnovaRM(data=dataframe, depvar='DecisionTime', subject='Participant', within=['Highlighting'], aggregate_func='mean').fit())
     plot = seaborn.violinplot(data=dataframe, x='Highlighting', y='DecisionTime', inner="point")
-    plot.set(xlabel="Test Condition",ylabel = "DecisionTime in seconds:")
+    plot.set(xlabel="Test Condition",ylabel = "DecisionTime in seconds:", ylim=0)
     plt.show()
     
     for i in range(len(decisionTime)):
@@ -365,9 +365,9 @@ def evaluateEvaluationQuestionaire():
     createQuestionaireBarChart(pressure, likert, 'I was under pressure during decision making.')
     
 
-#evaluateDemographicsQuestionaire()
+evaluateDemographicsQuestionaire()
 evaluateDecisions()
-#evaluateEvaluationQuestionaire()
+evaluateEvaluationQuestionaire()
 
 
 
